@@ -1,0 +1,112 @@
+.pageWrap {
+  width: 100%;
+}
+
+.bannerSection {
+  position: relative;
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=2560&q=85') center 35% / cover no-repeat;
+  padding: 8rem 0 4rem;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.75) 0%,
+    rgba(23, 23, 20, 0.6) 50%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+  max-width: 52rem;
+}
+
+.bannerOverline {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+.faqSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.accordionWrap {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.accordionItem {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.questionBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.questionText {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-midnight-black);
+}
+
+.toggleIcon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+}
+
+.answerBox {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.answerText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-gray-600);
+  padding-top: 1rem;
+}

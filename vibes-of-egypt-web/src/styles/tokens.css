@@ -1,0 +1,144 @@
+/* ============================================================
+   VIBES OF EGYPT — Design Tokens
+   Extracted from approved brand guidelines and Stitch designs
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-midnight-black: #171714;
+  --color-egyptian-gold: #C99A43;
+  --color-egyptian-gold-light: #D4AD65;
+  --color-egyptian-gold-dark: #B08835;
+  --color-desert-ivory: #F5F0E6;
+  --color-desert-ivory-dark: #E8DFD0;
+  --color-nile-teal: #176B68;
+  --color-nile-teal-light: #1E8A86;
+  --color-nile-teal-dark: #0F4F4D;
+  --color-desert-sand: #A66C46;
+  --color-desert-sand-light: #C08560;
+  --color-pure-white: #FFFFFF;
+  --color-off-white: #FAFAF7;
+
+  /* ── Neutral Palette ── */
+  --color-gray-50: #F9F9F7;
+  --color-gray-100: #F0EDE6;
+  --color-gray-200: #E0DBD0;
+  --color-gray-300: #C5BFB3;
+  --color-gray-400: #9E9688;
+  --color-gray-500: #7A7265;
+  --color-gray-600: #5C554A;
+  --color-gray-700: #3D3833;
+  --color-gray-800: #2A2622;
+  --color-gray-900: #1A1714;
+
+  /* ── Semantic Colors ── */
+  --color-text-primary: var(--color-midnight-black);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-400);
+  --color-text-on-dark: var(--color-desert-ivory);
+  --color-text-on-gold: var(--color-midnight-black);
+  --color-text-accent: var(--color-egyptian-gold);
+  --color-bg-primary: var(--color-pure-white);
+  --color-bg-secondary: var(--color-desert-ivory);
+  --color-bg-dark: var(--color-midnight-black);
+  --color-bg-teal: var(--color-nile-teal);
+  --color-border-light: var(--color-gray-200);
+  --color-border-medium: var(--color-gray-300);
+  --color-border-gold: var(--color-egyptian-gold);
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-accent: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+
+  /* ── Font Sizes ── */
+  --text-xs: 0.75rem;       /* 12px */
+  --text-sm: 0.875rem;      /* 14px */
+  --text-base: 1rem;        /* 16px */
+  --text-lg: 1.125rem;      /* 18px */
+  --text-xl: 1.25rem;       /* 20px */
+  --text-2xl: 1.5rem;       /* 24px */
+  --text-3xl: 1.875rem;     /* 30px */
+  --text-4xl: 2.25rem;      /* 36px */
+  --text-5xl: 3rem;         /* 48px */
+  --text-6xl: 3.75rem;      /* 60px */
+  --text-7xl: 4.5rem;       /* 72px */
+
+  /* ── Font Weights ── */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* ── Line Heights ── */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.75;
+
+  /* ── Letter Spacing ── */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+
+  /* ── Container ── */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-padding: var(--space-6);
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px 0 rgba(23, 23, 20, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(23, 23, 20, 0.07), 0 2px 4px -2px rgba(23, 23, 20, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(23, 23, 20, 0.08), 0 4px 6px -4px rgba(23, 23, 20, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(23, 23, 20, 0.1), 0 8px 10px -6px rgba(23, 23, 20, 0.05);
+  --shadow-card: 0 2px 8px rgba(23, 23, 20, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(23, 23, 20, 0.12);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index ── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-header: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+
+  /* ── Breakpoints (for reference; use @media in CSS) ── */
+  /* sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1440px */
+}

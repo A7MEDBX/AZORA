@@ -1,0 +1,247 @@
+.pageWrap {
+  width: 100%;
+}
+
+.bannerSection {
+  position: relative;
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=2560&q=85') center 40% / cover no-repeat;
+  padding: 8rem 0 4rem;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.75) 0%,
+    rgba(23, 23, 20, 0.6) 50%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+  max-width: 52rem;
+}
+
+.bannerOverline {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+.catalogSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.cruisesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrap {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.cruiseImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cruiseImg {
+  transform: scale(1.08);
+}
+
+.vesselBadge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: rgba(23, 23, 20, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-egyptian-gold);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.featureBadge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cardBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.routeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.cruiseTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  line-height: 1.3;
+  margin-bottom: 0.65rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-gray-600);
+  margin-bottom: 1.25rem;
+}
+
+.amenitiesWrap {
+  background: var(--color-desert-ivory);
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.amenitiesTitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.amenitiesTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--color-gray-700);
+  background: #ffffff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-gray-200);
+}
+
+.cardFooter {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 1rem;
+}
+
+.priceFrom {
+  font-size: 0.7rem;
+  color: var(--color-gray-500);
+  display: block;
+}
+
+.priceVal {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+}
+
+.pricePer {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+.detailsBtn {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  background: var(--color-egyptian-gold);
+  padding: 0.55rem 1.25rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.detailsBtn:hover {
+  background: #dbac52;
+}
+
+@media (max-width: 1024px) {
+  .cruisesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerTitle {
+    font-size: 2.25rem;
+  }
+  .cruisesGrid {
+    grid-template-columns: 1fr;
+  }
+}

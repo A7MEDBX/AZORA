@@ -1,0 +1,321 @@
+.pageWrap {
+  width: 100%;
+}
+
+.heroSection {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0 4rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.45) 0%,
+    rgba(23, 23, 20, 0.7) 50%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-gray-300);
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-egyptian-gold);
+}
+
+.metaBadges {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.vesselBadge {
+  background: rgba(201, 154, 67, 0.2);
+  border: 1px solid rgba(201, 154, 67, 0.5);
+  color: var(--color-egyptian-gold);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.durationBadge {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ratingBadge {
+  background: rgba(23, 23, 20, 0.8);
+  color: var(--color-desert-ivory);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cruiseTitle {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.routeText {
+  font-size: 1rem;
+  color: var(--color-gray-200);
+  font-weight: 500;
+}
+
+.contentSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cardHeading {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 1.25rem;
+}
+
+.subHeading {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-midnight-black);
+  margin: 2.5rem 0 1.25rem;
+}
+
+.overviewText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--color-desert-ivory);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  font-weight: 500;
+}
+
+.goldAnchor {
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portCard {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.85rem;
+  padding: 1.25rem;
+  background: #fafaf7;
+}
+
+.portHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.portBadge {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.portName {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-midnight-black);
+}
+
+.portActivity {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-gray-600);
+}
+
+.amenitiesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+}
+
+.check {
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+}
+
+/* Sidebar */
+.bookingCard {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.12);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.priceFrom {
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+  display: block;
+}
+
+.priceVal {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+}
+
+.pricePer {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+}
+
+.allInclusiveTag {
+  font-size: 0.7rem;
+  color: var(--color-egyptian-gold);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-egyptian-gold);
+  font-weight: 600;
+}
+
+.formInput,
+.formSelect {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  background: rgba(30, 29, 25, 0.8);
+  color: var(--color-desert-ivory);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.inquireBtn {
+  display: block;
+  text-align: center;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.95rem;
+  border-radius: 9999px;
+  margin: 1.5rem 0 1rem;
+  transition: all 0.2s ease;
+}
+
+.inquireBtn:hover {
+  background: #dbac52;
+}
+
+.policyNote {
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

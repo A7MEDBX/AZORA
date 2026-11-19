@@ -1,0 +1,150 @@
+.footer {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+  border-top: 1px solid rgba(201, 154, 67, 0.2);
+  padding-top: 5rem;
+  margin-top: auto;
+}
+
+.footerInner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logoBadge {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 154, 67, 0.6);
+  background: rgba(30, 29, 25, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sphinxSvg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.brandTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-desert-ivory);
+}
+
+.brandTagline {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 600;
+}
+
+.brandDescription {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-gray-300);
+}
+
+.trustBadges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-egyptian-gold);
+}
+
+.colHeading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.colHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--color-egyptian-gold);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.linkList a {
+  font-size: 0.85rem;
+  color: var(--color-gray-400);
+  transition: all 0.2s ease;
+}
+
+.linkList a:hover {
+  color: var(--color-egyptian-gold);
+  padding-left: 0.35rem;
+}
+
+.copyrightBar {
+  border-top: 1px solid rgba(201, 154, 67, 0.12);
+  padding: 1.5rem 0;
+  background: rgba(18, 18, 16, 0.95);
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+}
+
+.copyrightInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paymentMethods {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gray-400);
+}
+
+@media (max-width: 1024px) {
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .copyrightInner {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

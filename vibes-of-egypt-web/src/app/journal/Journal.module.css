@@ -1,0 +1,167 @@
+.pageWrap {
+  width: 100%;
+}
+
+.bannerSection {
+  position: relative;
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=2560&q=85') center 30% / cover no-repeat;
+  padding: 8rem 0 4rem;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.75) 0%,
+    rgba(23, 23, 20, 0.6) 50%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+  max-width: 52rem;
+}
+
+.bannerOverline {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.bannerSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+.catalogSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrap {
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.artImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .artImg {
+  transform: scale(1.08);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(23, 23, 20, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-egyptian-gold);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cardBody {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  margin-bottom: 0.5rem;
+}
+
+.artTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.artExcerpt {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-gray-600);
+  margin-bottom: 1.5rem;
+}
+
+.readMore {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+}
+
+@media (max-width: 1024px) {
+  .articlesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerTitle {
+    font-size: 2.25rem;
+  }
+  .articlesGrid {
+    grid-template-columns: 1fr;
+  }
+}
