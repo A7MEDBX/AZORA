@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Run Vibes of Egypt on Chrome",
+            "url": "http://127.0.0.1:3000",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Start Vibes of Egypt Localhost"
+        }
+    ]
+}

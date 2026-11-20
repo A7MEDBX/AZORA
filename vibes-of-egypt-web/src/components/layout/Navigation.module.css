@@ -1,0 +1,526 @@
+/* ============================================================
+   VIBES OF EGYPT — Modular Layout & Navigation Styles
+   100% Visual Fidelity with Stitch Approved Designs
+   ============================================================ */
+
+/* ── Header Shell ── */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+}
+
+.headerScrolled {
+  position: fixed;
+  background: rgba(23, 23, 20, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201, 154, 67, 0.25);
+  padding: 0.85rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Desktop Navigation ── */
+.navDesktop {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.navLink {
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: rgba(245, 240, 230, 0.92);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--color-egyptian-gold);
+}
+
+.navLinkActive {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  box-shadow: 0 2px 8px rgba(201, 154, 67, 0.3);
+}
+
+.navLinkActive:hover {
+  color: var(--color-midnight-black);
+}
+
+.chevron {
+  width: 0.85rem;
+  height: 0.85rem;
+  opacity: 0.75;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ── Mega Menu ── */
+.dropdownGroup {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  width: 32rem;
+  background: rgba(26, 25, 22, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 110;
+}
+
+.megaMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.megaMenuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.menuHeading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.375rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  background: rgba(201, 154, 67, 0.12);
+  color: var(--color-egyptian-gold);
+  padding-left: 0.85rem;
+}
+
+.menuItemDesc {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-gray-400);
+  margin-top: 0.15rem;
+}
+
+.menuViewAll {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(201, 154, 67, 0.2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.menuViewAll:hover {
+  text-decoration: underline;
+}
+
+/* ── Header Actions ── */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchTriggerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background: rgba(23, 23, 20, 0.65);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  color: var(--color-desert-ivory);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.searchTriggerBtn:hover {
+  border-color: var(--color-egyptian-gold);
+  color: var(--color-egyptian-gold);
+  transform: scale(1.05);
+}
+
+.searchIcon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ── Language Selector ── */
+.langSelector {
+  position: relative;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(23, 23, 20, 0.65);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  color: var(--color-desert-ivory);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.langBtn:hover {
+  border-color: var(--color-egyptian-gold);
+}
+
+.langFlag {
+  font-size: 0.95rem;
+}
+
+.langMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  width: 13.5rem;
+  background: rgba(26, 25, 22, 0.98);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  animation: fadeIn 0.15s ease;
+}
+
+.langMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.8rem;
+  color: var(--color-desert-ivory);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.langMenuItem:hover {
+  background: rgba(201, 154, 67, 0.15);
+  color: var(--color-egyptian-gold);
+}
+
+.langMenuItemActive {
+  background: rgba(201, 154, 67, 0.25);
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+}
+
+.langNameEn {
+  font-size: 0.7rem;
+  opacity: 0.65;
+  margin-left: auto;
+}
+
+/* ── Mobile Navigation Drawer ── */
+.mobileToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(23, 23, 20, 0.65);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  cursor: pointer;
+}
+
+.hamburgerBar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-desert-ivory);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobileDrawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 23, 20, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 998;
+  animation: fadeIn 0.2s ease;
+}
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(85vw, 24rem);
+  background: rgba(23, 23, 20, 0.98);
+  border-left: 1px solid rgba(201, 154, 67, 0.3);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow-y: auto;
+  animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(201, 154, 67, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.drawerCloseBtn {
+  background: none;
+  border: none;
+  color: var(--color-desert-ivory);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.drawerSearch {
+  margin-bottom: 1.25rem;
+}
+
+.drawerSearchInput {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 9999px;
+  background: rgba(35, 34, 30, 0.9);
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  color: var(--color-desert-ivory);
+  font-size: 0.85rem;
+}
+
+.drawerNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.drawerLink {
+  padding: 0.75rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawerLink:hover {
+  color: var(--color-egyptian-gold);
+}
+
+.drawerSubmenu {
+  padding: 0.5rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(30, 29, 25, 0.7);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.drawerSubItem {
+  font-size: 0.85rem;
+  color: rgba(245, 240, 230, 0.8);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.drawerSubItem:hover {
+  color: var(--color-egyptian-gold);
+}
+
+.drawerActions {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Search Overlay ── */
+.searchOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(23, 23, 20, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1.5rem 2rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.searchContainer {
+  max-width: 42rem;
+  width: 100%;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1.15rem 3.5rem 1.15rem 1.5rem;
+  border-radius: 9999px;
+  background: rgba(35, 34, 30, 0.95);
+  border: 2px solid var(--color-egyptian-gold);
+  color: var(--color-desert-ivory);
+  font-size: 1.15rem;
+  font-family: inherit;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.searchCloseBtn {
+  position: absolute;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--color-gray-400);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.searchResultsBox {
+  margin-top: 1.5rem;
+  background: rgba(30, 29, 25, 0.98);
+  border-radius: 1rem;
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.searchResultItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--color-desert-ivory);
+  transition: background 0.15s ease;
+}
+
+.searchResultItem:hover {
+  background: rgba(201, 154, 67, 0.15);
+  color: var(--color-egyptian-gold);
+}
+
+.searchResultCategory {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-egyptian-gold);
+}
+
+/* ── Responsive Rules ── */
+@media (max-width: 1024px) {
+  .navDesktop {
+    display: none;
+  }
+  .mobileToggle {
+    display: flex;
+  }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

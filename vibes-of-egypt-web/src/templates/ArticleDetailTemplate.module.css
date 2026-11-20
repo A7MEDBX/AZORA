@@ -1,0 +1,229 @@
+.pageWrap {
+  width: 100%;
+}
+
+.heroSection {
+  position: relative;
+  min-height: 48vh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0 4rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.45) 0%,
+    rgba(23, 23, 20, 0.75) 60%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+}
+
+.categoryBadge {
+  display: inline-block;
+  background: rgba(201, 154, 67, 0.2);
+  border: 1px solid rgba(201, 154, 67, 0.5);
+  color: var(--color-egyptian-gold);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.articleTitle {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-300);
+  flex-wrap: wrap;
+}
+
+.contentSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+
+.articleCard {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 1.25rem;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.excerpt {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-gray-800);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.bodyParagraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-gray-700);
+  margin-bottom: 1.5rem;
+}
+
+.authorBox {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--color-desert-ivory);
+  padding: 1.5rem;
+  border-radius: 0.85rem;
+  margin-top: 3rem;
+}
+
+.authorAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-egyptian-gold);
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-midnight-black);
+}
+
+.authorRole {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+}
+
+.sidebarCard {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.sidebarHeading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.sidebarHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: var(--color-egyptian-gold);
+}
+
+.relatedList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.relatedItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--color-desert-ivory);
+  transition: opacity 0.2s ease;
+}
+
+.relatedItem:hover {
+  opacity: 0.85;
+}
+
+.relatedImg {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.relatedTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-desert-ivory);
+}
+
+.relatedDate {
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+}
+
+.planBtn {
+  display: block;
+  text-align: center;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.85rem;
+  border-radius: 9999px;
+  margin-top: 2rem;
+  transition: all 0.2s ease;
+}
+
+.planBtn:hover {
+  background: #dbac52;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .articleTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .articleCard {
+    padding: 1.75rem;
+  }
+  .articleTitle {
+    font-size: 1.85rem;
+  }
+}

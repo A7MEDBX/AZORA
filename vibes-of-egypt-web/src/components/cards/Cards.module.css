@@ -1,0 +1,396 @@
+/* ============================================================
+   VIBES OF EGYPT — Shared Domain Card Styles
+   Preserves 100% Visual Fidelity with Stitch Approved Designs
+   ============================================================ */
+
+/* Base Card Shell */
+.cardShell {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-primary);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-200);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.cardShell:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(23, 23, 20, 0.08);
+  border-color: rgba(201, 154, 67, 0.45);
+}
+
+/* Image Wrappers */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-midnight-black);
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardShell:hover .cardImg {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(23, 23, 20, 0.05) 0%, rgba(23, 23, 20, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* Badges & Tags */
+.badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-size: 0.675rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.tagTopRight {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background: rgba(23, 23, 20, 0.8);
+  backdrop-filter: blur(8px);
+  color: var(--color-desert-ivory);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  z-index: 2;
+}
+
+/* Body */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  margin-bottom: 0.5rem;
+}
+
+.categoryTag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+  transition: color 0.2s ease;
+}
+
+.cardShell:hover .title {
+  color: var(--color-egyptian-gold);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Highlights Chips Box */
+.highlightsBox {
+  background: var(--color-gray-50);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color-gray-200);
+}
+
+.highlightsLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-500);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.highlightItem {
+  font-size: 0.775rem;
+  color: var(--color-gray-700);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.highlightIcon {
+  color: var(--color-egyptian-gold);
+  font-weight: bold;
+}
+
+/* Footer & Pricing */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-gray-200);
+  margin-top: auto;
+}
+
+.priceGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceFrom {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-500);
+  font-weight: 600;
+}
+
+.priceVal {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+}
+
+.pricePer {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  font-weight: normal;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: var(--color-gray-400);
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.cardActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+  font-size: 0.775rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cardShell:hover .cardActionBtn {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+}
+
+/* Destination Atlas Overlay Card Variant (from Stitch Homepage & Atlas) */
+.destinationOverlayCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  text-decoration: none;
+  background: var(--color-midnight-black);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.destinationOverlayCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.destBgImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.destinationOverlayCard:hover .destBgImg {
+  transform: scale(1.06);
+}
+
+.destGradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(23, 23, 20, 0.1) 0%, rgba(23, 23, 20, 0.4) 50%, rgba(23, 23, 20, 0.95) 100%);
+  pointer-events: none;
+}
+
+.destContent {
+  position: relative;
+  z-index: 2;
+  color: var(--color-desert-ivory);
+}
+
+.destCategory {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.destTitle {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-desert-ivory);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.destMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.775rem;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+/* Article Card */
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-primary);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-200);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.articleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(23, 23, 20, 0.08);
+  border-color: rgba(201, 154, 67, 0.45);
+}
+
+.articleImgWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.articleImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.articleCard:hover .articleImg {
+  transform: scale(1.05);
+}
+
+.articleBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.articleMeta {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.articleTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.articleCard:hover .articleTitle {
+  color: var(--color-egyptian-gold);
+}
+
+.articleExcerpt {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.readMoreLink {
+  color: var(--color-egyptian-gold);
+  font-size: 0.825rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+}

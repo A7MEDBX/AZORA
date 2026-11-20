@@ -1,0 +1,618 @@
+.homeContainer {
+  width: 100%;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=2560&q=85') center 30% / cover no-repeat;
+  padding: 8rem 0 5rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 16, 0.6) 0%,
+    rgba(18, 18, 16, 0.4) 40%,
+    rgba(18, 18, 16, 0.85) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+  max-width: 54rem;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background: rgba(201, 154, 67, 0.15);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  backdrop-filter: blur(8px);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-egyptian-gold);
+  margin-bottom: 1.5rem;
+}
+
+.goldDot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--color-egyptian-gold);
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--color-desert-ivory);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(245, 240, 230, 0.9);
+  margin-bottom: 2.25rem;
+  max-width: 44rem;
+}
+
+.heroCtaGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 20px rgba(201, 154, 67, 0.35);
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  background: #dbac52;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(201, 154, 67, 0.45);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  background: rgba(245, 240, 230, 0.12);
+  border: 1px solid rgba(245, 240, 230, 0.3);
+  backdrop-filter: blur(8px);
+  color: var(--color-desert-ivory);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.secondaryBtn:hover {
+  background: rgba(245, 240, 230, 0.25);
+  border-color: var(--color-desert-ivory);
+}
+
+/* Quick Search Bar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: rgba(23, 23, 20, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  border-radius: 1.25rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  max-width: 52rem;
+}
+
+.searchField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.searchField label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.searchField select {
+  background: transparent;
+  border: none;
+  color: var(--color-desert-ivory);
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.searchField select option {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+}
+
+.searchDivider {
+  width: 1px;
+  height: 2rem;
+  background: rgba(201, 154, 67, 0.25);
+}
+
+.searchBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.searchBtn:hover {
+  background: #dbac52;
+}
+
+/* Sections General */
+.section {
+  padding: 6rem 0;
+}
+
+.sectionAlt {
+  background: var(--color-desert-ivory);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.sectionOverline {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.viewAllLink {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+  transition: padding-left 0.2s ease;
+}
+
+.viewAllLink:hover {
+  padding-left: 0.35rem;
+}
+
+/* Destinations Grid */
+.destinationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.destinationCard {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.destinationImageWrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.destinationCard:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.destinationOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(23, 23, 20, 0.85) 0%,
+    rgba(23, 23, 20, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.destinationInfo {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+}
+
+.destinationCategory {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+}
+
+.destinationName {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.destinationMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+/* Tours Grid */
+.toursGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+/* Packages Grid */
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.tourCard {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(23, 23, 20, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tourCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tourImageWrap {
+  position: relative;
+  height: 13rem;
+  overflow: hidden;
+}
+
+.tourBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tourBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tourDestination {
+  font-size: 0.75rem;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.tourTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.tourOverview {
+  font-size: 0.825rem;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tourFooter {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 0.85rem;
+}
+
+.priceFrom {
+  font-size: 0.7rem;
+  color: var(--color-gray-500);
+  display: block;
+}
+
+.priceAmount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+}
+
+.pricePer {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+.tourDetailBtn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-egyptian-gold);
+  background: rgba(201, 154, 67, 0.1);
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.tourDetailBtn:hover {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+}
+
+/* Cruises Grid */
+.cruisesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.cruiseCard {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(23, 23, 20, 0.05);
+}
+
+.cruiseImageWrap {
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.cruiseVessel {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(23, 23, 20, 0.85);
+  color: var(--color-egyptian-gold);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.cruiseBody {
+  padding: 1.5rem;
+}
+
+.cruiseRoute {
+  font-size: 0.75rem;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.cruiseTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 0.65rem;
+}
+
+.cruiseDesc {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.cruiseFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 1rem;
+}
+
+/* Why Section */
+.whySection {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+}
+
+.whyHeader {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+}
+
+.whySubtitle {
+  font-size: 1.1rem;
+  color: var(--color-gray-300);
+  margin-top: 0.75rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.pillarCard {
+  background: rgba(30, 29, 25, 0.7);
+  border: 1px solid rgba(201, 154, 67, 0.2);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-egyptian-gold);
+}
+
+.pillarIcon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.pillarTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  margin-bottom: 0.65rem;
+}
+
+.pillarText {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-gray-400);
+}
+
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+  .destinationsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .toursGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .packagesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cruisesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 2.15rem;
+  }
+  .searchBar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .searchDivider {
+    display: none;
+  }
+  .searchField {
+    width: 100%;
+    padding: 0;
+  }
+  .searchBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .destinationsGrid {
+    grid-template-columns: 1fr;
+  }
+  .toursGrid {
+    grid-template-columns: 1fr;
+  }
+  .packagesGrid {
+    grid-template-columns: 1fr;
+  }
+  .cruisesGrid {
+    grid-template-columns: 1fr;
+  }
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+}

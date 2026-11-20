@@ -1,8 +1,12 @@
+/* ============================================================
+   VIBES OF EGYPT — Footer Styles
+   ============================================================ */
+
 .footer {
-  background: var(--color-midnight-black);
+  background-color: var(--color-midnight-black);
   color: var(--color-desert-ivory);
+  padding: 5rem 0 0;
   border-top: 1px solid rgba(201, 154, 67, 0.2);
-  padding-top: 5rem;
   margin-top: auto;
 }
 
@@ -16,65 +20,41 @@
 .brandCol {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-}
-
-.logoRow {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.logoBadge {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 154, 67, 0.6);
-  background: rgba(30, 29, 25, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sphinxSvg {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.brandTitle {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--color-desert-ivory);
-}
-
-.brandTagline {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-egyptian-gold);
-  font-weight: 600;
 }
 
 .brandDescription {
+  margin-top: 1.25rem;
   font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--color-gray-300);
+  color: rgba(245, 240, 230, 0.7);
+  line-height: 1.7;
+  max-width: 24rem;
 }
 
 .trustBadges {
+  margin-top: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.8rem;
+  gap: 0.6rem;
+}
+
+.badgeItem {
+  font-size: 0.775rem;
+  font-weight: 600;
   color: var(--color-egyptian-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 .colHeading {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--color-desert-ivory);
   margin-bottom: 1.25rem;
   position: relative;
@@ -86,13 +66,15 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 1.75rem;
+  width: 2rem;
   height: 2px;
   background: var(--color-egyptian-gold);
 }
 
 .linkList {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
@@ -100,8 +82,9 @@
 
 .linkList a {
   font-size: 0.85rem;
-  color: var(--color-gray-400);
+  color: rgba(245, 240, 230, 0.75);
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .linkList a:hover {
@@ -110,24 +93,27 @@
 }
 
 .copyrightBar {
-  border-top: 1px solid rgba(201, 154, 67, 0.12);
-  padding: 1.5rem 0;
-  background: rgba(18, 18, 16, 0.95);
-  font-size: 0.75rem;
-  color: var(--color-gray-400);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.75rem 0;
+  font-size: 0.775rem;
+  color: rgba(245, 240, 230, 0.5);
+  background: rgba(18, 18, 15, 0.95);
 }
 
 .copyrightInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .paymentMethods {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--color-gray-400);
+  gap: 0.75rem;
+  color: var(--color-egyptian-gold);
+  font-weight: 600;
 }
 
 @media (max-width: 1024px) {
@@ -138,13 +124,15 @@
 }
 
 @media (max-width: 640px) {
+  .footer {
+    padding-top: 3.5rem;
+  }
   .footerInner {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   .copyrightInner {
     flex-direction: column;
-    gap: 0.75rem;
     text-align: center;
   }
 }

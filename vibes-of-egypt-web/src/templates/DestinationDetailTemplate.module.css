@@ -1,0 +1,348 @@
+.pageWrap {
+  width: 100%;
+}
+
+.heroSection {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0 4rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 20, 0.4) 0%,
+    rgba(23, 23, 20, 0.65) 60%,
+    rgba(23, 23, 20, 0.95) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  color: var(--color-desert-ivory);
+}
+
+.categoryBadge {
+  display: inline-block;
+  background: rgba(201, 154, 67, 0.2);
+  border: 1px solid rgba(201, 154, 67, 0.5);
+  color: var(--color-egyptian-gold);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.destTitle {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-gray-200);
+}
+
+.contentSection {
+  padding: 5rem 0 7rem;
+  background: var(--color-bg-primary);
+}
+
+.contentLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+
+.storyCard {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 3.5rem;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 1.25rem;
+}
+
+.subHeading {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-midnight-black);
+  margin: 2rem 0 1rem;
+}
+
+.descriptionText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-desert-ivory);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.highlightIcon {
+  font-size: 1.1rem;
+}
+
+.highlightText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-midnight-black);
+}
+
+.gallerySection {
+  margin: 2.5rem 0;
+}
+
+.toursSection {
+  margin-top: 2rem;
+}
+
+.toursList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.tourCard {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tourCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.tourImg {
+  width: 16rem;
+  object-fit: cover;
+}
+
+.tourDetails {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tourHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.tourCategory {
+  font-size: 0.75rem;
+  color: var(--color-egyptian-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tourDuration {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  font-weight: 600;
+}
+
+.tourTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 0.5rem;
+}
+
+.tourOverview {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-gray-600);
+  margin-bottom: 1.25rem;
+}
+
+.tourFooter {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 1rem;
+}
+
+.priceLabel {
+  font-size: 0.7rem;
+  color: var(--color-gray-500);
+  display: block;
+}
+
+.priceVal {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+}
+
+.pricePer {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+.bookBtn {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  background: var(--color-egyptian-gold);
+  padding: 0.55rem 1.25rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.bookBtn:hover {
+  background: #dbac52;
+}
+
+/* Sidebar */
+.factsCard {
+  background: var(--color-midnight-black);
+  color: var(--color-desert-ivory);
+  border: 1px solid rgba(201, 154, 67, 0.3);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.factsHeading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.factsHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: var(--color-egyptian-gold);
+}
+
+.factItem {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.1);
+  padding-bottom: 0.85rem;
+}
+
+.factLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-egyptian-gold);
+  margin-bottom: 0.25rem;
+}
+
+.factValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-desert-ivory);
+}
+
+.localTipsList {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.localTipItem {
+  font-size: 0.85rem;
+  color: var(--color-gray-300);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.customPlanBtn {
+  display: block;
+  text-align: center;
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.85rem;
+  border-radius: 9999px;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.customPlanBtn:hover {
+  background: #dbac52;
+}
+
+@media (max-width: 1024px) {
+  .contentLayout {
+    grid-template-columns: 1fr;
+  }
+  .destTitle {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .destTitle {
+    font-size: 2.15rem;
+  }
+  .tourCard {
+    flex-direction: column;
+  }
+  .tourImg {
+    width: 100%;
+    height: 12rem;
+  }
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,327 @@
+.plannerCard {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.prefillBanner {
+  background: rgba(201, 154, 67, 0.12);
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-midnight-black);
+}
+
+.prefillIcon {
+  font-size: 1.2rem;
+}
+
+.progressBarContainer {
+  margin-bottom: 2rem;
+}
+
+.progressBarTrack {
+  height: 6px;
+  background: var(--color-gray-200);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--color-egyptian-gold);
+  transition: width 0.3s ease;
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-gray-500);
+  font-weight: 600;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 0.35rem;
+}
+
+.stepSub {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  margin-bottom: 2rem;
+}
+
+.errorMessage {
+  background: #fff1f0;
+  border: 1px solid #ffa39e;
+  color: #cf1322;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.destChips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.destChip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--color-desert-ivory);
+  border: 1px solid var(--color-gray-300);
+  color: var(--color-midnight-black);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.destChip:hover {
+  border-color: var(--color-egyptian-gold);
+}
+
+.destChipActive {
+  background: var(--color-midnight-black);
+  border-color: var(--color-midnight-black);
+  color: var(--color-egyptian-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.optionCard {
+  border: 1px solid var(--color-gray-300);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionCard:hover {
+  border-color: var(--color-egyptian-gold);
+  transform: translateY(-2px);
+}
+
+.optionCardActive {
+  border-color: var(--color-egyptian-gold);
+  background: rgba(201, 154, 67, 0.08);
+  box-shadow: 0 4px 14px rgba(201, 154, 67, 0.2);
+}
+
+.optionIcon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.optionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 0.35rem;
+}
+
+.optionDesc {
+  font-size: 0.825rem;
+  color: var(--color-gray-600);
+  line-height: 1.45;
+}
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formGroup label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+}
+
+.input,
+.select,
+.textarea {
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-300);
+  font-size: 0.95rem;
+  color: var(--color-midnight-black);
+  outline: none;
+  font-family: inherit;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-egyptian-gold);
+}
+
+.btnRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.backBtn {
+  background: transparent;
+  border: 1px solid var(--color-gray-300);
+  color: var(--color-midnight-black);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+  border-color: var(--color-midnight-black);
+}
+
+.nextBtn {
+  background: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.nextBtn:hover {
+  background: #dbac52;
+}
+
+.reviewBox {
+  background: var(--color-desert-ivory);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(23, 23, 20, 0.08);
+}
+
+.reviewLabel {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  font-weight: 600;
+}
+
+.reviewValue {
+  font-size: 0.9rem;
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  text-align: right;
+  max-width: 60%;
+}
+
+.successCard {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.successIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.successHeading {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-midnight-black);
+  margin-bottom: 0.75rem;
+}
+
+.refNumber {
+  display: inline-block;
+  background: rgba(201, 154, 67, 0.15);
+  border: 1px dashed var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.successText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .plannerCard {
+    padding: 1.75rem;
+  }
+  .fieldsGrid {
+    grid-template-columns: 1fr;
+  }
+  .stepTitle {
+    font-size: 1.45rem;
+  }
+}

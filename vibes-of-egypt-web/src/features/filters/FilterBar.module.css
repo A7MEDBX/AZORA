@@ -1,0 +1,70 @@
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(23, 23, 20, 0.08);
+  flex-wrap: wrap;
+}
+
+.filterPills {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-500);
+}
+
+.filterPill {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.12);
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterPill:hover {
+  border-color: var(--color-egyptian-gold);
+  color: var(--color-midnight-black);
+}
+
+.filterPillActive {
+  background: var(--color-midnight-black);
+  border-color: var(--color-midnight-black);
+  color: var(--color-egyptian-gold);
+}
+
+.dropdownWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.selectInput {
+  background: #ffffff;
+  border: 1px solid rgba(23, 23, 20, 0.15);
+  border-radius: 9999px;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-midnight-black);
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectInput:focus {
+  border-color: var(--color-egyptian-gold);
+}

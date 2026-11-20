@@ -3,30 +3,38 @@ import { Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ScrollToTop } from '@/components/layout/ScrollToTop';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 // Pages
-import HomePage from '@/app/page';
-import DestinationsPage from '@/app/destinations/page';
-import DestinationDetailPage from '@/app/destinations/[slug]/page';
-import ToursPage from '@/app/tours/page';
-import TourDetailPage from '@/app/tours/[slug]/page';
-import PackagesPage from '@/app/packages/page';
-import PackageDetailPage from '@/app/packages/[slug]/page';
-import NileCruisesPage from '@/app/nile-cruises/page';
-import CruiseDetailPage from '@/app/nile-cruises/[slug]/page';
-import ExperiencesPage from '@/app/experiences/page';
-import AboutPage from '@/app/about/page';
-import JournalPage from '@/app/journal/page';
-import PlanYourTripPage from '@/app/plan-your-trip/page';
-import ContactPage from '@/app/contact/page';
-import FaqPage from '@/app/faq/page';
-import SpecialOffersPage from '@/app/special-offers/page';
-import NotFound from '@/app/not-found';
+import HomePage from '@/pages/HomePage';
+import DestinationsPage from '@/pages/DestinationsPage';
+import DestinationDetailPage from '@/pages/DestinationDetailPage';
+import ToursPage from '@/pages/ToursPage';
+import TourDetailPage from '@/pages/TourDetailPage';
+import PackagesPage from '@/pages/PackagesPage';
+import PackageDetailPage from '@/pages/PackageDetailPage';
+import NileCruisesPage from '@/pages/NileCruisesPage';
+import CruiseDetailPage from '@/pages/CruiseDetailPage';
+import ExperiencesPage from '@/pages/ExperiencesPage';
+import ExperienceDetailPage from '@/pages/ExperienceDetailPage';
+import AboutPage from '@/pages/AboutPage';
+import JournalPage from '@/pages/JournalPage';
+import JournalDetailPage from '@/pages/JournalDetailPage';
+import PlanYourTripPage from '@/pages/PlanYourTripPage';
+import ContactPage from '@/pages/ContactPage';
+import FaqPage from '@/pages/FaqPage';
+import SpecialOffersPage from '@/pages/SpecialOffersPage';
+import SearchPage from '@/pages/SearchPage';
+import PrivacyPolicyPage from '@/pages/PrivacyPolicyPage';
+import TermsAndConditionsPage from '@/pages/TermsAndConditionsPage';
+import CancellationPolicyPage from '@/pages/CancellationPolicyPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 export default function App() {
   return (
     <LanguageProvider>
+      <ScrollToTop />
       <Header />
       <main style={{ minHeight: 'calc(100vh - 80px)' }}>
         <ErrorBoundary>
@@ -41,13 +49,19 @@ export default function App() {
             <Route path="/nile-cruises" element={<NileCruisesPage />} />
             <Route path="/nile-cruises/:slug" element={<CruiseDetailPage />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
+            <Route path="/experiences/:slug" element={<ExperienceDetailPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/journal" element={<JournalPage />} />
+            <Route path="/journal/:slug" element={<JournalDetailPage />} />
             <Route path="/plan-your-trip" element={<PlanYourTripPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/special-offers" element={<SpecialOffersPage />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+            <Route path="/cancellation-policy" element={<CancellationPolicyPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </ErrorBoundary>
       </main>

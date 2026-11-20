@@ -1,5 +1,3 @@
-'use client';
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import translationsData from '@/data/translations.json';
 import { SupportedLanguage } from '@/types';
