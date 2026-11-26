@@ -1,13 +1,25 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getExperienceBySlug, getExperiencesByCategory } from '@/lib/catalog';
+import { fetchExperienceBySlug, fetchExperiences } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { ExperienceDetailTemplate } from '@/templates';
 
 export default function ExperienceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const experience = getExperienceBySlug(slug);
+  const fallbackExp = getExperienceBySlug(slug) ?? null;
+  const { data: experience, isLoading } = useAsyncData(
+    () => (slug ? fetchExperienceBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    fallbackExp
+  );
+  const { data: relatedList } = useAsyncData(
+    () => (experience ? fetchExperiences({ category: experience.category }) : Promise.resolve([])),
+    [experience?.category],
+    experience ? getExperiencesByCategory(experience.category) : []
+  );
 
-  if (!experience) {
+  if (!experience && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,9 +45,9 @@ export default function ExperienceDetailPage() {
     );
   }
 
-  const relatedExperiences = getExperiencesByCategory(experience.category).filter(
-    e => e.id !== experience.id
-  );
+  if (!experience) return null;
+
+  const relatedExperiences = relatedList.filter(e => e.id !== experience.id);
 
   return (
     <ExperienceDetailTemplate

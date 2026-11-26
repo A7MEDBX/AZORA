@@ -1,0 +1,2190 @@
+{
+  "destinations": [
+    {
+      "id": "cairo-giza",
+      "slug": "cairo-giza",
+      "name": "Cairo & Giza",
+      "arabicName": "القاهرة والجيزة",
+      "tagline": "Cradle of Antiquity, Pyramids & Grand Metropolises",
+      "category": "Ancient Wonders & Metropolis",
+      "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 14,
+      "startingPrice": 120,
+      "shortDescription": "Marvel at the Great Pyramids of Giza, the Sphinx, and the treasures of King Tutankhamun inside the world-class Grand Egyptian Museum.",
+      "description": "A vibrant tapestry where five millennia of world history seamlessly converge with dynamic modern elegance. From the monumental Giza Plateau guarding the Great Pyramids and the Sphinx to the newly unveiled Grand Egyptian Museum, Cairo offers unscripted wonder at every turn. Wander through the medieval minarets of Islamic Cairo, browse spice-laden alleys in Khan El Khalili bazaar, and savor refined gastronomy overlooking the Nile.",
+      "highlights": [
+        "Private VIP Access to the Grand Egyptian Museum (GEM)",
+        "Sunset Camel & Horseback Safari across Giza Plateau",
+        "Curated Islamic & Coptic Cairo Heritage Alleys",
+        "Exclusive Dinner Cruising along the Nile River"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April (Mild, sunny daytime & crisp desert evenings)",
+        "currency": "EGP (Egyptian Pound) / USD widely accepted",
+        "climate": "Arid desert climate with comfortable winter temperatures (18°C - 25°C)",
+        "airport": "Cairo International Airport (CAI) & Sphinx International (SPX)",
+        "recommendedStay": "3 - 4 Days",
+        "localTips": [
+          "Book Grand Egyptian Museum VIP permits in advance for private hall entry.",
+          "Early morning visits to the Pyramids avoid both crowds and midday heat.",
+          "Private chauffeur service is essential for seamless metropolis navigation."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "luxor",
+      "slug": "luxor",
+      "name": "Luxor",
+      "arabicName": "الأقصر",
+      "tagline": "The World’s Greatest Open-Air Archaeological Museum",
+      "category": "Archaeological Capital",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 11,
+      "startingPrice": 95,
+      "shortDescription": "Unveil the Valley of the Kings, the monumental Karnak Temple, and Queen Hatshepsut’s terraced sanctuary on the West Bank.",
+      "description": "Built on the ancient capital of Thebes, Luxor holds an unmatched concentration of monumental architecture. Sail the peaceful Nile to the West Bank to enter subterranean royal tombs adorned with vibrant 3,000-year-old hieroglyphic frescoes in the Valley of the Kings. Gaze in awe at the colossal Hypostyle Hall of Karnak Temple and soar silently in a sunrise hot air balloon over Hatshepsut’s mortuary monument.",
+      "highlights": [
+        "Exclusive Private Opening of Queen Nefertari’s Tomb",
+        "Sunrise Hot Air Balloon Flight over Ancient Thebes",
+        "Torchlight Night Tour of Illuminated Luxor Temple",
+        "Avenue of Sphinxes Walk connecting Karnak to Luxor"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "November to March",
+      "practicalInfo": {
+        "bestSeason": "November to March (Pleasantly warm days, cool starry nights)",
+        "currency": "EGP / USD",
+        "climate": "Subtropical desert; dry warmth year-round",
+        "airport": "Luxor International Airport (LXR)",
+        "recommendedStay": "2 - 3 Days",
+        "localTips": [
+          "Visit the Valley of the Kings early at 06:00 AM for undisturbed stillness.",
+          "Don’t miss Nefertari’s tomb (QV66) in the Valley of the Queens.",
+          "Take a private sunset felucca ride around Banana Island."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "aswan",
+      "slug": "aswan",
+      "name": "Aswan",
+      "arabicName": "أسوان",
+      "tagline": "Timeless Nile Tranquility & Rich Nubian Soul",
+      "category": "Nile & Nubian Heritage",
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 8,
+      "startingPrice": 85,
+      "shortDescription": "Discover the romantic island temple of Philae, emerald granite cataracts, and colorful Nubian traditions on the shores of Lake Nasser.",
+      "description": "Egypt’s sunniest southern outpost where the Nile flows at its most poetic, weaving past massive pink granite boulders and emerald islands. Aswan invites unhurried contemplation. Explore the sacred island sanctuary of Goddess Isis at Philae Temple, sip afternoon high tea on the historic terrace of the Sofitel Legend Old Cataract, and sail by private felucca into authentic painted Nubian settlements.",
+      "highlights": [
+        "Boat Crossing to the Sacred Island Temple of Philae",
+        "High Tea on the Historic Old Cataract Terrace where Agatha Christie wrote",
+        "Private Felucca Cruise around Elephantine Island & Botanical Gardens",
+        "Nubian Village Cultural Immersion & Artisanal Spice Markets"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP / USD",
+        "climate": "Hyper-arid warm desert sunshine",
+        "airport": "Aswan International Airport (ASW)",
+        "recommendedStay": "2 - 3 Days",
+        "localTips": [
+          "Sunset views from the Old Cataract terrace are unparalleled.",
+          "Combine Aswan with an early morning excursion to Abu Simbel.",
+          "Purchase authentic hibiscus flowers and Nile spices in the local souk."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "abu-simbel",
+      "slug": "abu-simbel",
+      "name": "Abu Simbel",
+      "arabicName": "أبو سمبل",
+      "tagline": "Monumental Colossi of Ramesses II on Lake Nasser",
+      "category": "Monumental Archaeology",
+      "image": "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 4,
+      "startingPrice": 160,
+      "shortDescription": "Witness the four colossal seated statues of Ramesses II carved into the cliff face, rescued from the rising waters of Lake Nasser.",
+      "description": "Rising majestically from the tranquil desert waters of southern Lake Nasser, Abu Simbel stands as the supreme testament to pharaonic ambition and modern UNESCO engineering. Carved into a sandstone mountain in the 13th century BC, the twin temples honor Ramesses the Great and his beloved Queen Nefertari, aligned with mathematical precision to illuminate the inner sanctuary during the Sun Festival.",
+      "highlights": [
+        "Twin Mountain-Carved Temples of Ramesses II and Queen Nefertari",
+        "Biannual Solar Alignment Phenomenon in the Inner Sanctum",
+        "UNESCO Architectural Miracle: Relocation of the Entire Mountain",
+        "Desert Flight or Private Lake Nasser Expedition Cruise Arrival"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to March (Special Sun Festival in Oct & Feb)",
+      "practicalInfo": {
+        "bestSeason": "October to March",
+        "currency": "EGP / USD",
+        "climate": "Warm sunny desert climate",
+        "airport": "Abu Simbel Airport (ABS) with daily flights from Aswan/Cairo",
+        "recommendedStay": "1 Day or Overnight for Sound & Light Show",
+        "localTips": [
+          "Fly in on the early morning flight or stay overnight to witness sunrise before day-tripper coaches arrive.",
+          "Don’t miss the subtle love poetry inscribed inside Nefertari’s temple."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "alexandria",
+      "slug": "alexandria",
+      "name": "Alexandria",
+      "arabicName": "الإسكندرية",
+      "tagline": "Pearl of the Mediterranean & Greco-Roman Legacy",
+      "category": "Greco-Roman Coastal",
+      "image": "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 5,
+      "startingPrice": 110,
+      "shortDescription": "Walk the legendary Corniche, explore the Bibliotheca Alexandrina, and uncover Roman catacombs beneath the Mediterranean waves.",
+      "description": "Founded by Alexander the Great in 331 BC, Alexandria balances Mediterranean charm with profound classical legacy. Fanned by sea breezes along its sweeping seaside Corniche, Alexandria reveals subterranean treasures like the Catacombs of Kom El Shoqafa, the historic Citadel of Qaitbay overlooking the ancient Pharos Lighthouse site, and the striking contemporary Bibliotheca Alexandrina.",
+      "highlights": [
+        "Bibliotheca Alexandrina: World-Famous Modern Revival of the Ancient Library",
+        "Subterranean Catacombs of Kom El Shoqafa Roman Burial Galleries",
+        "Citadel of Qaitbay Standing on the Site of the Ancient Pharos Lighthouse",
+        "Fresh Mediterranean Seafood Dining on the Waterfront Corniche"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "April to October",
+      "practicalInfo": {
+        "bestSeason": "Spring through Autumn (Moderate Mediterranean sea breezes)",
+        "currency": "EGP / USD",
+        "climate": "Mediterranean coastal climate; mild winters and refreshing coastal summers",
+        "airport": "Borg El Arab Airport (HBE) or 2.5 hrs luxury transfer from Cairo",
+        "recommendedStay": "1 - 2 Days",
+        "localTips": [
+          "Pair your visit with an authentic Greek-Alexandrian seafood lunch.",
+          "A stroll down the historic Corniche at sunset captures the city’s nostalgic elegance."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "hurghada",
+      "slug": "hurghada",
+      "name": "Hurghada",
+      "arabicName": "الغردقة",
+      "tagline": "Red Sea Riviera, Pristine Reefs & Luxury Resorts",
+      "category": "Beach & Marine Sanctuary",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 7,
+      "startingPrice": 65,
+      "shortDescription": "Dive into turquoise waters, lounge on private coral sandbanks, and experience world-class all-inclusive coastal hospitality.",
+      "description": "Stretching along the azure coast of the Red Sea, Hurghada is Egypt’s premier beach haven for travelers seeking sublime relaxation, vibrant coral reefs, and year-round sunshine. From private yacht charters to Giftun Island to desert quad biking across rolling Eastern Desert dunes, Hurghada pairs effortless leisure with thrilling outdoor escapades.",
+      "highlights": [
+        "Private Yacht Excursion to Giftun Island and Orange Bay",
+        "Scuba Diving & Snorkeling in World-Renowned Coral Gardens",
+        "Sunset Quad Biking & Bedouin Dinner in the Eastern Desert",
+        "Luxury Waterfront Promenade at Hurghada Marina"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "All Year Round (Prime in Autumn & Spring)",
+      "practicalInfo": {
+        "bestSeason": "Year-round sunshine; March–May and Sept–Nov offer ideal waters",
+        "currency": "EGP / EUR / USD",
+        "climate": "Subtropical marine desert; dry warm weather",
+        "airport": "Hurghada International Airport (HRG)",
+        "recommendedStay": "3 - 5 Days",
+        "localTips": [
+          "Take a private catamaran to secluded reef drop-offs away from the crowds.",
+          "El Gouna, just 25 minutes north, offers high-end lagoons, golf, and dining."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "sharm-el-sheikh",
+      "slug": "sharm-el-sheikh",
+      "name": "Sharm El Sheikh",
+      "arabicName": "شرم الشيخ",
+      "tagline": "Sinai’s Crown Jewel & World-Class Diving Capital",
+      "category": "Luxury Coastal & Diving",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 6,
+      "startingPrice": 75,
+      "shortDescription": "Explore the marine biodiversity of Ras Mohammed National Park, luxurious cliffside resorts, and vibrant Sinai nightlife.",
+      "description": "Perched on the southern tip of the Sinai Peninsula between the Gulf of Suez and the Gulf of Aqaba, Sharm El Sheikh is celebrated globally for its pristine marine reserves. Ras Mohammed National Park boasts towering coral walls dropping thousands of feet into crystal waters teeming with tropical marine life, while luxury 5-star resorts offer cliffside infinity pools and fine dining.",
+      "highlights": [
+        "Ras Mohammed National Park World-Class Marine Sanctuary",
+        "Straits of Tiran Scuba Diving & Dolphin Sightings",
+        "Exclusive Sunset Yacht Cruises with Gourmet Seafood",
+        "Gateway to Mount Sinai and St. Catherine Monastery Excursions"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "September to May",
+      "practicalInfo": {
+        "bestSeason": "September to May",
+        "currency": "EGP / USD",
+        "climate": "Arid coastal desert with warm sea temperatures",
+        "airport": "Sharm El Sheikh International Airport (SSH)",
+        "recommendedStay": "3 - 6 Days",
+        "localTips": [
+          "Dive Shark and Yolanda Reefs for peak marine biodiversity.",
+          "Consider an overnight extension to climb Mount Sinai for sunrise."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "dahab",
+      "slug": "dahab",
+      "name": "Dahab",
+      "arabicName": "دهب",
+      "tagline": "Bohemian Coastal Haven, Blue Hole & Windsurfing",
+      "category": "Bohemian Adventure",
+      "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 4,
+      "startingPrice": 50,
+      "shortDescription": "Relax in relaxed seafront cafes, snorkel the world-famous Blue Hole, and trek the majestic canyons of the Sinai desert.",
+      "description": "With its bohemian soul, golden sand beaches, and rugged mountain backdrop, Dahab provides a tranquil, laid-back antidote to bustling resort cities. Renowned worldwide for the underwater abyss of the Blue Hole and the sheltered lagoon of Blue Lagoon, Dahab draws free-divers, kitesurfers, and wellness seekers looking for authenticity and natural peace.",
+      "highlights": [
+        "Snorkeling & Freediving the World-Famous Blue Hole",
+        "Boat or Camel Safari to the Remote Ras Abu Galum Nature Reserve",
+        "Kite-surfing and Wind-surfing in Dahab Lagoon",
+        "Seaside Bedouin Lounges with Fresh Juices and Shisha"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP / USD",
+        "climate": "Sunny desert seaside with consistent coastal breezes",
+        "airport": "Sharm El Sheikh (SSH) + 1 hr private scenic mountain transfer",
+        "recommendedStay": "2 - 4 Days",
+        "localTips": [
+          "Stay in an eco-boutique hotel along the Lighthouse reef.",
+          "Experience dinner under the stars at Wadi Qnai Bedouin camp."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "marsa-alam",
+      "slug": "marsa-alam",
+      "name": "Marsa Alam",
+      "arabicName": "مرسى علم",
+      "tagline": "Pristine Southern Reefs, Dugongs & Sea Turtles",
+      "category": "Pristine Marine Nature",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 4,
+      "startingPrice": 90,
+      "shortDescription": "Swim alongside gentle sea turtles and wild dugongs in Abu Dabbab Bay, surrounded by intact virgin coral atolls.",
+      "description": "Egypt’s southern frontier on the Red Sea remains an untouched paradise for marine enthusiasts and discerning eco-travelers. Here, crystal turquoise lagoons host resident green sea turtles, rare dugongs (sea cows), and spinning dolphins at Sataya Reef. Far removed from commercial crowds, Marsa Alam offers peaceful eco-luxury resorts nestled between golden desert and crystal sea.",
+      "highlights": [
+        "Swim with Wild Dugongs and Giant Sea Turtles at Abu Dabbab",
+        "Sataya Reef (Dolphin House) Snorkeling Expedition",
+        "Elphinstone Reef Diving for Advanced Divers & Oceanic Whitetips",
+        "Wadi El Gemal National Park Desert & Mangrove Safari"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "September to May",
+      "practicalInfo": {
+        "bestSeason": "Autumn and Spring for crystal underwater visibility",
+        "currency": "EGP / EUR / USD",
+        "climate": "Warm sunny maritime climate",
+        "airport": "Marsa Alam International Airport (RMF)",
+        "recommendedStay": "3 - 5 Days",
+        "localTips": [
+          "Visit Abu Dabbab Bay early in the morning for calm waters and active feeding turtles.",
+          "Wadi El Gemal is a sanctuary for migratory birds and ancient Roman emerald mines."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "siwa-oasis",
+      "slug": "siwa-oasis",
+      "name": "Siwa Oasis",
+      "arabicName": "واحة سيوة",
+      "tagline": "Mystic Desert Sanctuary, Salt Lakes & Alexander’s Oracle",
+      "category": "Desert Oasis & Eco-Luxury",
+      "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 3,
+      "startingPrice": 180,
+      "shortDescription": "Float weightlessly in hyper-saline turquoise pools, explore the mud-brick fortress of Shali, and consult the Oracle of Amun.",
+      "description": "Deep in the Western Desert near the Libyan border, Siwa Oasis is an enchanting world unto itself. Famous for its mud-brick fortress of Shali, hundreds of thermal freshwater springs, crystalline turquoise salt lakes where you float effortlessly, and the historic Temple of the Oracle where Alexander the Great was confirmed as the son of Amun.",
+      "highlights": [
+        "Floating in Surreal High-Salinity Turquoise Salt Pools",
+        "Sunset at the 13th-Century Mud-Brick Citadel of Shali",
+        "Temple of the Oracle of Amun visited by Alexander the Great",
+        "Great Sand Sea 4x4 Dune Bashing & Desert Camping"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April (Warm pleasant days, cool desert nights)",
+        "currency": "EGP cash preferred in oasis markets",
+        "climate": "Continental desert climate",
+        "airport": "Private charter flight or scenic overland private vehicle from Cairo / Alexandria",
+        "recommendedStay": "3 - 4 Days",
+        "localTips": [
+          "Stay at an authentic Kershef eco-lodge built from local clay and salt rock.",
+          "Bathe in Cleopatra’s Spring and sample fresh Siwan dates and olive oil."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "white-desert",
+      "slug": "white-desert",
+      "name": "White Desert",
+      "arabicName": "الصحراء البيضاء",
+      "tagline": "Surreal Chalk Sculptures & Star-Drenched Wilderness",
+      "category": "Wilderness Adventure",
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 3,
+      "startingPrice": 195,
+      "shortDescription": "Camp under billions of stars amidst chalk monoliths shaped like mushrooms, eagles, and surreal towers by desert winds.",
+      "description": "A landscape of hypnotic alien beauty in the heart of Egypt’s Western Desert. Millions of years of wind and sand erosion have carved blindingly white calcium-chalk formations into surreal sculptures that resemble colossal mushrooms, sphinxes, and icebergs rising out of golden dunes. An overnight Bedouin camp here under the pristine Milky Way is a transformative travel experience.",
+      "highlights": [
+        "Glamping under the Starlit Sky at the White Desert National Park",
+        "Surreal Chalk Formations: The Mushroom, Chicken & Giant Sphinx",
+        "Crystal Mountain Sparkle and Agabat Valley Panoramic Dunes",
+        "Authentic Campfire Dinner prepared fresh by Bedouin Guides"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP",
+        "climate": "Desert extremes: warm sunny days, chilly star-filled nights",
+        "airport": "Accessible by 4x4 expedition vehicle via Bahariya Oasis from Cairo",
+        "recommendedStay": "2 Days / 1 Night Camping",
+        "localTips": [
+          "Pack warm thermal layers for nighttime desert stargazing.",
+          "High-clearance 4WD vehicles and licensed desert navigators are mandatory."
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "black-desert",
+      "slug": "black-desert",
+      "name": "Black Desert",
+      "arabicName": "الصحراء السوداء",
+      "tagline": "Volcanic Basalt Cones & Martian Desert Vistas",
+      "category": "Geological Wonder",
+      "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 2,
+      "startingPrice": 150,
+      "shortDescription": "Witness dramatic volcanic peaks capped in black dolerite rock contrasting vividly against the golden desert floor.",
+      "description": "Formed by ancient volcanic activity millions of years ago, the Black Desert presents an extraordinary geological contrast to the neighboring White Desert. Black dolerite-capped cones rise out of the ochre sands, creating a cinematic, almost Martian panorama. Climbing the English Mountain offers breathtaking 360-degree views across the surreal volcanic valley.",
+      "highlights": [
+        "Climb English Mountain for Epic 360° Volcanic Valley Vistas",
+        "Stark Visual Contrast between Dark Basalt Cones and Golden Sands",
+        "Ancient Prehistoric Iron & Volcanic Formations",
+        "Seamless Connection on the Safari Trail to Bahariya & White Desert"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP",
+        "climate": "Dry continental desert",
+        "airport": "Overland expedition from Cairo via Bahariya Oasis",
+        "recommendedStay": "1 Day (often paired with White Desert overnight)",
+        "localTips": [
+          "Wear sturdy footwear with grip if you plan to climb the volcanic mounds.",
+          "Combine with the nearby hot mineral springs of Bahariya Oasis."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "fayoum",
+      "slug": "fayoum",
+      "name": "Fayoum Oasis",
+      "arabicName": "الفيوم",
+      "tagline": "Wadi El Hitan Whales, Magic Lake & Pottery Villages",
+      "category": "Nature & Paleontology",
+      "image": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 4,
+      "startingPrice": 95,
+      "shortDescription": "Explore the UNESCO fossil valley of prehistoric whales, sandboard giant dunes into Magic Lake, and visit Tunis pottery village.",
+      "description": "Located just 90 minutes southwest of Cairo, Fayoum Oasis is an oasis of prehistoric wonders, tranquil lakes, and artistic heritage. Wadi El Hitan (Valley of the Whales), a UNESCO World Heritage site, displays intact 40-million-year-old walking whale skeletons embedded in desert sandstone. Nearby, Tunis Village charms with artisanal terracotta ceramics, boutique eco-lodges, and views over Lake Qarun.",
+      "highlights": [
+        "Wadi El Hitan UNESCO Prehistoric Whale Skeleton Valley",
+        "Sandboarding and 4x4 Dune Adventures at Magic Lake",
+        "Artisanal Pottery Workshops in Bohemian Tunis Village",
+        "Waterfalls of Wadi El Rayan & Bird Watching at Lake Qarun"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to May",
+      "practicalInfo": {
+        "bestSeason": "October to May",
+        "currency": "EGP",
+        "climate": "Pleasant oasis microclimate with fresh lake breezes",
+        "airport": "1.5 hrs private chauffeur transfer from Cairo",
+        "recommendedStay": "1 - 2 Days",
+        "localTips": [
+          "Tunis Village is the premier destination in Egypt for bespoke pottery.",
+          "Plan sunset at Magic Lake to watch the water shift colors against the dunes."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "edfu",
+      "slug": "edfu",
+      "name": "Edfu",
+      "arabicName": "إدفو",
+      "tagline": "The Monumental Temple of the Falcon God Horus",
+      "category": "Nile Shore Archaeology",
+      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 3,
+      "startingPrice": 70,
+      "shortDescription": "Step through the towering pylon of Egypt’s best-preserved Ptolemaic temple dedicated to Horus the Falcon.",
+      "description": "Positioned midway between Luxor and Aswan along the banks of the Nile, Edfu is home to the Temple of Horus—universally recognized as the most completely preserved ancient temple in Egypt. Shielded by desert sand for two millennia, its mammoth 36-meter-high entrance pylon, intact roofed hypostyle chambers, and sacred golden barque chamber reveal ancient temple liturgy in vivid detail.",
+      "highlights": [
+        "Colossal Black Granite Falcon Statues Guarding the Main Portal",
+        "Inscriptions of the Sacred Drama: Mythological Battle of Horus & Seth",
+        "Intact Roofed Hypostyle Halls and Royal Sacrificial Chambers",
+        "Classic Horse Carriage Ride through the Riverside Town"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April (Standard port of call on Nile Cruises)",
+        "currency": "EGP / USD",
+        "climate": "Warm Upper Egypt sunshine",
+        "airport": "Luxor (LXR) or Aswan (ASW) + Nile Cruise or private vehicle transfer",
+        "recommendedStay": "Half Day (Ideal shore excursion)",
+        "localTips": [
+          "Arrive at dawn with your cruise Egyptologist before mid-day heat and large tour parties.",
+          "Inspect the walls of the outer corridor for the fascinating Nilometer records."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "kom-ombo",
+      "slug": "kom-ombo",
+      "name": "Kom Ombo",
+      "arabicName": "كوم أمبو",
+      "tagline": "Dual Sanctuary of Sobek the Crocodile & Horus the Falcon",
+      "category": "Nile Shore Archaeology",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 3,
+      "startingPrice": 65,
+      "shortDescription": "Perched on a dramatic bend of the Nile, this unique symmetrical temple honors two rival gods and houses mummified crocodiles.",
+      "description": "Dramatically perched on a picturesque promontory overlooking a sweeping bend of the Nile, Kom Ombo is unique in Egyptian architecture. The complex is completely symmetrical, with twin entrances, twin sanctuaries, and paired halls honoring two opposing deities: Sobek the crocodile god of fertility and Horus the Elder the winged falcon god. The site includes ancient medical instrument reliefs and an adjacent Crocodile Mummy Museum.",
+      "highlights": [
+        "Unique Symmetrical Dual Temple Dedicated to Sobek & Horus",
+        "Ancient Carved Surgical & Medical Instruments Reliefs",
+        "Crocodile Mummy Museum displaying Intact Ancient Reptilian Relics",
+        "Spectacular Sunset Moorings directly at the Temple Steps"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP / USD",
+        "climate": "Upper Egypt sunny dry climate",
+        "airport": "Aswan International Airport (45 km south)",
+        "recommendedStay": "Half Day (Nile cruise stop)",
+        "localTips": [
+          "Visiting at twilight when the sandstone is lit up against the Nile is unforgettable.",
+          "Examine the ancient calendar carvings near the rear sanctuary."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "saint-catherine",
+      "slug": "saint-catherine",
+      "name": "Saint Catherine",
+      "arabicName": "سانت كاترين",
+      "tagline": "Mount Sinai Sunrise Trek & Sacred Burning Bush Sanctuary",
+      "category": "Spiritual & Pilgrimage",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 2,
+      "startingPrice": 120,
+      "shortDescription": "Ascend the biblical Mount Sinai for sunrise and visit the world’s oldest continuously inhabited Christian monastery.",
+      "description": "Nestled in a remote granite canyon at the foot of Mount Sinai (Jabal Musa), Saint Catherine’s Monastery is a UNESCO World Heritage sanctuary of profound spiritual and historical importance. Founded by Emperor Justinian in the 6th century, it protects the Living Burning Bush, priceless early Christian icons, and one of the world’s oldest libraries. The night trek up Mount Sinai rewards travelers with a sunrise across jagged red peaks.",
+      "highlights": [
+        "Overnight Ascent of Mount Sinai for a Radiant Desert Sunrise",
+        "St. Catherine Monastery: The Oldest Continually Inhabited Monastery",
+        "The Sacred Relic of the Living Burning Bush",
+        "UNESCO-Listed Collection of 6th-Century Encaustic Icons & Manuscripts"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "September to May",
+      "practicalInfo": {
+        "bestSeason": "September to November and March to May",
+        "currency": "EGP",
+        "climate": "Alpine high-elevation desert: warm days, freezing mountain nights in winter",
+        "airport": "Transfers from Sharm El Sheikh (2.5 hrs) or Dahab (1.5 hrs)",
+        "recommendedStay": "1 - 2 Days",
+        "localTips": [
+          "Dress in warm windproof layers for the summit sunrise.",
+          "Local Bedouin guides accompany every mountain trek for safety."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "wadi-el-natrun",
+      "slug": "wadi-el-natrun",
+      "name": "Wadi El Natrun",
+      "arabicName": "وادي النطرون",
+      "tagline": "Cradle of Christian Monasticism in the Western Desert",
+      "category": "Heritage & Monasteries",
+      "image": "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 2,
+      "startingPrice": 100,
+      "shortDescription": "Visit the four fortified 4th-century Coptic desert monasteries that preserved monastic scholarship across the millennia.",
+      "description": "Located in a natural depression northwest of Cairo along the desert highway to Alexandria, Wadi El Natrun is the historic birthplace of Christian monastic asceticism. Since the 4th century AD, holy hermits and scholars have sought solitude here. Today, four majestic fortified desert monasteries—Deir Anba Bishoy, Deir al-Suryan, Deir al-Baramus, and Deir Abu Maqar—still practice continuous prayer, surrounded by lush date palms.",
+      "highlights": [
+        "Fortified 4th-Century Coptic Monasteries in the Desert",
+        "Historic Wall Frescoes & Ancient Syriac Christian Manuscripts",
+        "Peaceful Contemplation and Meeting Resident Monks",
+        "Ancient Natron Salt Lakes used in Pharaonic Mummification"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP",
+        "climate": "Temperate desert climate",
+        "airport": "1 hr luxury private vehicle transfer from Cairo or Alexandria",
+        "recommendedStay": "1 Day Excursion",
+        "localTips": [
+          "Modest dress covering shoulders and knees is strictly required inside the monasteries.",
+          "A wonderful cultural stopover when traveling between Cairo and Alexandria."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "nuweiba",
+      "slug": "nuweiba",
+      "name": "Nuweiba",
+      "arabicName": "نويبع",
+      "tagline": "Sinai Eco-Lodges, Colored Canyon & Gulf of Aqaba Serenity",
+      "category": "Eco-Lodge & Canyon Trek",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 2,
+      "startingPrice": 60,
+      "shortDescription": "Unwind in beachfront bamboo huts, trek through the kaleidoscopic Colored Canyon, and gaze across the Gulf of Aqaba.",
+      "description": "Nuweiba is the peaceful soul of the Sinai coast. Situated between the red-hued granite mountains of the Sinai and the serene blue waters of the Gulf of Aqaba, Nuweiba is legendary for simple eco-chic bamboo camps where the sand meets the sea. Nearby, the famous Colored Canyon presents a hiker’s paradise of winding sandstone narrows glowing with violet, copper, and magenta ribbons.",
+      "highlights": [
+        "Hiking the Prismatic Rock Formations of the Colored Canyon",
+        "Beachfront Bamboo Hut Eco-Resorts right on the Coral Sand",
+        "Gazing Across the Gulf of Aqaba toward the Mountains of Jordan & Saudi Arabia",
+        "Quiet Coral Reef Snorkeling with Zero Boat Crowds"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "October to April",
+      "practicalInfo": {
+        "bestSeason": "October to April",
+        "currency": "EGP / USD",
+        "climate": "Warm coastal breezes and sunny skies",
+        "airport": "Taba Airport or transfer from Sharm El Sheikh / Dahab",
+        "recommendedStay": "2 - 3 Days",
+        "localTips": [
+          "Hike the Colored Canyon with an experienced local Bedouin guide.",
+          "Ideal retreat for digital detox, yoga, and contemplative coastal relaxation."
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "ain-sokhna",
+      "slug": "ain-sokhna",
+      "name": "Ain Sokhna",
+      "arabicName": "العين السخنة",
+      "tagline": "Warm Gulf Waters & Mount Galala Coastal Luxury",
+      "category": "Quick Coastal Getaway",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85",
+      "tourCount": 3,
+      "startingPrice": 85,
+      "shortDescription": "Egypt’s closest Red Sea beach to Cairo, featuring warm mineral springs, upscale resorts, and Mount Galala cable car.",
+      "description": "Meaning \"The Hot Spring\" after the thermal sulfuric springs bubbling nearby at Mount Ataka, Ain Sokhna is Cairo’s premier coastal retreat, situated just an hour’s drive from the capital on the Gulf of Suez. With calm swimmable waters year-round, dolphin-watching boat trips, and the state-of-the-art Galala resort city and cable car perched 700 meters above sea level, it provides the ultimate seaside getaway.",
+      "highlights": [
+        "Fast 1-Hour Private Highway Connection from Cairo",
+        "Galala Mountain Cable Car with Panoramic Red Sea Views",
+        "Private Yacht Charters for Deep-Sea Fishing and Dolphin Watching",
+        "Thermal Sulfur Springs and Mountain Spas"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "bestTimeToVisit": "Year-Round (Best Oct–May)",
+      "practicalInfo": {
+        "bestSeason": "Year-round; spring and autumn are perfection",
+        "currency": "EGP / USD",
+        "climate": "Warm sunny maritime climate with tranquil gulf waters",
+        "airport": "1 hr private transfer from Cairo International Airport (CAI)",
+        "recommendedStay": "1 - 3 Days",
+        "localTips": [
+          "Perfect coastal weekend addition before or after a cultural Cairo itinerary.",
+          "Visit the historic St. Anthony and St. Paul monasteries located in the nearby Galala mountains."
+        ]
+      },
+      "featured": false
+    }
+  ],
+  "tours": [
+    {
+      "id": "cairo-pyramids-gem",
+      "slug": "cairo-pyramids-gem",
+      "title": "Giza Pyramids, Sphinx & Grand Egyptian Museum VIP Tour",
+      "subheadline": "Exclusive Egyptologist-led access to the Seven Wonders & Tutankhamun’s treasures",
+      "category": "Daily",
+      "city": "Cairo & Giza",
+      "destinationSlug": "cairo-giza",
+      "destinationName": "Cairo & Giza",
+      "duration": "Full Day (8 Hours)",
+      "price": 135,
+      "rating": 5,
+      "reviewsCount": 642,
+      "badge": "Best Seller",
+      "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Experience the iconic Giza Plateau and the legendary Grand Egyptian Museum in unparalleled comfort. Stand before the Great Pyramid of Khufu, uncover the enigmatic Great Sphinx, and explore King Tutankhamun’s complete tomb collection with your private accredited Egyptologist.",
+      "description": "Begin your journey with private chauffeur pick-up from your Cairo or Giza hotel in a climate-controlled luxury vehicle. Arrive at the Giza Plateau before the mid-day heat. Your personal Egyptologist will unravel the engineering genius and cosmological secrets behind Khufu, Khafre, and Menkaure. Enjoy an optional panoramic camel ride with the trio of pyramids rising on the horizon. Afterward, savor an authentic Egyptian gourmet lunch overlooking the plateau. In the afternoon, proceed with skip-the-line VIP entry to the Grand Egyptian Museum (GEM) to behold Tutankhamun’s gilded chariots, royal thrones, and golden death mask.",
+      "highlights": [
+        "Private accredited Egyptologist guide throughout the day",
+        "Skip-the-line VIP entrance to the Grand Egyptian Museum (GEM)",
+        "Up-close access to the Great Sphinx and Valley Temple of Khafre",
+        "Gourmet lunch with sweeping views of the Giza Plateau",
+        "Door-to-door private Mercedes or luxury van transfers"
+      ],
+      "included": [
+        "Private licensed Egyptologist guide",
+        "All monument and museum entry tickets with VIP lane access",
+        "Chauffeured luxury air-conditioned transport",
+        "Gourmet lunch at 9 Pyramids Lounge or Mena House",
+        "Bottled mineral water, cold Egyptian hibiscus, and towels"
+      ],
+      "excluded": [
+        "Entry inside the burial chamber of the Great Pyramid (optional add-on)",
+        "Personal gratuities / tipping for guide and driver"
+      ],
+      "inclusions": [
+        "Private licensed Egyptologist guide",
+        "All monument and museum entry tickets with VIP lane access",
+        "Chauffeured luxury air-conditioned transport",
+        "Gourmet lunch at 9 Pyramids Lounge or Mena House"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: Giza Plateau & Great Sphinx",
+          "desc": "Depart hotel at 08:30 AM. Arrive at the plateau for an in-depth private tour of Khufu and Khafre, followed by the Valley Temple and Sphinx enclosure.",
+          "duration": "3.5 Hours",
+          "activity": "Plateau Exploration & Camel Trek"
+        },
+        {
+          "day": 1,
+          "title": "Midday: Egyptian Gourmet Lunch",
+          "desc": "Savor traditional grilled meats, fresh mezze, and Egyptian dips with uninterrupted panoramic vistas of the nine pyramids.",
+          "duration": "1.5 Hours",
+          "activity": "Panoramic Dining"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: The Grand Egyptian Museum (GEM)",
+          "desc": "Step into the colossal atrium beneath Ramesses the Great colossus. Tour the Grand Staircase and Tutankhamun’s complete 5,000-piece royal treasure galleries.",
+          "duration": "3 Hours",
+          "activity": "Museum Curated Tour"
+        }
+      ],
+      "inquiryInfo": "Available daily with flexible morning start times. Special private sunrise openings can be arranged upon request.",
+      "featured": true
+    },
+    {
+      "id": "pyramid-trail-saqqara",
+      "slug": "pyramid-trail-saqqara",
+      "title": "The Royal Pyramid Evolution: Saqqara, Dahshur & Memphis",
+      "subheadline": "Walk inside the Bent and Red Pyramids and explore Djoser’s Step Pyramid complex",
+      "category": "Historical & Cultural",
+      "city": "Giza & Saqqara",
+      "destinationSlug": "cairo-giza",
+      "destinationName": "Cairo & Giza",
+      "duration": "Full Day (7 Hours)",
+      "price": 125,
+      "rating": 4.9,
+      "reviewsCount": 310,
+      "badge": "Archaeology Focus",
+      "image": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Before Giza existed, pharaonic master builders perfected the art of pyramid construction at Saqqara and Dahshur. This connoisseur tour takes you deep inside the tranquil royal necropolises of the Old Kingdom.",
+      "description": "Travel south of Cairo through peaceful date palm groves to Saqqara, where architect Imhotep constructed the world’s first stone monument: the Step Pyramid of King Djoser. Venture inside the subterranean tomb of Mehu and the Pyramid of Unas, adorned with the earliest known Pyramid Texts. Continue to Dahshur to descend inside Pharaoh Sneferu’s Red Pyramid and marvel at the angle-shifting Bent Pyramid, concluding with Memphis, the ancient pharaonic capital.",
+      "highlights": [
+        "Explore Djoser’s Step Pyramid Complex & Imhotep Museum",
+        "Descend directly inside the burial chamber of the Red Pyramid",
+        "Marvel at the mysterious architectural angle of the Bent Pyramid",
+        "View the colossal fallen statue of Ramesses II at ancient Memphis"
+      ],
+      "included": [
+        "Private accredited Egyptologist guide",
+        "All entrance fees to Saqqara, Dahshur, and Memphis",
+        "Interior entry to the Red Pyramid and Pyramid of Unas",
+        "Air-conditioned private vehicle and hotel transfers",
+        "Farm-to-table countryside lunch"
+      ],
+      "excluded": [
+        "Gratuities for guide and driver"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Saqqara Necropolis & Step Pyramid",
+          "desc": "Explore Djoser’s limestone enclosure, the Serapeum bull vaults, and high-relief Noble Mastaba tombs.",
+          "duration": "3.5 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Dahshur Royal Pyramids",
+          "desc": "Climb inside the peaceful Red Pyramid and inspect the unique casing of the Bent Pyramid.",
+          "duration": "2 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Open-Air Museum of Memphis",
+          "desc": "Visit the first capital of unified Egypt and gaze upon the 10-meter limestone colossus of Ramesses II.",
+          "duration": "1.5 Hours"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "islamic-cairo-citadel",
+      "slug": "islamic-cairo-citadel",
+      "title": "Historic Cairo, Saladin Citadel & Khan El Khalili Walking Tour",
+      "subheadline": "Medieval minarets, Mamluk palaces, and bustling artisanal alleyways",
+      "category": "Historical & Cultural",
+      "city": "Cairo & Old Town",
+      "destinationSlug": "cairo-giza",
+      "destinationName": "Cairo & Giza",
+      "duration": "Half Day (5 Hours)",
+      "price": 90,
+      "rating": 4.8,
+      "reviewsCount": 280,
+      "badge": "Cultural Immersion",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Discover why medieval Cairo was crowned the \"City of a Thousand Minarets\". Trace centuries of Islamic architecture from the hilltop Citadel down to the vibrant brass and spice quarters of Khan El Khalili.",
+      "description": "Ascend to the 12th-century Citadel of Saladin, offering commanding vistas over Cairo’s skyline. Step inside the soaring domes of the Great Mosque of Muhammad Ali, lined with alabaster stone. Stroll down historic Al-Mu’izz Street, the greatest concentration of medieval Islamic architecture in the world, and conclude with mint tea and pastries at the historic El Fishawy Cafe in Khan El Khalili bazaar.",
+      "highlights": [
+        "Citadel of Saladin and the magnificent Alabaster Mosque",
+        "Walking tour of Al-Mu’izz Street (UNESCO World Heritage)",
+        "Sultan Hassan & Al-Rifa’i monumental mosque architecture",
+        "Mint tea and aromatic shisha stop at historic El Fishawy Cafe"
+      ],
+      "included": [
+        "Private expert cultural guide",
+        "All entry tickets to Citadel, Alabaster Mosque, and historic complexes",
+        "Private air-conditioned transfers",
+        "Traditional tea and sweets at El Fishawy"
+      ],
+      "excluded": [
+        "Personal purchases and tips"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Saladin Citadel & Muhammad Ali Mosque",
+          "desc": "Tour the fortress ramparts and grand Ottoman-style alabaster dome.",
+          "duration": "2 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Al-Mu’izz Street & Khan El Khalili Souks",
+          "desc": "Stroll past Mamluk madrasas, gates, and browse copper craft workshops.",
+          "duration": "3 Hours"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "id": "luxor-east-west-bank",
+      "slug": "luxor-east-west-bank",
+      "title": "Full-Day Luxor Masterpiece: Valley of the Kings, Karnak & Hatshepsut",
+      "subheadline": "The complete Theban royal journey covering both banks of the Nile",
+      "category": "Daily",
+      "city": "Luxor",
+      "destinationSlug": "luxor",
+      "destinationName": "Luxor",
+      "duration": "Full Day (8 Hours)",
+      "price": 145,
+      "rating": 5,
+      "reviewsCount": 520,
+      "badge": "Iconic",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Experience the crown jewels of ancient Thebes in one seamless, private day. Enter subterranean royal tombs in the Valley of the Kings and stand amidst the 134 towering columns of Karnak.",
+      "description": "Cross the Nile in the gentle morning light to explore the West Bank. Walk deep into three royal tombs in the Valley of the Kings with your Egyptologist, admiring murals that look freshly painted after 3,000 years. Marvel at the dramatic colonnaded terraces of Queen Hatshepsut’s Temple set against towering limestone cliffs, and pause before the massive Colossi of Memnon. After a leisurely lunch, explore Karnak’s Hypostyle Hall and the grand Luxor Temple.",
+      "highlights": [
+        "3 royal tombs in the Valley of the Kings (Tutankhamun permit available)",
+        "Queen Hatshepsut’s Mortuary Temple at Deir el-Bahari",
+        "Colossal Hypostyle Hall at Karnak Temple",
+        "Luxor Temple connected via the newly restored Avenue of Sphinxes"
+      ],
+      "included": [
+        "Private licensed Egyptologist guide",
+        "All monument entrance fees",
+        "Private luxury air-conditioned vehicle throughout the day",
+        "Nile-side gourmet lunch",
+        "Cold bottled water and refreshments"
+      ],
+      "excluded": [
+        "King Tutankhamun & Seti I special tomb tickets (available as add-ons)",
+        "Gratuities"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: West Bank Royal Necropolis",
+          "desc": "Explore the Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
+          "duration": "4 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Midday: Riverside Lunch",
+          "desc": "Relax at a traditional riverside restaurant on the Nile bank.",
+          "duration": "1 Hour"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: East Bank Temples",
+          "desc": "Walk the majestic halls of Karnak and the Avenue of Sphinxes at Luxor Temple.",
+          "duration": "3 Hours"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "abu-simbel-private-tour",
+      "slug": "abu-simbel-private-tour",
+      "title": "Abu Simbel Sun Temples: Private Day Expedition",
+      "subheadline": "Stand in awe before Ramesses II’s monumental cliff temple on Lake Nasser",
+      "category": "Daily",
+      "city": "Aswan",
+      "destinationSlug": "abu-simbel",
+      "destinationName": "Abu Simbel",
+      "duration": "Half Day (7 Hours)",
+      "price": 180,
+      "rating": 5,
+      "reviewsCount": 380,
+      "badge": "Must See",
+      "image": "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Journey south across the Nubian desert to Egypt’s most spectacular architectural feat. Behold the four 20-meter seated colossi of Ramesses the Great and the elegant temple dedicated to Queen Nefertari.",
+      "description": "Depart Aswan early in a private luxury limousine or SUV across the golden Nubian Sahara. As dawn breaks over Lake Nasser, you will arrive at the colossal cliffside temples of Abu Simbel. Your private Egyptologist will guide you through the intricate battle scenes of Kadesh carved on the inner walls, the astronomical alignment of the inner sanctum, and the miraculous 1960s UNESCO operation that moved the entire mountain 65 meters above the rising floodwaters.",
+      "highlights": [
+        "The Great Temple of Ramesses II with its four mammoth statues",
+        "The Temple of Hathor and Queen Nefertari",
+        "Fascinating UNESCO engineering salvage exhibition",
+        "Scenic private drive across the serene Nubian desert landscape"
+      ],
+      "included": [
+        "Private accredited Egyptologist guide",
+        "All entry tickets to Abu Simbel complex",
+        "Private luxury vehicle with professional chauffeur and police permits",
+        "Breakfast box and cold refreshments"
+      ],
+      "excluded": [
+        "Tipping and personal expenses"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Desert Drive from Aswan",
+          "desc": "Relax in air-conditioned comfort as you travel across the southern desert.",
+          "duration": "3 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Private Exploration of Abu Simbel",
+          "desc": "In-depth tour of both temples and the UNESCO rescue documentation center.",
+          "duration": "2.5 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Return to Aswan",
+          "desc": "Return to your Aswan hotel or cruise ship in time for lunch.",
+          "duration": "3 Hours"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "white-desert-safari-overnight",
+      "slug": "white-desert-safari-overnight",
+      "title": "White & Black Desert 4x4 Wilderness Safari & Bedouin Camp",
+      "subheadline": "Surreal chalk sculptures, crystal mountains, and starlit glamping",
+      "category": "Adventure & Safari",
+      "city": "White Desert",
+      "destinationSlug": "white-desert",
+      "destinationName": "White Desert",
+      "duration": "2 Days / 1 Night",
+      "price": 240,
+      "rating": 4.9,
+      "reviewsCount": 195,
+      "badge": "Adventure",
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Leave civilization behind and venture deep into the surreal landscapes of the Western Desert. Gaze at volcanic peaks in the Black Desert, marvel at sparkling Crystal Mountain, and camp in luxury under the stars in the White Desert.",
+      "description": "Depart Cairo by private vehicle to Bahariya Oasis, where your high-clearance 4WD expedition team awaits. Traverse the dramatic basalt cones of the Black Desert, sandboard down towering dunes in the Agabat Valley, and wander among glowing calcite crystals. At twilight, enter the White Desert National Park, where wind-carved chalk monoliths resemble surreal modern art. Gather around a crackling Bedouin campfire for a freshly roasted lamb dinner before sleeping under a diamond canopy of stars.",
+      "highlights": [
+        "4x4 Dune driving and sandboarding in the Agabat Valley",
+        "Sunset among the mushroom and sphinx chalk formations",
+        "Bedouin campfire barbecue feast with fresh desert bread",
+        "Luxury tented desert camp with comfortable bedding and blankets"
+      ],
+      "included": [
+        "Roundtrip private transport from Cairo and 4x4 desert vehicle",
+        "Experienced Bedouin desert navigators and English-speaking guide",
+        "All camping gear (tents, mattresses, warm sleeping bags)",
+        "All meals, barbecue dinner, snacks, and unlimited mineral water",
+        "National park permits and conservation fees"
+      ],
+      "excluded": [
+        "Personal items and tips"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Cairo to Bahariya & Black Desert",
+          "desc": "Drive to the oasis, transition to 4x4, and explore volcanic peaks and Crystal Mountain.",
+          "duration": "Day 1"
+        },
+        {
+          "day": 2,
+          "title": "White Desert Sunrise & Return",
+          "desc": "Watch the sunrise turn chalk towers pink and gold. Morning tea, exploration, and drive back to Cairo.",
+          "duration": "Day 2"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "alexandria-greco-roman-day-tour",
+      "slug": "alexandria-greco-roman-day-tour",
+      "title": "Alexandria Day Tour: Bibliotheca, Catacombs & Qaitbay Citadel",
+      "subheadline": "The Mediterranean soul and classical antiquity of Alexander’s city",
+      "category": "Daily",
+      "city": "Alexandria",
+      "destinationSlug": "alexandria",
+      "destinationName": "Alexandria",
+      "duration": "Full Day (9 Hours)",
+      "price": 130,
+      "rating": 4.8,
+      "reviewsCount": 220,
+      "badge": "Coastal Heritage",
+      "image": "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "A scenic coastal day excursion from Cairo to Alexandria. Discover the Greco-Roman synthesis through Roman catacombs, Pompey’s Pillar, the seaside Citadel of Qaitbay, and the ultra-modern Bibliotheca Alexandrina.",
+      "description": "Travel in private luxury along the desert highway to Alexandria. Descend into the multi-level Roman Catacombs of Kom El Shoqafa, where Roman, Greek, and Egyptian funerary art unite. View Pompey’s Pillar, stand where the ancient Lighthouse of Alexandria once guided Mediterranean mariners at the Citadel of Qaitbay, and enjoy a fresh seafood lunch overlooking the harbor. Conclude with a guided tour of the stunning modern Bibliotheca Alexandrina.",
+      "highlights": [
+        "Bibliotheca Alexandrina guided tour and manuscript museum",
+        "Subterranean Catacombs of Kom El Shoqafa Roman tombs",
+        "15th-century seaside fortress Citadel of Qaitbay",
+        "Mediterranean seafood lunch right on the waterfront"
+      ],
+      "included": [
+        "Private licensed tour guide",
+        "All entrance fees and museum admissions",
+        "Private chauffeured luxury vehicle from Cairo and back",
+        "Seafood lunch overlooking the Mediterranean"
+      ],
+      "excluded": [
+        "Gratuities and personal souvenirs"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: Drive & Catacombs",
+          "desc": "Depart Cairo at 07:30 AM. Arrive in Alexandria and tour the Roman Catacombs and Pompey’s Pillar.",
+          "duration": "4 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Midday: Citadel & Seafood Lunch",
+          "desc": "Tour Qaitbay Fortress followed by a harbor-view Mediterranean lunch.",
+          "duration": "2.5 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: Bibliotheca Alexandrina",
+          "desc": "Visit the world-renowned library complex before returning to Cairo.",
+          "duration": "2.5 Hours"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "id": "cairo-sunset-felucca-food",
+      "slug": "cairo-sunset-felucca-food",
+      "title": "Sunset Nile Felucca & Old Cairo Culinary Street Food Safari",
+      "subheadline": "Taste authentic Egyptian cuisine and sail the Nile during golden hour",
+      "category": "Historical & Cultural",
+      "city": "Cairo / Nile",
+      "destinationSlug": "cairo-giza",
+      "destinationName": "Cairo & Giza",
+      "duration": "4 Hours",
+      "price": 75,
+      "rating": 4.9,
+      "reviewsCount": 260,
+      "badge": "Popular",
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "overview": "Glide along the tranquil Nile aboard a private wooden felucca at sunset, then dive into the historic culinary quarters of downtown Cairo to sample Egypt’s most beloved street delicacies.",
+      "description": "Begin late in the afternoon with a private sailing aboard a traditional canvas-sailed felucca as Cairo’s skyscrapers and river islands are bathed in amber light. Fresh mint tea and dates are served on deck. Afterward, your foodie host leads you on an insider walk through bustling neighborhoods to savor crispy falafel made with fava beans, authentic koshari, hawawshi spiced flatbreads, and warm honey-drizzled zalabia.",
+      "highlights": [
+        "Private 1-hour sunset felucca sailing on the Nile",
+        "6+ authentic food tastings with a dedicated local foodie guide",
+        "Discover secret local eateries in downtown Cairo & Bab El Louk",
+        "All food and non-alcoholic drinks included"
+      ],
+      "included": [
+        "Private felucca boat and skipper",
+        "Local foodie guide",
+        "All food tastings and beverages",
+        "Hotel pickup and drop-off"
+      ],
+      "excluded": [
+        "Gratuities"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Sunset Felucca Sailing",
+          "desc": "Board your private sailboat on the Nile for twilight views and tea.",
+          "duration": "1.5 Hours"
+        },
+        {
+          "day": 1,
+          "title": "Culinary Walking Tour",
+          "desc": "Taste local specialties through hidden street food gems.",
+          "duration": "2.5 Hours"
+        }
+      ],
+      "featured": false
+    }
+  ],
+  "packages": [
+    {
+      "id": "classic-egypt-wonders-8-days",
+      "slug": "classic-egypt-wonders-8-days",
+      "title": "The Classic Egypt: Cairo, Pyramids & Luxury Nile Cruise",
+      "duration": "8 Days / 7 Nights",
+      "durationDays": 8,
+      "durationNights": 7,
+      "category": "Classic",
+      "price": 1350,
+      "rating": 4.9,
+      "reviewsCount": 420,
+      "badge": "Best Seller",
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "route": "Cairo (3N) → Luxor (Cruise 4N) → Aswan",
+      "destinationsCovered": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Edfu",
+        "Kom Ombo",
+        "Aswan"
+      ],
+      "destinations": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Edfu",
+        "Kom Ombo",
+        "Aswan"
+      ],
+      "overview": "The definitive introduction to Egypt. Combines 5-star hotel accommodations in Cairo, private Giza Plateau explorations, internal domestic flights, and a 4-night full-board luxury Nile cruise from Luxor to Aswan.",
+      "description": "Immerse yourself in 5,000 years of splendor. Begin in Cairo with private visits to the Great Pyramids, Sphinx, and the Grand Egyptian Museum. Fly to Luxor to embark on a 5-star luxury Nile cruiser. Over four blissful nights, drift between the colossal temples of Karnak, Luxor, Edfu, and Kom Ombo, concluding in the tranquil cataract waters of Aswan and the island sanctuary of Philae.",
+      "hotels": "Four Seasons Cairo / Marriott Mena House + Steigenberger Luxury Nile Cruise",
+      "accommodation": "5-Star Luxury Hotels (3 Nights) & 5-Star Deluxe River Cruiser (4 Nights)",
+      "highlights": [
+        "Private Egyptologist guide for all sightseeing and excursions",
+        "Giza Pyramids, Great Sphinx & Grand Egyptian Museum (GEM)",
+        "4-Night Full-Board Luxury Nile Cruise with panoramic river-view cabin",
+        "Valley of the Kings, Karnak, Edfu, Kom Ombo & Philae Temples",
+        "Domestic flights included (Cairo – Luxor / Aswan – Cairo)"
+      ],
+      "inclusions": [
+        "3 Nights 5-star luxury hotel in Cairo with daily gourmet breakfast",
+        "4 Nights 5-star deluxe Nile cruise on full-board basis (all meals)",
+        "Domestic round-trip flight tickets (Cairo/Luxor & Aswan/Cairo)",
+        "All private sightseeing tours with accredited Egyptologist guide",
+        "All monument entrance fees according to the itinerary",
+        "All airport and port transfers in private air-conditioned vehicles"
+      ],
+      "exclusions": [
+        "International flights and Egyptian entry visa",
+        "Optional tours (Hot Air Balloon in Luxor or Abu Simbel excursion)",
+        "Personal expenditures, laundry, and guide/crew tipping"
+      ],
+      "dailyItinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Cairo — Welcome to the Land of Pharaohs",
+          "desc": "Meet-and-assist service before passport control at Cairo Airport. VIP transfer to your 5-star hotel. Evening welcome briefing and dinner at leisure.",
+          "meals": "Dinner at hotel",
+          "accommodation": "Marriott Mena House or Four Seasons Cairo"
+        },
+        {
+          "day": 2,
+          "title": "The Great Pyramids, Sphinx & Grand Egyptian Museum",
+          "desc": "Private tour of the Giza Plateau, the Great Sphinx, and the new Grand Egyptian Museum. Enjoy a panoramic lunch overlooking the pyramids.",
+          "meals": "Breakfast & Lunch",
+          "accommodation": "Marriott Mena House or Four Seasons Cairo"
+        },
+        {
+          "day": 3,
+          "title": "Fly to Luxor & Board 5-Star Luxury Nile Cruise",
+          "desc": "Morning flight to Luxor. Embarkation on your luxury river cruiser. Lunch on board, followed by afternoon tours of Karnak and Luxor Temples.",
+          "meals": "Breakfast, Lunch & Dinner",
+          "accommodation": "Deluxe Nile Cruiser (Panoramic Cabin)"
+        },
+        {
+          "day": 4,
+          "title": "Valley of the Kings & Hatshepsut Temple — Sail to Edfu",
+          "desc": "Cross to the West Bank to explore the royal tombs in the Valley of the Kings and Hatshepsut’s mortuary temple. Sail towards Edfu through the Esna Lock.",
+          "meals": "Breakfast, Lunch & Dinner",
+          "accommodation": "Deluxe Nile Cruiser"
+        },
+        {
+          "day": 5,
+          "title": "Edfu Horus Temple & Kom Ombo Crocodile Temple",
+          "desc": "Visit the remarkably intact Temple of Horus in Edfu by horse carriage. Sail to Kom Ombo to visit the unique dual temple dedicated to Sobek and Haroeris.",
+          "meals": "Breakfast, Lunch & Dinner",
+          "accommodation": "Deluxe Nile Cruiser"
+        },
+        {
+          "day": 6,
+          "title": "Aswan High Dam, Philae Island & Sunset Felucca",
+          "desc": "Arrive in Aswan. Take a boat to the romantic Island Temple of Isis at Philae and visit the High Dam. Afternoon sunset felucca sailing around Elephantine Island.",
+          "meals": "Breakfast, Lunch & Dinner",
+          "accommodation": "Deluxe Nile Cruiser"
+        },
+        {
+          "day": 7,
+          "title": "Disembarkation — Optional Abu Simbel & Fly to Cairo",
+          "desc": "Disembark after breakfast. Optional morning excursion to Abu Simbel by air or road. Fly back to Cairo for a final farewell dinner.",
+          "meals": "Breakfast & Farewell Dinner",
+          "accommodation": "Luxury Hotel in Cairo"
+        },
+        {
+          "day": 8,
+          "title": "Departure from Cairo",
+          "desc": "Breakfast at hotel. Private luxury transfer to Cairo International Airport for your homebound flight.",
+          "meals": "Breakfast",
+          "accommodation": "Departure"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "luxury-pharaohs-dahabiya-10-days",
+      "slug": "luxury-pharaohs-dahabiya-10-days",
+      "title": "The Pharaoh’s Sanctuary: Cairo & Private Dahabiya Voyage",
+      "duration": "10 Days / 9 Nights",
+      "durationDays": 10,
+      "durationNights": 9,
+      "category": "Luxury",
+      "price": 3200,
+      "rating": 5,
+      "reviewsCount": 180,
+      "badge": "VIP Luxury",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "route": "Cairo (3N) → Luxor to Aswan (Private Dahabiya 5N) → Abu Simbel",
+      "destinationsCovered": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Esna",
+        "Edfu",
+        "Gebel el-Silsila",
+        "Kom Ombo",
+        "Aswan",
+        "Abu Simbel"
+      ],
+      "destinations": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Esna",
+        "Edfu",
+        "Gebel el-Silsila",
+        "Kom Ombo",
+        "Aswan",
+        "Abu Simbel"
+      ],
+      "overview": "Unrivaled river elegance. Sail the Nile aboard an intimate private twin-sailed Dahabiya with a dedicated chef and Egyptologist, paired with premier hotel suites in Cairo and the legendary Old Cataract in Aswan.",
+      "description": "Experience Egypt as royalty did in the golden age of travel. Stay at Cairo’s most prestigious suites before boarding a private 6-suite Dahabiya for a 5-night wind-powered journey down the Nile. Stop at secluded sandstone quarries and untouched island villages that large cruise liners cannot reach. Dine on candlelit sandbanks under desert skies, accompanied by your private Egyptologist.",
+      "hotels": "The St. Regis Cairo + Private Boutique Dahabiya + Sofitel Legend Old Cataract Palace",
+      "accommodation": "Boutique Teakwood Dahabiya (5 Nights) & Palace Hotel Suites (4 Nights)",
+      "highlights": [
+        "Private twin-masted Dahabiya limited to 12 discerning guests",
+        "VIP opening permits to King Tutankhamun & Queen Nefertari Tombs",
+        "Candlelit dinners on secluded Nile river sandbanks under the stars",
+        "Private flight excursion to the Sun Temples of Abu Simbel",
+        "Palace Suite at Sofitel Legend Old Cataract Aswan overlooking the cataracts"
+      ],
+      "inclusions": [
+        "3 Nights at The St. Regis Cairo (Nile View Suite) with breakfast",
+        "5 Nights private Dahabiya sailing with all gourmet meals prepared by master chef",
+        "1 Night at Sofitel Legend Old Cataract Aswan (Palace Suite)",
+        "Domestic flights in Business/Premium class (Cairo–Luxor & Aswan–Cairo)",
+        "Private flight to Abu Simbel with VIP tour",
+        "All private tours and VIP tomb entries with dedicated senior Egyptologist"
+      ],
+      "exclusions": [
+        "International flights",
+        "Personal alcoholic beverages and discretionary gratuities"
+      ],
+      "dailyItinerary": [
+        {
+          "day": 1,
+          "title": "VIP Welcome in Cairo",
+          "desc": "Private tarmac escort and fast-track immigration at CAI. Chauffeur transfer to The St. Regis Cairo.",
+          "meals": "Welcome Cocktails",
+          "accommodation": "The St. Regis Cairo"
+        },
+        {
+          "day": 2,
+          "title": "Giza Plateau & Grand Egyptian Museum Curatorial Tour",
+          "desc": "Private early-hours access to the pyramids. Curated museum tour of Tutankhamun’s complete royal hoard.",
+          "meals": "Breakfast & Gourmet Lunch",
+          "accommodation": "The St. Regis Cairo"
+        },
+        {
+          "day": 3,
+          "title": "Fly to Luxor & Board Private Dahabiya",
+          "desc": "Board your handcrafted teak Dahabiya. Afternoon visit to Karnak’s Hypostyle Hall and Luxor Temple.",
+          "meals": "Breakfast, Lunch & Dinner",
+          "accommodation": "Private Luxury Dahabiya"
+        },
+        {
+          "day": 4,
+          "title": "Valley of the Kings with Nefertari Special Access",
+          "desc": "VIP entrance to Queen Nefertari’s tomb (QV66). Cast off and raise sails to cruise past Esna under gentle winds.",
+          "meals": "Full Board on Dahabiya",
+          "accommodation": "Private Luxury Dahabiya"
+        },
+        {
+          "day": 5,
+          "title": "Edfu Temple & Quiet Island Mooring",
+          "desc": "Morning visit to Horus Temple at Edfu. Afternoon peaceful sailing; moor at an uninhabited river island for dinner.",
+          "meals": "Full Board on Dahabiya",
+          "accommodation": "Private Luxury Dahabiya"
+        },
+        {
+          "day": 6,
+          "title": "Gebel el-Silsila Sandstone Quarries & Kom Ombo",
+          "desc": "Explore the ancient pharaonic stone quarries of Gebel el-Silsila accessible only by small boat. Sunset at Kom Ombo.",
+          "meals": "Full Board on Dahabiya",
+          "accommodation": "Private Luxury Dahabiya"
+        },
+        {
+          "day": 7,
+          "title": "Sail into Aswan & Romantic Philae Sanctuary",
+          "desc": "Arrive at the first cataract of Aswan. Private launch to Philae Island. Check-in to Sofitel Legend Old Cataract.",
+          "meals": "Breakfast & High Tea",
+          "accommodation": "Sofitel Legend Old Cataract"
+        },
+        {
+          "day": 8,
+          "title": "Abu Simbel Flight & Nubian Sunset",
+          "desc": "Private flight to Abu Simbel to marvel at Ramesses II colossi. Afternoon private felucca sailing in Aswan.",
+          "meals": "Breakfast & Dinner",
+          "accommodation": "Sofitel Legend Old Cataract"
+        },
+        {
+          "day": 9,
+          "title": "Return to Cairo & Khan El Khalili Private Walk",
+          "desc": "Fly to Cairo. Private walking tour of historic palaces and an intimate farewell gala dinner.",
+          "meals": "Breakfast & Gala Dinner",
+          "accommodation": "The St. Regis Cairo"
+        },
+        {
+          "day": 10,
+          "title": "Farewell Egypt",
+          "desc": "Chauffeur transfer to Cairo International Airport with VIP departure lounge access.",
+          "meals": "Breakfast",
+          "accommodation": "Departure"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "nile-and-red-sea-escape-11-days",
+      "slug": "nile-and-red-sea-escape-11-days",
+      "title": "Nile Splendors & Red Sea Azure: Cairo, Cruise & Hurghada",
+      "duration": "11 Days / 10 Nights",
+      "durationDays": 11,
+      "durationNights": 10,
+      "category": "Nile & Red Sea",
+      "price": 1850,
+      "rating": 4.9,
+      "reviewsCount": 290,
+      "badge": "Family & Honeymoon",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "route": "Cairo (3N) → Nile Cruise (4N) → Hurghada (3N)",
+      "destinationsCovered": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Edfu",
+        "Kom Ombo",
+        "Aswan",
+        "Hurghada"
+      ],
+      "destinations": [
+        "Cairo",
+        "Giza",
+        "Luxor",
+        "Edfu",
+        "Kom Ombo",
+        "Aswan",
+        "Hurghada"
+      ],
+      "overview": "The ideal balance of monumental world wonder and tropical coastal leisure. Explore Cairo and ancient Upper Egypt by deluxe river cruiser, then unwind in an all-inclusive Red Sea beach resort.",
+      "description": "Begin with three nights in Cairo touring the Pyramids and GEM. Board a 4-night 5-star Nile cruise from Luxor to Aswan, marveling at the Valley of the Kings and riverside temples. Then transition by private scenic transfer to Hurghada on the Red Sea for three nights of all-inclusive relaxation, coral reef snorkeling, and beachfront serenity.",
+      "hotels": "5★ Deluxe Properties throughout (Cairo, Cruise & All-Inclusive Red Sea Resort)",
+      "accommodation": "5-Star Cairo Hotel (3N), 5-Star Nile Cruiser (4N), 5-Star Red Sea Resort (3N)",
+      "highlights": [
+        "Cairo Pyramids, Sphinx, Saqqara & Grand Egyptian Museum",
+        "4-Night 5-Star Nile Cruise with full-board dining and shore excursions",
+        "3-Night All-Inclusive Red Sea beach stay in Hurghada or El Gouna",
+        "Private yacht snorkeling trip to Giftun Island coral reefs",
+        "All private ground transfers and domestic flights included"
+      ],
+      "inclusions": [
+        "3 Nights in Cairo with daily breakfast",
+        "4 Nights full-board Nile Cruise",
+        "3 Nights all-inclusive Red Sea Beach Resort in Hurghada",
+        "Domestic flights: Cairo–Luxor and Hurghada–Cairo",
+        "All guided excursions with private licensed Egyptologist"
+      ],
+      "exclusions": [
+        "International flights and Egyptian entry visa",
+        "Scuba diving certifications or motorized watersports",
+        "Gratuities"
+      ],
+      "dailyItinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Cairo",
+          "desc": "Meet and assist at airport, transfer to hotel.",
+          "meals": "Welcome Dinner",
+          "accommodation": "5★ Cairo Hotel"
+        },
+        {
+          "day": 2,
+          "title": "Pyramids, Sphinx & GEM",
+          "desc": "Full day private tour of Giza Plateau and Grand Egyptian Museum.",
+          "meals": "Breakfast & Lunch",
+          "accommodation": "5★ Cairo Hotel"
+        },
+        {
+          "day": 3,
+          "title": "Saqqara & Old Cairo",
+          "desc": "Explore Djoser Step Pyramid and Khan El Khalili market.",
+          "meals": "Breakfast & Lunch",
+          "accommodation": "5★ Cairo Hotel"
+        },
+        {
+          "day": 4,
+          "title": "Fly to Luxor & Cruise Embarkation",
+          "desc": "Fly to Luxor, board luxury cruise ship, tour Karnak and Luxor temples.",
+          "meals": "Full Board",
+          "accommodation": "5★ Nile Cruiser"
+        },
+        {
+          "day": 5,
+          "title": "West Bank & Sail to Edfu",
+          "desc": "Valley of the Kings, Hatshepsut Temple, Colossi of Memnon.",
+          "meals": "Full Board",
+          "accommodation": "5★ Nile Cruiser"
+        },
+        {
+          "day": 6,
+          "title": "Edfu & Kom Ombo Temples",
+          "desc": "Horse carriage to Horus Temple, sail to Kom Ombo dual temple.",
+          "meals": "Full Board",
+          "accommodation": "5★ Nile Cruiser"
+        },
+        {
+          "day": 7,
+          "title": "Aswan Philae Temple & High Dam",
+          "desc": "Boat to Island of Philae, High Dam, afternoon felucca ride.",
+          "meals": "Full Board",
+          "accommodation": "5★ Nile Cruiser"
+        },
+        {
+          "day": 8,
+          "title": "Disembark & Transfer to Hurghada Red Sea",
+          "desc": "Scenic drive across Eastern Desert mountains to your Red Sea resort.",
+          "meals": "All-Inclusive",
+          "accommodation": "5★ Red Sea Resort"
+        },
+        {
+          "day": 9,
+          "title": "Red Sea Relaxation & Giftun Island Snorkel",
+          "desc": "Private boat excursion to coral reefs and turquoise lagoons.",
+          "meals": "All-Inclusive",
+          "accommodation": "5★ Red Sea Resort"
+        },
+        {
+          "day": 10,
+          "title": "Beach Day at Leisure",
+          "desc": "Free day for spa treatments, water sports, or poolside relaxation.",
+          "meals": "All-Inclusive",
+          "accommodation": "5★ Red Sea Resort"
+        },
+        {
+          "day": 11,
+          "title": "Fly to Cairo & International Departure",
+          "desc": "Short flight from Hurghada to Cairo for your connecting flight home.",
+          "meals": "Breakfast",
+          "accommodation": "Departure"
+        }
+      ],
+      "featured": true
+    }
+  ],
+  "cruises": [
+    {
+      "id": "dahabiya-cleopatra",
+      "slug": "dahabiya-cleopatra",
+      "title": "Dahabiya Cleopatra: Exclusive Private Nile Sailing",
+      "profileName": "Dahabiya Cleopatra • Traditional Handcrafted Teakwood",
+      "profileTitle": "Bespoke River Architecture & Timeless Character",
+      "cruiseType": "Dahabiya",
+      "vesselType": "Handcrafted Teak Dahabiya",
+      "type": "Dahabiya",
+      "route": "Luxor to Aswan",
+      "capacity": "Max 12 Guests (6 Deluxe Suites)",
+      "duration": "5 Days / 4 Nights",
+      "durationNights": 4,
+      "cabins": "6 Deluxe Panoramic Suites with Private Teak Balconies",
+      "price": 1450,
+      "rating": 5,
+      "reviewsCount": 164,
+      "badge": "Exclusive Teak Sailing",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "lead": "Discover timeless riverside temples, intimate character, secluded sandbank moorings, and an affectionate culinary journey aboard a private 6-suite Dahabiya.",
+      "description": "Authentic wooden sailing vessel featuring handcrafted teak decks, fine Egyptian linen canopy shading, farm-to-table organic dining prepared by your private chef, and visits to ancient monuments unreachable by large cruise ships. With zero engine noise when sails are raised, enjoy peaceful, wind-driven passage along the eternal Nile.",
+      "highlights": [
+        "Private 6-suite boutique vessel catering to maximum 12 guests",
+        "Wind-driven authentic sailing with zero engine vibration or noise",
+        "Dedicated onboard master chef preparing fresh farm-to-table cuisine",
+        "Mooring at secluded islands and untouched sandstone monument quarries",
+        "Private Egyptologist providing intimate lectures and guided walks"
+      ],
+      "shipInfo": {
+        "yearBuilt": "2023 (Refitted 2025)",
+        "length": "46 Meters",
+        "decks": 2,
+        "cabinsCount": 6,
+        "dining": "Open-Air Shaded Teak Deck Salon & Indoor Dining Room",
+        "crewRatio": "1.5 Crew Members per Guest"
+      },
+      "amenities": [
+        "Private Balcony Panoramic Suites with Egyptian Cotton Linens",
+        "Onboard Master Chef with Customized Dietary Menus",
+        "Full-Board Fine Dining with Organic Local Ingredients",
+        "Private Egyptologist Escort for all Excursions",
+        "All Shore Excursions and Temple Entrance Tickets Included",
+        "Complimentary Wi-Fi and Espresso Bar"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "port": "Luxor (West Bank & East Bank)",
+          "activity": "Embarkation & Karnak Temple Tour",
+          "desc": "Board your Dahabiya in Luxor for a welcome champagne luncheon. Visit Karnak Temple and embark on an evening stroll through illuminated Luxor Temple."
+        },
+        {
+          "day": 2,
+          "port": "Esna to El Hegz Island",
+          "activity": "Esna Lock Crossing & Peaceful River Sailing",
+          "desc": "Cross the historic Esna Lock. Raise the twin canvas sails and glide past palm orchards and riverside hamlets. Moor at El Hegz Island for an evening barbecue under the stars."
+        },
+        {
+          "day": 3,
+          "port": "Edfu & Bassawa Island",
+          "activity": "Temple of Horus & Village Walk",
+          "desc": "Horse carriage excursion to the Temple of Horus in Edfu. Afternoon sailing to Bassawa Island; walk through tranquil date groves and meet local village farmers."
+        },
+        {
+          "day": 4,
+          "port": "Gebel el-Silsila & Kom Ombo",
+          "activity": "Pharaonic Stone Quarries & Sobek Temple",
+          "desc": "Explore the ancient cliff shrines and sandstone quarries of Gebel el-Silsila. Twilight visit to the dual temple of Kom Ombo, followed by candlelit dinner."
+        },
+        {
+          "day": 5,
+          "port": "Aswan",
+          "activity": "Philae Temple & Disembarkation",
+          "desc": "Sail into Aswan. Private launch to the Island Temple of Philae. Farewell gourmet breakfast on deck before disembarkation."
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "sanctuary-sun-boat-luxury",
+      "slug": "sanctuary-sun-boat-luxury",
+      "title": "Sanctuary Sun Boat IV: Five-Star Nile Elegance",
+      "profileName": "Sanctuary Sun Boat IV • Five-Star Floating Boutique Resort",
+      "profileTitle": "Five-Star Floating Elegance & Panoramic Sun Deck Suites",
+      "cruiseType": "Luxury Nile Cruiser",
+      "vesselType": "Five-Star River Cruiser",
+      "type": "Luxury Nile Cruiser",
+      "route": "Aswan to Luxor",
+      "capacity": "40 Luxury Cabins (80 Guests)",
+      "duration": "4 Days / 3 Nights",
+      "durationNights": 3,
+      "cabins": "40 River-View Cabins & 2 Presidential Suites with Floor-to-Ceiling Windows",
+      "price": 1200,
+      "rating": 4.9,
+      "reviewsCount": 310,
+      "badge": "Ultra-Luxury",
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1600&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "lead": "Award-winning river sanctuary with a rooftop heated pool, sun deck bar, French-Egyptian fusion restaurant, and spacious panoramic suites.",
+      "description": "The pinnacle of contemporary river elegance, offering state-of-the-art hospitality, marble bathrooms, Michelin-inspired dining, and daily private excursions with senior Egyptologists to the Nile’s grandest temples.",
+      "highlights": [
+        "Heated plunge pool and teak sun loungers on the observation deck",
+        "Spacious cabins with floor-to-ceiling French panoramic windows",
+        "Gourmet fine dining blending French culinary artistry with Egyptian flavors",
+        "Daily curated excursions avoiding peak crowd hours",
+        "Onboard wellness spa, gym, and evening Egyptology salon lectures"
+      ],
+      "shipInfo": {
+        "yearBuilt": "2021 (Modern Architectural Renovation)",
+        "length": "72 Meters",
+        "decks": 4,
+        "cabinsCount": 40,
+        "dining": "Gourmet Restaurant, Sun Deck Bar & Nile Lounge",
+        "crewRatio": "1:1 Luxury Service Ratio"
+      },
+      "amenities": [
+        "Panoramic French Windows with Electric Blackout Drapes",
+        "Heated Rooftop Pool & Sun Lounge with Poolside Bar Service",
+        "Luxury Spa, Massage Suites & Fully Equipped Fitness Center",
+        "Evening Entertainment, Nubian Folk Shows & Curatorial Lectures",
+        "Complimentary Laundry Service for Suite Guests",
+        "High-Speed Satellite Wi-Fi"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "port": "Aswan",
+          "activity": "Philae Temple & Welcome Gala",
+          "desc": "Embarkation in Aswan. Lunch on board. Private tour of Philae Temple and the Unfinished Obelisk. Captain’s welcome cocktails and four-course dinner."
+        },
+        {
+          "day": 2,
+          "port": "Kom Ombo & Edfu",
+          "activity": "Sobek Temple & Horus Temple",
+          "desc": "Morning cruise to Kom Ombo to visit the dual temple. Sail toward Edfu while enjoying lunch on the sun deck. Tour the grand Temple of Horus."
+        },
+        {
+          "day": 3,
+          "port": "Luxor (West Bank & East Bank)",
+          "activity": "Valley of the Kings & Karnak",
+          "desc": "Cross Esna Lock and sail into Luxor. Tour the Valley of the Kings, Temple of Hatshepsut, and Karnak Temple. Formal Egyptian dinner on board."
+        },
+        {
+          "day": 4,
+          "port": "Luxor",
+          "activity": "Disembarkation",
+          "desc": "Gourmet buffet breakfast. Morning disembarkation in Luxor with transfer to Luxor Airport or hotel."
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "lake-nasser-expedition",
+      "slug": "lake-nasser-expedition",
+      "title": "Lake Nasser Wilderness Cruiser: Abu Simbel Route",
+      "profileName": "Lake Nasser Wilderness Cruiser • Remote Desert Waters",
+      "profileTitle": "Secluded Desert Lake Sanctuary & Monumental Cliff Temples",
+      "cruiseType": "Lake Nasser Expedition",
+      "vesselType": "Expedition Cruiser",
+      "type": "Lake Nasser Expedition",
+      "route": "Aswan to Abu Simbel",
+      "capacity": "24 Luxury Cabins",
+      "duration": "5 Days / 4 Nights",
+      "durationNights": 4,
+      "cabins": "24 Deluxe Lake-View Staterooms with Private Bathrooms",
+      "price": 980,
+      "rating": 4.8,
+      "reviewsCount": 140,
+      "badge": "Wilderness Expedition",
+      "image": "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1600&q=85",
+      "images": [
+        "https://images.unsplash.com/photo-1566192091743-5966a6079984?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "lead": "Cruise across the immense desert waters south of the High Dam to remote temples and arrive directly before the colossal statues of Abu Simbel.",
+      "description": "Traverse the tranquil waters of Lake Nasser to secluded pharaonic sanctuaries like Kalabsha and Wadi El Seboua, offering tranquil desert stargazing, migratory birdlife, and dramatic sunrise views of Ramesses II’s cliff temple.",
+      "highlights": [
+        "Arrive directly before the colossal statues of Abu Simbel from the water",
+        "Explore secluded desert temples inaccessible to standard tour buses",
+        "Spectacular dark-sky stargazing over tranquil desert lake waters",
+        "Full-board expedition luxury with licensed Egyptologist guide"
+      ],
+      "shipInfo": {
+        "yearBuilt": "2022",
+        "length": "65 Meters",
+        "decks": 3,
+        "cabinsCount": 24,
+        "dining": "Panoramic View Dining Room & Starlight Deck",
+        "crewRatio": "Personalized Expedition Attention"
+      },
+      "amenities": [
+        "Spacious Outer Cabins with Sliding Windows overlooking Lake Nasser",
+        "Nubian Sunset Lounge & Panoramic Stargazing Deck",
+        "All Shore Excursions and Desert Temple Permits Included",
+        "Private Abu Simbel Sightseeing with Sound & Light Show Admission",
+        "Plunge Pool & Shaded Observation Lounges"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "port": "Aswan (Lake Nasser)",
+          "activity": "Embarkation & Kalabsha Temple",
+          "desc": "Board your vessel south of the High Dam. Visit the relocated Temple of Kalabsha and Beit el-Wali. Welcome dinner on board."
+        },
+        {
+          "day": 2,
+          "port": "Wadi El Seboua",
+          "activity": "Valley of the Lions Desert Temple",
+          "desc": "Cruise across peaceful desert waters to Wadi El Seboua. Walk along the avenue of sphinxes guarding the desert temple of Ramesses II."
+        },
+        {
+          "day": 3,
+          "port": "Amada & Kasr Ibrim",
+          "activity": "18th Dynasty Reliefs & Sunken Citadel",
+          "desc": "Tour the temple of Amada, the oldest Egyptian monument on Lake Nasser, featuring fine painted reliefs. Gaze upon the fortress of Kasr Ibrim."
+        },
+        {
+          "day": 4,
+          "port": "Abu Simbel",
+          "activity": "Waterfront Arrival & Night Sound & Light Show",
+          "desc": "Sail towards Abu Simbel. Experience the breathtaking sight of Ramesses II’s temple rising from the water. Evening VIP attendance at the Sound & Light show."
+        },
+        {
+          "day": 5,
+          "port": "Abu Simbel",
+          "activity": "Morning Temple Exploration & Disembarkation",
+          "desc": "Morning tour of the twin temples of Ramesses II and Nefertari before crowds arrive. Disembarkation with transfer to Abu Simbel Airport."
+        }
+      ],
+      "featured": true
+    }
+  ],
+  "experiences": [
+    {
+      "id": "hot-air-balloon",
+      "slug": "hot-air-balloon",
+      "title": "Sunrise Hot Air Balloon Flight over Ancient Thebes",
+      "location": "Luxor",
+      "duration": "45 min flight (3 hrs total)",
+      "price": 90,
+      "rating": 5,
+      "reviewsCount": 840,
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Aerial Adventure",
+      "badge": "Iconic",
+      "description": "Drift serenely above the Valley of the Kings, Queen Hatshepsut Temple, and the fertile Nile plain as the morning sun casts a golden glow across ancient Thebes. Enjoy unmatched aerial photography angles and peaceful floating silence high above monumental Egypt.",
+      "highlights": [
+        "Breathtaking 360-degree aerial views of the entire Luxor West Bank",
+        "Sunrise flight over Hatshepsut’s mortuary temple and Colossi of Memnon",
+        "Licensed master balloon pilots adhering to top international civil aviation safety standards",
+        "Personalized commemorative flight certificate and post-flight champagne toast"
+      ],
+      "practicalInfo": {
+        "timing": "Pre-dawn pick-up (around 04:30 AM depending on season); return by 08:00 AM",
+        "dressCode": "Comfortable layers (morning air can be brisk aloft), flat closed-toe walking shoes",
+        "physicalLevel": "Easy (ability to step into balloon basket with pilot assistance)",
+        "included": [
+          "Roundtrip private hotel/cruise ship transfers including motorboat Nile crossing",
+          "Pre-flight tea, coffee, and Egyptian pastries at launch field",
+          "45–60 minute hot air balloon flight",
+          "Official flight certificate signed by chief pilot"
+        ]
+      },
+      "inquiryCta": "Reserve Your Sunrise Flight",
+      "featured": true
+    },
+    {
+      "id": "desert-safari",
+      "slug": "desert-safari",
+      "title": "White Desert 4x4 Stargazing & Bedouin Camp",
+      "location": "White Desert & Bahariya",
+      "duration": "Overnight (2 Days)",
+      "price": 195,
+      "rating": 4.9,
+      "reviewsCount": 320,
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Desert Safari",
+      "badge": "Wilderness",
+      "description": "Venture deep into the surreal chalk rock formations of the White Desert and volcanic mounds of the Black Desert, accompanied by seasoned Bedouin navigators. Sleep under a sky ablaze with billions of stars.",
+      "highlights": [
+        "Surreal wind-carved chalk sculptures at White Desert National Park",
+        "Crystal Mountain calcite sparkle and sandboarding in Agabat dunes",
+        "Overnight Bedouin camp with crackling campfire and acoustic music",
+        "Traditional campfire-roasted dinner and freshly baked bedouin bread"
+      ],
+      "practicalInfo": {
+        "timing": "Departs Cairo at 07:00 AM Day 1; returns by 06:00 PM Day 2",
+        "dressCode": "Casual desert wear for daytime, warm fleece/jacket for chilly desert nights",
+        "physicalLevel": "Moderate (dune walking, 4x4 off-road riding)",
+        "included": [
+          "Private 4x4 expedition vehicle with professional desert driver",
+          "Complete camping equipment (spacious tents, thick mattresses, blankets)",
+          "All meals, campfire dinner, snacks, and unlimited bottled water",
+          "National park entry and environmental permits"
+        ]
+      },
+      "inquiryCta": "Plan Your Desert Safari",
+      "featured": true
+    },
+    {
+      "id": "felucca-sailing",
+      "slug": "felucca-sailing",
+      "title": "Sunset Nile Felucca Sailing with Traditional High Tea",
+      "location": "Aswan & Cairo",
+      "duration": "2 Hours",
+      "price": 35,
+      "rating": 4.9,
+      "reviewsCount": 460,
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Nile Sailing",
+      "badge": "Romantic",
+      "description": "Board a handcrafted wooden sailboat with canvas sails for a peaceful, wind-driven passage along the timeless Nile, accompanied by freshly brewed mint tea and oriental dates as golden hour bathes the riverbanks.",
+      "highlights": [
+        "Private traditional Egyptian felucca reserved exclusively for your party",
+        "Wind-powered peaceful navigation with zero motor noise",
+        "Fresh Egyptian mint tea, hibiscus karkadeh, and local dates served on deck",
+        "Unsurpassed golden hour photography of river islands and granite rocks"
+      ],
+      "practicalInfo": {
+        "timing": "Departures late afternoon (16:30 in winter, 17:30 in summer)",
+        "dressCode": "Smart casual; light wrap or windbreaker for when the sun dips",
+        "physicalLevel": "Easy",
+        "included": [
+          "Private felucca and experienced river captain",
+          "Freshly brewed mint tea, bottled water, and seasonal fruit/dates",
+          "Hotel or cruise ship dock pickup and return"
+        ]
+      },
+      "inquiryCta": "Book Sunset Felucca",
+      "featured": true
+    },
+    {
+      "id": "red-sea-diving",
+      "slug": "red-sea-diving",
+      "title": "Red Sea VIP Diving & Coral Reef Snorkeling Yacht Charter",
+      "location": "Hurghada & Sharm El Sheikh",
+      "duration": "Full Day (7 Hours)",
+      "price": 75,
+      "rating": 4.9,
+      "reviewsCount": 390,
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Snorkeling & Diving",
+      "badge": "Top Rated",
+      "description": "Submerge into the legendary coral gardens of Ras Mohammed and Giftun Island, home to over 1,000 species of marine life, manta rays, and playful wild dolphins, aboard a private luxury sea cruiser.",
+      "highlights": [
+        "Explore pristine coral reef walls with 30+ meter underwater visibility",
+        "Guidance by certified PADI Dive Masters & marine biologists",
+        "Complimentary top-tier snorkel gear, wetsuits, and flotation devices",
+        "Fresh seafood buffet lunch served on the spacious sun deck"
+      ],
+      "practicalInfo": {
+        "timing": "08:30 AM marina departure; 04:00 PM return",
+        "dressCode": "Swimwear, sun hat, UV rashguard, biodegradable reef-safe sunscreen",
+        "physicalLevel": "Easy to Moderate (swimming proficiency recommended)",
+        "included": [
+          "Private or small-group yacht cruise to two distinct coral reef sites",
+          "All snorkeling gear, fins, masks, and life vests",
+          "Chef-prepared buffet lunch and unlimited hot & cold soft drinks",
+          "National park marine conservation marine permits"
+        ]
+      },
+      "inquiryCta": "Inquire for Marine Yacht",
+      "featured": false
+    },
+    {
+      "id": "nubian-village",
+      "slug": "nubian-village",
+      "title": "Authentic Nubian Village Cultural Encounter",
+      "location": "Aswan",
+      "duration": "Half Day (4 hrs)",
+      "price": 50,
+      "rating": 4.8,
+      "reviewsCount": 290,
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Cultural",
+      "badge": "Authentic",
+      "description": "Cross the Nile by private motor launch to the brightly painted villages of Soheil Island. Meet welcoming Nubian families, learn about ancient heritage that predates pharaonic dynasties, and browse handmade aromatic spices and woven palm crafts.",
+      "highlights": [
+        "Scenic boat passage through the Nile’s granite boulders and bird sanctuaries",
+        "Visit a traditional domed Nubian home with colorful geometric frescoes",
+        "Sip sweet cinnamon and mint tea with village elders",
+        "Optional henna tattoo application and spice market discovery"
+      ],
+      "practicalInfo": {
+        "timing": "Morning (09:00 AM) or late afternoon (14:30 PM)",
+        "dressCode": "Respectful modest clothing covering knees and shoulders",
+        "physicalLevel": "Easy (short walking over sandy village paths)",
+        "included": [
+          "Private boat roundtrip from Aswan dock to Soheil Island",
+          "Local resident guide sharing oral Nubian history and language",
+          "Traditional tea and hospitality in a family home"
+        ]
+      },
+      "inquiryCta": "Experience Nubian Culture",
+      "featured": false
+    },
+    {
+      "id": "egyptian-food-tour",
+      "slug": "egyptian-food-tour",
+      "title": "Old Cairo Culinary & Historic Street Food Safari",
+      "location": "Cairo",
+      "duration": "4 Hours",
+      "price": 55,
+      "rating": 4.9,
+      "reviewsCount": 340,
+      "image": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1200&q=85",
+      "gallery": [
+        "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "category": "Food",
+      "badge": "Popular",
+      "description": "Wander through the buzzing culinary alleys of historic Cairo, savoring authentic fava bean falafel, steaming bowls of koshari, freshly baked baladi bread from stone ovens, and artisanal oriental sweets.",
+      "highlights": [
+        "6+ authentic food tastings at revered heritage food stalls",
+        "Historic walk through Khan El Khalili alleys and Bab Zuweila",
+        "Traditional tea and conversation at the legendary El Fishawy Cafe",
+        "Discover secret family recipes handed down across generations"
+      ],
+      "practicalInfo": {
+        "timing": "Evening departures (17:00 PM) when food bazaars are most vibrant",
+        "dressCode": "Comfortable walking shoes and casual evening attire",
+        "physicalLevel": "Easy (slow-paced walking with multiple seated food stops)",
+        "included": [
+          "Dedicated local food specialist guide",
+          "All food tastings, street snacks, juices, and tea",
+          "Private hotel pickup and return"
+        ]
+      },
+      "inquiryCta": "Taste Historic Cairo",
+      "featured": false
+    }
+  ],
+  "articles": [
+    {
+      "id": "grand-egyptian-museum-guide",
+      "slug": "grand-egyptian-museum-guide",
+      "title": "The Ultimate Guide to the Grand Egyptian Museum (GEM)",
+      "excerpt": "Step inside the largest archaeological museum in the world, home to the complete treasures of King Tutankhamun and thousands of royal artifacts.",
+      "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=85",
+      "category": "Archaeology & Culture",
+      "readTime": "6 min read",
+      "date": "November 2026",
+      "author": "Resident Egyptology Directorate",
+      "authorRole": "Senior Curator of Antiquities",
+      "authorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "content": [
+        "Situated at the foot of the Giza Plateau, the Grand Egyptian Museum (GEM) represents the crowning architectural and archaeological milestone of 21st-century Egypt.",
+        "Spanning over 500,000 square meters, the sanctuary houses over 100,000 antiquities, including—for the first time in human history—the complete, intact collection of King Tutankhamun’s 5,398 funerary treasures in one unified hall.",
+        "Upon entering the museum’s immense glass-walled atrium, visitors are greeted by the colossal 3,200-year-old pink granite statue of Pharaoh Ramesses II, suspended effortlessly within soaring architectural lines that frame the Great Pyramids outside through colossal panoramic windows.",
+        "Ascending the monumental Grand Staircase, chronologically curated artifacts narrate the evolution of kingship, royal mortuary rituals, and divinity through the Old, Middle, and New Kingdoms.",
+        "Our VIP private tours offer priority early access, private Egyptologist curatorial walk-throughs, and exclusive access to the conservation laboratories where pharaonic gold and cedar barques are preserved."
+      ],
+      "tags": [
+        "Grand Egyptian Museum",
+        "Tutankhamun",
+        "Giza",
+        "VIP Access",
+        "Museum Guide"
+      ]
+    },
+    {
+      "id": "sailing-nile-dahabiya-experience",
+      "slug": "sailing-nile-dahabiya-experience",
+      "title": "Why a Private Dahabiya Is the Purest Way to Sail the Nile",
+      "excerpt": "Discover why twin-masted sailing vessels offer an intimate, wind-driven voyage impossible to match on larger commercial cruise liners.",
+      "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=85",
+      "category": "Luxury Sailing",
+      "readTime": "5 min read",
+      "date": "October 2026",
+      "author": "Captain Tarek & Flotilla Curators",
+      "authorRole": "Master River Navigator",
+      "authorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      "content": [
+        "Before diesel engines and multi-deck river cruisers navigated the Nile, 19th-century royalty, aristocrats, and early scholars journeyed along the eternal river aboard Dahabiyas: graceful twin-masted sailing yachts propelled purely by the northerly desert wind.",
+        "Unlike massive commercial liners carrying hundreds of passengers, a private Dahabiya accommodates just 8 to 12 guests. It can moor at serene river islands, Nubian village coves, and secluded monuments such as Gebel el-Silsila that large cruisers cannot access.",
+        "With no engine roar or exhaust vibration, the only sounds are the billow of white canvas, the lapping of the Nile against teak hull timbers, and the song of kingfishers among the papyrus reeds.",
+        "Dining on teak decks under the star-drenched Egyptian night sky, accompanied by an onboard private chef and personal Egyptologist, transforms the river journey into pure poetry."
+      ],
+      "tags": [
+        "Dahabiya",
+        "Nile Cruise",
+        "Luxury Travel",
+        "Upper Egypt",
+        "Sailing"
+      ]
+    },
+    {
+      "id": "hidden-tombs-valley-of-the-kings",
+      "slug": "hidden-tombs-valley-of-the-kings",
+      "title": "Beyond Tutankhamun: Secret Tombs of Luxor’s West Bank",
+      "excerpt": "Explore the vivid astronomical ceilings of Seti I and the subterranean masterpieces tucked away in the Valley of the Nobles.",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=85",
+      "category": "Egyptology Notes",
+      "readTime": "8 min read",
+      "date": "September 2026",
+      "author": "Antiquities Field Researchers",
+      "authorRole": "Field Archaeologist",
+      "authorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      "content": [
+        "While the world marvels at Tutankhamun’s golden treasures, seasoned scholars know that the finest ancient Egyptian royal wall reliefs lie elsewhere in the Theban Necropolis.",
+        "Tomb KV17—the subterranean sepulcher of Pharaoh Seti I—stretches more than 137 meters into the limestone mountain. Its subterranean astronomical ceilings, rendered in vivid lapis lazuli and gold leaf pigments, remain as vibrant today as when royal painters sealed them 3,300 years ago.",
+        "Equally mesmerizing is Tomb QV66 in the Valley of the Queens: the eternal resting place of Queen Nefertari, known as \"The Sistine Chapel of Ancient Egypt\" for its masterfully shaded bas-reliefs illustrating her journey through the Duat underworld.",
+        "On our bespoke Luxor journeys, guests enjoy private opening permits to Seti I, Nefertari’s tomb, and the intimate aristocratic tombs of Sennefer and Rekhmire in the Valley of the Nobles."
+      ],
+      "tags": [
+        "Valley of the Kings",
+        "Nefertari",
+        "Luxor",
+        "Archaeology",
+        "Royal Tombs"
+      ]
+    }
+  ],
+  "specialOffers": [
+    {
+      "id": "early-bird-nile-2027",
+      "title": "Early Bird Luxury: 2026/2027 Nile Cruise Privilege",
+      "discount": "15% Off",
+      "description": "Book your 2026 or 2027 private Dahabiya or 5-Star river cruise at least 90 days in advance and receive a 15% booking credit plus complimentary domestic flights.",
+      "originalPrice": 1450,
+      "discountedPrice": 1230,
+      "validity": "Valid for bookings made before Dec 31, 2026",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1000&q=80",
+      "category": "Cruise Privilege",
+      "badge": "Limited Availability",
+      "slug": "dahabiya-cleopatra",
+      "targetType": "cruise"
+    },
+    {
+      "id": "honeymoon-red-sea-cairo",
+      "title": "Honeymoon Romance Package: Suite Upgrades & Champagne",
+      "discount": "$350 Savings",
+      "description": "Celebrate your union with complimentary suite upgrades in Cairo, private candlelit dinner on the Nile bank, and couples massage at our Red Sea resort.",
+      "originalPrice": 1850,
+      "discountedPrice": 1500,
+      "validity": "Year-Round Booking Privilege",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+      "category": "Romantic Escape",
+      "badge": "Honeymoon Special",
+      "slug": "nile-and-red-sea-escape-11-days",
+      "targetType": "package"
+    },
+    {
+      "id": "family-gem-adventure",
+      "title": "Family Pharaoh Expedition: Kids Go Free on Sightseeing",
+      "discount": "Kids Free",
+      "description": "Children under 12 receive complimentary entry tickets and private child-friendly Egyptologist treasure hunts on all Cairo and Luxor packages.",
+      "originalPrice": 1350,
+      "discountedPrice": 1190,
+      "validity": "Valid for Travel in 2026 - 2027",
+      "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=80",
+      "category": "Family Friendly",
+      "badge": "Family Offer",
+      "slug": "classic-egypt-wonders-8-days",
+      "targetType": "package"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-1",
+      "author": "Eleanor & Charles Sterling",
+      "rating": 5,
+      "date": "October 2026",
+      "location": "London, United Kingdom",
+      "text": "Our 10-day Dahabiya voyage exceeded every dream. Having a private Egyptologist explain the astronomical murals of Seti I with no one else in the tomb was an experience we will cherish for life.",
+      "tourOrCruiseName": "The Pharaoh’s Sanctuary: Cairo & Private Dahabiya"
+    },
+    {
+      "id": "review-2",
+      "author": "David & Sophia Chen",
+      "rating": 5,
+      "date": "September 2026",
+      "location": "San Francisco, USA",
+      "text": "From the tarmac meet-and-assist in Cairo to the private sunrise opening of the Grand Egyptian Museum, Vibes of Egypt delivered seamless white-glove service. Truly world-class.",
+      "tourOrCruiseName": "The Classic Egypt: Cairo & Luxury Nile Cruise"
+    },
+    {
+      "id": "review-3",
+      "author": "Markus & Beatrice Weber",
+      "rating": 5,
+      "date": "November 2026",
+      "location": "Zurich, Switzerland",
+      "text": "Glamping under the Milky Way in the White Desert with Bedouin hosts was unforgettable. The logistics, the chef-prepared food, and the private 4x4 were impeccable.",
+      "tourOrCruiseName": "White Desert 4x4 Wilderness Safari"
+    }
+  ]
+}

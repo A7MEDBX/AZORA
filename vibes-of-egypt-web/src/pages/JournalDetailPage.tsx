@@ -1,13 +1,21 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getArticleBySlug, getArticles } from '@/lib/catalog';
+import { fetchJournalArticleBySlug, fetchJournalArticles } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { ArticleDetailTemplate } from '@/templates';
 
 export default function JournalDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const article = getArticleBySlug(slug);
+  const fallbackArticle = getArticleBySlug(slug) ?? null;
+  const { data: article, isLoading } = useAsyncData(
+    () => (slug ? fetchJournalArticleBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    fallbackArticle
+  );
+  const { data: allArticles } = useAsyncData(() => fetchJournalArticles(), [], getArticles());
 
-  if (!article) {
+  if (!article && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,7 +41,9 @@ export default function JournalDetailPage() {
     );
   }
 
-  const relatedArticles = getArticles().filter(a => a.id !== article.id);
+  if (!article) return null;
+
+  const relatedArticles = allArticles.filter(a => a.id !== article.id);
 
   return <ArticleDetailTemplate article={article} relatedArticles={relatedArticles} />;
 }

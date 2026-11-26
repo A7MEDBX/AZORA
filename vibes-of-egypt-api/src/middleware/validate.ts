@@ -7,22 +7,38 @@ interface ValidationSchemas {
   params?: AnyZodObject | ZodSchema;
 }
 
+export interface ValidatedRequestData {
+  body?: unknown;
+  query?: unknown;
+  params?: unknown;
+}
+
 /**
  * Validates request body, query, and/or params against Zod schemas.
- * Parsed values replace the raw properties on the request object.
+ * Stores parsed, coerced values on res.locals.validated for type-safe access.
  */
 export function validate(schemas: ValidationSchemas) {
-  return (req: Request, _res: Response, next: NextFunction): void => {
+  return (req: Request, res: Response, next: NextFunction): void => {
     try {
+      const validated: ValidatedRequestData = {};
+
       if (schemas.params) {
-        req.params = schemas.params.parse(req.params);
+        const parsedParams = schemas.params.parse(req.params);
+        validated.params = parsedParams;
+        req.params = parsedParams;
       }
+
       if (schemas.query) {
-        req.query = schemas.query.parse(req.query);
+        validated.query = schemas.query.parse(req.query);
       }
+
       if (schemas.body) {
-        req.body = schemas.body.parse(req.body);
+        const parsedBody = schemas.body.parse(req.body);
+        validated.body = parsedBody;
+        req.body = parsedBody;
       }
+
+      res.locals.validated = validated;
       next();
     } catch (error) {
       next(error);

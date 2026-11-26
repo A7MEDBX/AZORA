@@ -1,10 +1,10 @@
 import cors from 'cors';
 import express from 'express';
-import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import { env } from './config/env';
 import { errorHandler } from './middleware/errorHandler';
 import { notFound } from './middleware/notFound';
+import { apiRateLimiter } from './middleware/rateLimiter';
 import apiRoutes from './routes';
 
 const app = express();
@@ -24,28 +24,12 @@ app.use(
   })
 );
 
-// Global rate limiting
-app.use(
-  rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 300,
-    standardHeaders: true,
-    legacyHeaders: false,
-    message: {
-      error: {
-        code: 'TOO_MANY_REQUESTS',
-        message: 'Too many requests, please try again later.',
-      },
-    },
-  })
-);
+// Body parsers with strict 50kb payload limits to prevent oversized payload abuse
+app.use(express.json({ limit: '50kb' }));
+app.use(express.urlencoded({ extended: true, limit: '50kb' }));
 
-// Body parsers with strict payload limits
-app.use(express.json({ limit: '100kb' }));
-app.use(express.urlencoded({ extended: true, limit: '100kb' }));
-
-// Mount API routes
-app.use('/api', apiRoutes);
+// Mount API routes with general API rate limiter
+app.use('/api', apiRateLimiter, apiRoutes);
 
 // 404 & centralized error handling
 app.use(notFound);

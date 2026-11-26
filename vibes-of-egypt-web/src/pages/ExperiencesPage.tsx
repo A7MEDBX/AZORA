@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { experiences } from '@/lib/catalog';
+import { experiences as mockExperiences } from '@/lib/catalog';
+import { fetchExperiences } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { Container, PageBanner, EmptyState } from '@/components/ui';
 import { ExperienceCard } from '@/components/cards';
 import { FilterBar } from '@/features/filters';
@@ -9,6 +11,7 @@ import styles from './Experiences.module.css';
 
 export default function ExperiencesPage() {
   const { t } = useLanguage();
+  const { data: experiences } = useAsyncData(() => fetchExperiences(), [], mockExperiences);
 
   usePageMeta({
     title: 'Signature Egyptian Experiences & Desert Safaris',

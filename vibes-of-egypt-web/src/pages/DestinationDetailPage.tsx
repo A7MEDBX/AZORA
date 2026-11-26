@@ -1,13 +1,24 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getDestinationBySlug, getToursByDestination } from '@/lib/catalog';
+import { fetchDestinationBySlug } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { DestinationDetailTemplate } from '@/templates';
 
 export default function DestinationDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const destination = getDestinationBySlug(slug);
+  const fallbackDest = getDestinationBySlug(slug);
+  const initialData = fallbackDest
+    ? { destination: fallbackDest, relatedTours: getToursByDestination(fallbackDest.slug) }
+    : null;
 
-  if (!destination) {
+  const { data, isLoading } = useAsyncData(
+    () => (slug ? fetchDestinationBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    initialData
+  );
+
+  if (!data && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,12 +44,12 @@ export default function DestinationDetailPage() {
     );
   }
 
-  const relatedTours = getToursByDestination(destination.slug);
+  if (!data) return null;
 
   return (
     <DestinationDetailTemplate
-      destination={destination}
-      relatedTours={relatedTours}
+      destination={data.destination}
+      relatedTours={data.relatedTours}
     />
   );
 }

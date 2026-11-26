@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { searchCatalog, SearchResultItem } from '@/lib/catalog';
+import type { SearchResultItem } from '@/lib/catalog';
+import { searchCatalogApi } from '@/services/catalogService';
 import { EmptyState } from '@/components/ui';
 import styles from './SearchFeature.module.css';
 
@@ -20,9 +21,27 @@ export const SearchFeature: React.FC = () => {
     if (categoryParam) setSelectedCategory(categoryParam);
   }, [queryParam, categoryParam]);
 
-  // Execute cross-catalog search
-  const allResults = useMemo(() => {
-    return searchCatalog(queryParam);
+  // Execute cross-catalog search via API (or mock fallback when VITE_USE_MOCK_DATA=true)
+  const [allResults, setAllResults] = useState<SearchResultItem[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!queryParam.trim()) {
+      setAllResults([]);
+      return;
+    }
+
+    searchCatalogApi(queryParam)
+      .then((results) => {
+        if (!cancelled) setAllResults(results);
+      })
+      .catch(() => {
+        if (!cancelled) setAllResults([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, [queryParam]);
 
   // Filter results by selected category tab

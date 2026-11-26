@@ -2,12 +2,15 @@ import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Container, PageBanner } from '@/components/ui';
 import { ArticleCard } from '@/components/cards';
-import { articles } from '@/lib/catalog';
+import { articles as mockArticles } from '@/lib/catalog';
+import { fetchJournalArticles } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import styles from './Journal.module.css';
 
 export default function JournalPage() {
   const { t } = useLanguage();
+  const { data: articles } = useAsyncData(() => fetchJournalArticles(), [], mockArticles);
 
   usePageMeta({
     title: 'The Egyptian Travel Journal — Insights & Travel Guides',

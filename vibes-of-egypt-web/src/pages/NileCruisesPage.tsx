@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { cruises } from '@/lib/catalog';
+import { cruises as mockCruises } from '@/lib/catalog';
+import { fetchCruises } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { Container, PageBanner, EmptyState } from '@/components/ui';
 import { CruiseCard } from '@/components/cards';
 import { FilterBar } from '@/features/filters';
@@ -9,6 +11,7 @@ import styles from './Cruises.module.css';
 
 export default function NileCruisesPage() {
   const { t } = useLanguage();
+  const { data: cruises } = useAsyncData(() => fetchCruises(), [], mockCruises);
 
   usePageMeta({
     title: 'Luxury Nile Cruises & Boutique Dahabiya Charters',

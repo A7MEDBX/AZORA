@@ -1,13 +1,25 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getTourBySlug, getToursByCategory } from '@/lib/catalog';
+import { fetchTourBySlug, fetchTours } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { TourDetailTemplate } from '@/templates';
 
 export default function TourDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const tour = getTourBySlug(slug);
+  const fallbackTour = getTourBySlug(slug) ?? null;
+  const { data: tour, isLoading } = useAsyncData(
+    () => (slug ? fetchTourBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    fallbackTour
+  );
+  const { data: categoryTours } = useAsyncData(
+    () => (tour ? fetchTours({ category: tour.category }) : Promise.resolve([])),
+    [tour?.category],
+    tour ? getToursByCategory(tour.category) : []
+  );
 
-  if (!tour) {
+  if (!tour && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,7 +45,9 @@ export default function TourDetailPage() {
     );
   }
 
-  const relatedTours = getToursByCategory(tour.category).filter(t => t.id !== tour.id);
+  if (!tour) return null;
+
+  const relatedTours = categoryTours.filter(t => t.id !== tour.id);
 
   return <TourDetailTemplate tour={tour} relatedTours={relatedTours} />;
 }

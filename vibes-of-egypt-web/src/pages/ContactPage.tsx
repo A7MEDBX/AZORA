@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Container, PageBanner, Button, FormField } from '@/components/ui';
-import { submitInquiry } from '@/lib/submitInquiry';
+import { ApiClientError } from '@/api/client';
+import { submitContactInquiry } from '@/services/inquiriesService';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import styles from './Contact.module.css';
 
@@ -47,18 +48,34 @@ export default function ContactPage() {
     setSubmissionError(null);
 
     try {
-      const result = await submitInquiry({
-        formType: 'contact',
-        name: formData.name,
+      const result = await submitContactInquiry({
+        fullName: formData.name,
         email: formData.email,
-        phone: formData.phone,
-        message: formData.message
+        phone: formData.phone || undefined,
+        message: formData.message,
+        inquiryType: 'general'
       });
       setSubmissionMode(result.mode);
       setSubmitted(true);
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Failed to send your message. Please try again.';
-      setSubmissionError(msg);
+      if (err instanceof ApiClientError) {
+        if (err.status === 400 && Object.keys(err.fieldErrors).length > 0) {
+          const mappedErrors: Record<string, string> = {};
+          if (err.fieldErrors.fullName) mappedErrors.name = err.fieldErrors.fullName;
+          if (err.fieldErrors.email) mappedErrors.email = err.fieldErrors.email;
+          if (err.fieldErrors.phone) mappedErrors.phone = err.fieldErrors.phone;
+          if (err.fieldErrors.message) mappedErrors.message = err.fieldErrors.message;
+          setErrors(prev => ({ ...prev, ...mappedErrors }));
+          setSubmissionError('Please review the highlighted fields below and try again.');
+        } else if (err.isRateLimited) {
+          setSubmissionError(err.message);
+        } else {
+          setSubmissionError(err.message);
+        }
+      } else {
+        const msg = err instanceof Error ? err.message : 'Failed to send your message. Please try again.';
+        setSubmissionError(msg);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -211,11 +228,14 @@ export default function ContactPage() {
                   />
                 </FormField>
 
-                <FormField label="Phone / WhatsApp Number">
+                <FormField label="Phone / WhatsApp Number" error={errors.phone}>
                   <input
                     type="tel"
                     value={formData.phone}
-                    onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                    onChange={e => {
+                      setFormData(prev => ({ ...prev, phone: e.target.value }));
+                      if (errors.phone) setErrors(prev => ({ ...prev, phone: '' }));
+                    }}
                     placeholder="+1 (555) 019-2834"
                     className={styles.input}
                   />

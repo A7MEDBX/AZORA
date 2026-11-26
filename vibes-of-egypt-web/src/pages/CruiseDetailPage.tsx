@@ -1,13 +1,25 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getCruiseBySlug, getCruisesByType } from '@/lib/catalog';
+import { fetchCruiseBySlug, fetchCruises } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { CruiseDetailTemplate } from '@/templates';
 
 export default function CruiseDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const cruise = getCruiseBySlug(slug);
+  const fallbackCruise = getCruiseBySlug(slug) ?? null;
+  const { data: cruise, isLoading } = useAsyncData(
+    () => (slug ? fetchCruiseBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    fallbackCruise
+  );
+  const { data: relatedList } = useAsyncData(
+    () => (cruise ? fetchCruises({ type: cruise.cruiseType }) : Promise.resolve([])),
+    [cruise?.cruiseType],
+    cruise ? getCruisesByType(cruise.cruiseType) : []
+  );
 
-  if (!cruise) {
+  if (!cruise && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,7 +45,9 @@ export default function CruiseDetailPage() {
     );
   }
 
-  const relatedCruises = getCruisesByType(cruise.cruiseType).filter(c => c.id !== cruise.id);
+  if (!cruise) return null;
+
+  const relatedCruises = relatedList.filter(c => c.id !== cruise.id);
 
   return <CruiseDetailTemplate cruise={cruise} relatedCruises={relatedCruises} />;
 }

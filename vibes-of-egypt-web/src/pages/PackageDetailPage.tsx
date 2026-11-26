@@ -1,13 +1,25 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getPackageBySlug, getPackagesByCategory } from '@/lib/catalog';
+import { fetchPackageBySlug, fetchPackages } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { PackageDetailTemplate } from '@/templates';
 
 export default function PackageDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const pkg = getPackageBySlug(slug);
+  const fallbackPkg = getPackageBySlug(slug) ?? null;
+  const { data: pkg, isLoading } = useAsyncData(
+    () => (slug ? fetchPackageBySlug(slug) : Promise.resolve(null)),
+    [slug],
+    fallbackPkg
+  );
+  const { data: categoryPackages } = useAsyncData(
+    () => (pkg ? fetchPackages({ category: pkg.category }) : Promise.resolve([])),
+    [pkg?.category],
+    pkg ? getPackagesByCategory(pkg.category) : []
+  );
 
-  if (!pkg) {
+  if (!pkg && !isLoading) {
     return (
       <div style={{ padding: '8rem 2rem', textAlign: 'center' }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '1rem' }}>
@@ -33,7 +45,9 @@ export default function PackageDetailPage() {
     );
   }
 
-  const relatedPackages = getPackagesByCategory(pkg.category).filter(p => p.id !== pkg.id);
+  if (!pkg) return null;
+
+  const relatedPackages = categoryPackages.filter(p => p.id !== pkg.id);
 
   return <PackageDetailTemplate packageData={pkg} relatedPackages={relatedPackages} />;
 }

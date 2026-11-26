@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { tours } from '@/lib/catalog';
+import { tours as mockTours } from '@/lib/catalog';
+import { fetchTours } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import type { Tour } from '@/types';
 import { Container, PageBanner, EmptyState } from '@/components/ui';
 import { TourCard } from '@/components/cards';
@@ -10,6 +12,7 @@ import styles from './Tours.module.css';
 
 export default function ToursPage() {
   const { t } = useLanguage();
+  const { data: tours } = useAsyncData(() => fetchTours(), [], mockTours);
 
   usePageMeta({
     title: 'Curated Private Tours & Expeditions',

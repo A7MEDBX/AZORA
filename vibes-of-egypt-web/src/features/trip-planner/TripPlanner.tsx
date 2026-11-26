@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { destinations } from '@/lib/catalog';
-import { submitInquiry } from '@/lib/submitInquiry';
+import { ApiClientError } from '@/api/client';
+import { submitTripPlan } from '@/services/inquiriesService';
 import styles from './TripPlanner.module.css';
 
 interface TripPlannerData {
@@ -158,34 +159,60 @@ export const TripPlanner: React.FC = () => {
     setErrorMsg('');
 
     try {
-      const generatedRef = `VOE-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
-      setSubmissionRef(generatedRef);
+      const parsedAdults = parseInt(data.partySize, 10);
+      const adultsCount = Number.isNaN(parsedAdults) ? 2 : Math.max(1, parsedAdults);
+      const parsedDuration = parseInt(data.duration, 10);
+      const durationDays = Number.isNaN(parsedDuration) ? 8 : Math.max(1, parsedDuration);
+      const isoStartDate = /^\d{4}-\d{2}-\d{2}$/.test(data.travelDates.trim())
+        ? data.travelDates.trim()
+        : undefined;
 
-      const result = await submitInquiry({
-        formType: 'trip-planner',
-        referenceNumber: generatedRef,
-        destinations: data.destinations,
-        travelDates: data.travelDates,
-        flexibleDates: data.flexibleDates,
-        duration: data.duration,
-        partySize: data.partySize,
-        travelerType: data.travelerType,
-        interests: data.interests,
-        travelStyle: data.travelStyle,
-        budgetPerPerson: data.budgetPerPerson,
+      const noteParts = [
+        prefillContext ? `Context: ${prefillContext}` : '',
+        !isoStartDate && data.travelDates.trim() ? `Preferred Dates: ${data.travelDates.trim()}` : '',
+        data.travelerType ? `Traveler Type: ${data.travelerType}` : '',
+        data.specialRequests.trim() ? data.specialRequests.trim() : ''
+      ].filter(Boolean);
+
+      const result = await submitTripPlan({
         fullName: data.fullName,
         email: data.email,
-        phone: data.phone,
-        country: data.country,
-        specialRequests: data.specialRequests,
-        prefillContext
+        phone: data.phone || undefined,
+        country: data.country || undefined,
+        travelStartDate: isoStartDate,
+        isDatesFlexible: data.flexibleDates,
+        durationDays,
+        adultsCount,
+        childrenCount: 0,
+        preferredDestinations: data.destinations,
+        interests: data.interests,
+        accommodationPreference: data.travelStyle,
+        budgetPerPerson: data.budgetPerPerson,
+        additionalNotes: noteParts.length > 0 ? noteParts.join(' | ') : undefined
       });
 
+      const shortRef = result.id.startsWith('mock-')
+        ? `VOE-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`
+        : `VOE-${result.id.slice(0, 8).toUpperCase()}`;
+      setSubmissionRef(shortRef);
       setSubmissionMode(result.mode);
       setIsSubmitted(true);
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Unable to transmit your request. Please check your network and try again.';
-      setErrorMsg(msg);
+      if (err instanceof ApiClientError) {
+        if (err.status === 400 && Object.keys(err.fieldErrors).length > 0) {
+          const fieldMessages = Object.entries(err.fieldErrors)
+            .map(([field, message]) => `${field}: ${message}`)
+            .join(' • ');
+          setErrorMsg(`Please check your entries: ${fieldMessages}`);
+        } else if (err.isRateLimited) {
+          setErrorMsg(err.message);
+        } else {
+          setErrorMsg(err.message);
+        }
+      } else {
+        const msg = err instanceof Error ? err.message : 'Unable to transmit your request. Please check your network and try again.';
+        setErrorMsg(msg);
+      }
     } finally {
       setIsSubmitting(false);
     }

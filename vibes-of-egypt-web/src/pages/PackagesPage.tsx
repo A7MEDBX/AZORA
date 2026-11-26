@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { packages } from '@/lib/catalog';
+import { packages as mockPackages } from '@/lib/catalog';
+import { fetchPackages } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { Container, PageBanner, EmptyState } from '@/components/ui';
 import { PackageCard } from '@/components/cards';
 import { FilterBar } from '@/features/filters';
@@ -9,6 +11,7 @@ import styles from './Packages.module.css';
 
 export default function PackagesPage() {
   const { t } = useLanguage();
+  const { data: packages } = useAsyncData(() => fetchPackages(), [], mockPackages);
 
   usePageMeta({
     title: 'Luxury Travel Packages & All-Inclusive Itineraries',
