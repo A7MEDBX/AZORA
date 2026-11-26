@@ -1,0 +1,45 @@
+:root {
+  /* Brand Palette — Dark Slate & Warm Egyptian Gold/Sand */
+  --bg-sidebar: #0f172a;
+  --bg-sidebar-hover: #1e293b;
+  --bg-sidebar-active: rgba(201, 154, 67, 0.16);
+  --bg-page: #f8f7f4;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f3f1ec;
+
+  --gold: #c99a43;
+  --gold-hover: #b38431;
+  --gold-soft: rgba(201, 154, 67, 0.14);
+  --sand: #a66c46;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-sidebar: #cbd5e1;
+  --text-sidebar-muted: #64748b;
+
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --success-bg: #dcfce7;
+  --success-text: #166534;
+  --warning-bg: #fef3c7;
+  --warning-text: #92400e;
+  --danger-bg: #fee2e2;
+  --danger-text: #991b1b;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --info-bg: #e0f2fe;
+  --info-text: #075985;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.16);
+
+  --sidebar-width: 260px;
+  --header-height: 64px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
