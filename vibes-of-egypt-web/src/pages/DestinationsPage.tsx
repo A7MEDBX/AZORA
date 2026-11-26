@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { USE_MOCK_DATA } from '@/api/client';
 import { destinations as mockDestinations } from '@/lib/catalog';
 import { fetchDestinations } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -10,7 +11,11 @@ import styles from './Destinations.module.css';
 
 export default function DestinationsPage() {
   const { t } = useLanguage();
-  const { data: destinations } = useAsyncData(fetchDestinations, [], mockDestinations);
+  const { data: destinations } = useAsyncData(
+    fetchDestinations,
+    [],
+    USE_MOCK_DATA ? mockDestinations : []
+  );
 
   usePageMeta({
     title: 'Destinations of Egypt — 19 Ancient & Coastal Sanctuaries',

@@ -1,10 +1,12 @@
 import type { Request, Response } from 'express';
+import { loginAdmin } from '../../services/admin/auth.admin.service';
 import * as inquiryAdminService from '../../services/admin/inquiry.admin.service';
 import * as reviewAdminService from '../../services/admin/review.admin.service';
 import { getAdminStats } from '../../services/admin/stats.admin.service';
 import * as tripPlanAdminService from '../../services/admin/tripPlan.admin.service';
 import * as uploadAdminService from '../../services/admin/upload.admin.service';
 import { AppError } from '../../types/api';
+import type { AdminLoginInput } from '../../validators/admin/auth.admin.validator';
 import type { UuidParams } from '../../validators/admin/common.validator';
 import type {
   AdminInquiriesQuery,
@@ -38,7 +40,13 @@ function getBody<T>(req: Request, res: Response): T {
   return (validatedBody ?? req.body) as T;
 }
 
-// Admin Profile & Stats
+// Admin Login, Profile & Stats
+export async function handleAdminLogin(req: Request, res: Response): Promise<void> {
+  const input = getBody<AdminLoginInput>(req, res);
+  const result = await loginAdmin(input);
+  res.status(200).json({ data: result });
+}
+
 export async function getAdminMe(req: Request, res: Response): Promise<void> {
   res.status(200).json({ data: req.adminUser });
 }
@@ -139,7 +147,11 @@ export async function uploadImage(req: Request, res: Response): Promise<void> {
     undefined;
 
   const folder = uploadFolderSchema.parse(rawFolder);
-  const data = await uploadAdminService.uploadImageToStorage(req.file, folder);
+  const data = await uploadAdminService.uploadImageToStorage(
+    req.file,
+    folder,
+    req.adminUser?.email
+  );
 
   res.status(201).json({ data });
 }

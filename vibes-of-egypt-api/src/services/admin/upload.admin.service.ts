@@ -1,110 +1,150 @@
 import { randomUUID } from 'node:crypto';
+import type { UploadApiResponse } from 'cloudinary';
+import { getCloudinary } from '../../config/cloudinary';
 import { getSupabaseClient } from '../../config/supabase';
 import { AppError } from '../../types/api';
-import type { UploadFolder } from '../../validators/admin/upload.admin.validator';
-
-export const MEDIA_BUCKET = 'vibes-of-egypt-media';
-
-const MIME_TO_EXT: Record<string, string> = {
-  'image/jpeg': 'jpg',
-  'image/png': 'png',
-  'image/webp': 'webp',
-  'image/avif': 'avif',
-};
+import {
+  CLOUDINARY_NAMESPACE,
+  type UploadFolder,
+} from '../../validators/admin/upload.admin.validator';
 
 export interface UploadedImageDto {
   url: string;
   path: string;
+  width?: number;
+  height?: number;
+  format?: string;
+  bytes?: number;
 }
 
-async function ensurePublicMediaBucket(): Promise<void> {
-  const supabase = getSupabaseClient();
-  const { data: bucket, error: getError } = await supabase.storage.getBucket(MEDIA_BUCKET);
+function streamBufferToCloudinary(
+  buffer: Buffer,
+  folder: string,
+  publicIdName: string
+): Promise<UploadApiResponse> {
+  const cloudinary = getCloudinary();
 
-  if (bucket) {
-    return;
-  }
-
-  // Create bucket as public if it does not exist yet
-  const isNotFound =
-    getError &&
-    (/not found/i.test(getError.message) ||
-      ('statusCode' in getError && String((getError as { statusCode?: unknown }).statusCode) === '404'));
-
-  if (!isNotFound && getError) {
-    throw new AppError(
-      `Failed to check storage bucket "${MEDIA_BUCKET}": ${getError.message}`,
-      500,
-      'STORAGE_ERROR'
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder,
+        public_id: publicIdName,
+        resource_type: 'image',
+        overwrite: false,
+      },
+      (err, result) => {
+        if (err || !result) {
+          reject(
+            new AppError(
+              `Cloudinary upload failed: ${err?.message ?? 'No upload response received'}`,
+              500,
+              'STORAGE_UPLOAD_ERROR'
+            )
+          );
+          return;
+        }
+        resolve(result);
+      }
     );
-  }
 
-  const { error: createError } = await supabase.storage.createBucket(MEDIA_BUCKET, {
-    public: true,
-    fileSizeLimit: 5 * 1024 * 1024,
-    allowedMimeTypes: Object.keys(MIME_TO_EXT),
+    uploadStream.end(buffer);
   });
+}
 
-  if (createError && !/already exists/i.test(createError.message)) {
-    throw new AppError(
-      `Failed to create storage bucket "${MEDIA_BUCKET}": ${createError.message}`,
-      500,
-      'STORAGE_ERROR'
+async function recordMediaAsset(params: {
+  publicId: string;
+  secureUrl: string;
+  folder: UploadFolder;
+  format?: string;
+  width?: number;
+  height?: number;
+  bytes?: number;
+  uploadedBy?: string;
+}): Promise<void> {
+  try {
+    const supabase = getSupabaseClient();
+    const { error } = await supabase.from('media_assets').upsert(
+      {
+        public_id: params.publicId,
+        secure_url: params.secureUrl,
+        folder: params.folder,
+        format: params.format ?? null,
+        width: params.width ?? null,
+        height: params.height ?? null,
+        bytes: params.bytes ?? null,
+        uploaded_by: params.uploadedBy ?? null,
+      },
+      { onConflict: 'public_id' }
     );
+
+    // If 003_media_assets.sql hasn't been executed yet (PGRST205), don't fail the upload
+    if (error && error.code !== 'PGRST205') {
+      console.warn('[media_assets] Failed to record uploaded image metadata:', error.message);
+    }
+  } catch {
+    // Non-fatal metadata logging fallback
+  }
+}
+
+async function removeMediaAssetRecord(publicId: string): Promise<void> {
+  try {
+    const supabase = getSupabaseClient();
+    await supabase.from('media_assets').delete().eq('public_id', publicId);
+  } catch {
+    // Ignore if media_assets table has not been migrated yet
   }
 }
 
 export async function uploadImageToStorage(
   file: Express.Multer.File,
-  folder: UploadFolder
+  folder: UploadFolder,
+  uploadedBy?: string
 ): Promise<UploadedImageDto> {
-  const ext = MIME_TO_EXT[file.mimetype];
-  if (!ext) {
-    throw new AppError(
-      `Unsupported image MIME type "${file.mimetype}".`,
-      400,
-      'INVALID_FILE_TYPE'
-    );
-  }
+  const targetFolder = `${CLOUDINARY_NAMESPACE}/${folder}`;
+  const publicIdName = `${Date.now()}-${randomUUID()}`;
 
-  await ensurePublicMediaBucket();
+  const result = await streamBufferToCloudinary(file.buffer, targetFolder, publicIdName);
 
-  const objectPath = `${folder}/${Date.now()}-${randomUUID()}.${ext}`;
-  const supabase = getSupabaseClient();
-
-  const { error: uploadError } = await supabase.storage
-    .from(MEDIA_BUCKET)
-    .upload(objectPath, file.buffer, {
-      contentType: file.mimetype,
-      cacheControl: '31536000',
-      upsert: false,
-    });
-
-  if (uploadError) {
-    throw new AppError(
-      `Failed to upload image to storage: ${uploadError.message}`,
-      500,
-      'STORAGE_UPLOAD_ERROR'
-    );
-  }
-
-  const { data: publicUrlData } = supabase.storage.from(MEDIA_BUCKET).getPublicUrl(objectPath);
+  await recordMediaAsset({
+    publicId: result.public_id,
+    secureUrl: result.secure_url,
+    folder,
+    format: result.format,
+    width: result.width,
+    height: result.height,
+    bytes: result.bytes,
+    uploadedBy,
+  });
 
   return {
-    url: publicUrlData.publicUrl,
-    path: objectPath,
+    url: result.secure_url,
+    path: result.public_id,
+    width: result.width,
+    height: result.height,
+    format: result.format,
+    bytes: result.bytes,
   };
 }
 
-export async function deleteImageFromStorage(objectPath: string): Promise<void> {
-  const supabase = getSupabaseClient();
+export async function deleteImageFromStorage(publicId: string): Promise<void> {
+  const cloudinary = getCloudinary();
+  const normalizedPublicId = publicId.startsWith(`${CLOUDINARY_NAMESPACE}/`)
+    ? publicId
+    : `${CLOUDINARY_NAMESPACE}/${publicId}`;
 
-  const { error } = await supabase.storage.from(MEDIA_BUCKET).remove([objectPath]);
-  if (error) {
+  try {
+    await cloudinary.uploader.destroy(normalizedPublicId, {
+      resource_type: 'image',
+      invalidate: true,
+    });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : 'Unknown Cloudinary error';
     throw new AppError(
-      `Failed to delete image from storage: ${error.message}`,
+      `Failed to delete image from Cloudinary: ${message}`,
       500,
       'STORAGE_DELETE_ERROR'
     );
   }
+
+  await removeMediaAssetRecord(normalizedPublicId);
 }

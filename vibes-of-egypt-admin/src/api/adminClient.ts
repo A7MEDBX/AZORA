@@ -1,4 +1,6 @@
-import { supabase } from '@/lib/supabase';
+import type { AdminUser } from '@/types/admin';
+
+export const ADMIN_TOKEN_STORAGE_KEY = 'voe_admin_jwt';
 
 export interface AdminApiErrorPayload {
   error?: {
@@ -34,13 +36,20 @@ const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api'
 ).replace(/\/+$/, '');
 
-async function getAccessToken(): Promise<string> {
-  const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
-  if (!token) {
-    throw new AdminApiError('No active session. Please sign in again.', 401, 'UNAUTHORIZED');
+export function getStoredAdminToken(): string | null {
+  try {
+    return window.localStorage.getItem(ADMIN_TOKEN_STORAGE_KEY);
+  } catch {
+    return null;
   }
-  return token;
+}
+
+export function setStoredAdminToken(token: string): void {
+  window.localStorage.setItem(ADMIN_TOKEN_STORAGE_KEY, token);
+}
+
+export function clearStoredAdminToken(): void {
+  window.localStorage.removeItem(ADMIN_TOKEN_STORAGE_KEY);
 }
 
 function buildAdminUrl(
@@ -116,13 +125,20 @@ async function request<T>(
     params?: Record<string, string | number | boolean | undefined>;
     body?: unknown;
     formData?: FormData;
+    skipAuth?: boolean;
   }
 ): Promise<T> {
-  const token = await getAccessToken();
   const headers: Record<string, string> = {
-    Authorization: `Bearer ${token}`,
     Accept: 'application/json',
   };
+
+  if (!options?.skipAuth) {
+    const token = getStoredAdminToken();
+    if (!token) {
+      throw new AdminApiError('No active session. Please sign in.', 401, 'UNAUTHORIZED');
+    }
+    headers.Authorization = `Bearer ${token}`;
+  }
 
   let bodyInit: BodyInit | undefined;
   if (options?.formData) {
@@ -151,6 +167,11 @@ async function request<T>(
 }
 
 export const adminClient = {
+  login: (email: string, password: string) =>
+    request<{ data: { token: string; user: AdminUser } }>('POST', '/auth/login', {
+      body: { email, password },
+      skipAuth: true,
+    }),
   get: <T>(path: string, params?: Record<string, string | number | boolean | undefined>) =>
     request<T>('GET', path, { params }),
   post: <T>(path: string, body: unknown) => request<T>('POST', path, { body }),

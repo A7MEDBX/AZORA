@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { USE_MOCK_DATA } from '@/api/client';
 import { cruises as mockCruises } from '@/lib/catalog';
 import { fetchCruises } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -11,7 +12,11 @@ import styles from './Cruises.module.css';
 
 export default function NileCruisesPage() {
   const { t } = useLanguage();
-  const { data: cruises } = useAsyncData(() => fetchCruises(), [], mockCruises);
+  const { data: cruises } = useAsyncData(
+    () => fetchCruises(),
+    [],
+    USE_MOCK_DATA ? mockCruises : []
+  );
 
   usePageMeta({
     title: 'Luxury Nile Cruises & Boutique Dahabiya Charters',

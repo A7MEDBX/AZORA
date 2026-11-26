@@ -69,7 +69,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
               <span className={styles.pricePer}> / person</span>
             </div>
           </div>
-          <Link to={`/packages/${pkg.id}`} className={styles.cardActionBtn}>
+          <Link to={`/packages/${pkg.slug || pkg.id}`} className={styles.cardActionBtn}>
             {actionText}
           </Link>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getPackageBySlug, getPackagesByCategory } from '@/lib/catalog';
 import { fetchPackageBySlug, fetchPackages } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,7 +8,7 @@ import { PackageDetailTemplate } from '@/templates';
 
 export default function PackageDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackPkg = getPackageBySlug(slug) ?? null;
+  const fallbackPkg = USE_MOCK_DATA ? (getPackageBySlug(slug) ?? null) : null;
   const { data: pkg, isLoading } = useAsyncData(
     () => (slug ? fetchPackageBySlug(slug) : Promise.resolve(null)),
     [slug],
@@ -16,7 +17,7 @@ export default function PackageDetailPage() {
   const { data: categoryPackages } = useAsyncData(
     () => (pkg ? fetchPackages({ category: pkg.category }) : Promise.resolve([])),
     [pkg?.category],
-    pkg ? getPackagesByCategory(pkg.category) : []
+    USE_MOCK_DATA && pkg ? getPackagesByCategory(pkg.category) : []
   );
 
   if (!pkg && !isLoading) {

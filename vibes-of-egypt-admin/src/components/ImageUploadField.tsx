@@ -14,10 +14,12 @@ interface ImageUploadFieldProps {
 }
 
 function extractStoragePathFromUrl(url: string): string | null {
-  const marker = '/vibes-of-egypt-media/';
-  const idx = url.indexOf(marker);
-  if (idx === -1) return null;
-  return url.slice(idx + marker.length).split('?')[0] || null;
+  // Match Cloudinary URLs: .../image/upload/(v1234/)?vibes-of-egypt/<folder>/<name>.<ext>
+  const cloudinaryMatch = url.match(/\/image\/upload\/(?:v\d+\/)?(vibes-of-egypt\/[^?.]+)/);
+  if (cloudinaryMatch?.[1]) {
+    return cloudinaryMatch[1];
+  }
+  return null;
 }
 
 export const ImageUploadField: React.FC<ImageUploadFieldProps> = ({
@@ -50,7 +52,7 @@ export const ImageUploadField: React.FC<ImageUploadFieldProps> = ({
       );
       setUploadedPath(res.data.path);
       onChange(res.data.url);
-      showSuccess('Image uploaded to Supabase Storage.');
+      showSuccess('Image uploaded to Cloudinary.');
     } catch (err: unknown) {
       showError(err instanceof Error ? err.message : 'Image upload failed.');
     } finally {

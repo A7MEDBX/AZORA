@@ -1,0 +1,19 @@
+{
+  "name": "vibes-of-egypt-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end Playwright integration suite across vibes-of-egypt-api, vibes-of-egypt-web, and vibes-of-egypt-admin.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.4",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.3"
+  }
+}

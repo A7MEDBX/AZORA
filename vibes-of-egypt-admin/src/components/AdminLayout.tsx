@@ -102,7 +102,6 @@ export const AdminLayout: React.FC = () => {
           >
             <MessageSquare size={17} />
             <span>Inquiries</span>
-            <span className="sidebar-pill">Phase 4</span>
           </NavLink>
           <NavLink
             to="/trip-plans"
@@ -110,7 +109,6 @@ export const AdminLayout: React.FC = () => {
           >
             <RouteIcon size={17} />
             <span>Trip Plans</span>
-            <span className="sidebar-pill">Phase 4</span>
           </NavLink>
           <NavLink
             to="/reviews"
@@ -118,7 +116,6 @@ export const AdminLayout: React.FC = () => {
           >
             <Star size={17} />
             <span>Reviews</span>
-            <span className="sidebar-pill">Phase 4</span>
           </NavLink>
         </nav>
       </aside>

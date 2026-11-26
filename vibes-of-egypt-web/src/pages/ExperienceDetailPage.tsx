@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getExperienceBySlug, getExperiencesByCategory } from '@/lib/catalog';
 import { fetchExperienceBySlug, fetchExperiences } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,7 +8,7 @@ import { ExperienceDetailTemplate } from '@/templates';
 
 export default function ExperienceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackExp = getExperienceBySlug(slug) ?? null;
+  const fallbackExp = USE_MOCK_DATA ? (getExperienceBySlug(slug) ?? null) : null;
   const { data: experience, isLoading } = useAsyncData(
     () => (slug ? fetchExperienceBySlug(slug) : Promise.resolve(null)),
     [slug],
@@ -16,7 +17,7 @@ export default function ExperienceDetailPage() {
   const { data: relatedList } = useAsyncData(
     () => (experience ? fetchExperiences({ category: experience.category }) : Promise.resolve([])),
     [experience?.category],
-    experience ? getExperiencesByCategory(experience.category) : []
+    USE_MOCK_DATA && experience ? getExperiencesByCategory(experience.category) : []
   );
 
   if (!experience && !isLoading) {

@@ -73,7 +73,7 @@ export const TourCard: React.FC<TourCardProps> = ({
               <span className={styles.pricePer}> / person</span>
             </div>
           </div>
-          <Link to={`/tours/${tour.id}`} className={styles.cardActionBtn}>
+          <Link to={`/tours/${tour.slug || tour.id}`} className={styles.cardActionBtn}>
             {actionText}
           </Link>
         </div>

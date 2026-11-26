@@ -59,59 +59,59 @@ export const DashboardPage: React.FC = () => {
       ) : stats ? (
         <>
           <div className="kpi-grid">
-            <div className="kpi-card">
+            <Link to="/destinations" className="kpi-card">
               <div className="kpi-label">Destinations</div>
               <div className="kpi-value">{stats.catalog.destinations.total}</div>
               <div className="kpi-meta">{stats.catalog.destinations.published} published</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/tours" className="kpi-card">
               <div className="kpi-label">Private Tours</div>
               <div className="kpi-value">{stats.catalog.tours.total}</div>
               <div className="kpi-meta">{stats.catalog.tours.published} published</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/packages" className="kpi-card">
               <div className="kpi-label">Packages</div>
               <div className="kpi-value">{stats.catalog.packages.total}</div>
               <div className="kpi-meta">{stats.catalog.packages.published} published</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/cruises" className="kpi-card">
               <div className="kpi-label">Nile Cruises</div>
               <div className="kpi-value">{stats.catalog.cruises.total}</div>
               <div className="kpi-meta">{stats.catalog.cruises.published} published</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/experiences" className="kpi-card">
               <div className="kpi-label">Experiences</div>
               <div className="kpi-value">{stats.catalog.experiences.total}</div>
               <div className="kpi-meta">{stats.catalog.experiences.published} published</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/journal" className="kpi-card">
               <div className="kpi-label">Journal Articles</div>
               <div className="kpi-value">{stats.catalog.journalArticles.total}</div>
               <div className="kpi-meta">{stats.catalog.journalArticles.published} published</div>
-            </div>
+            </Link>
           </div>
 
           <div className="kpi-grid">
-            <div className="kpi-card">
+            <Link to="/special-offers" className="kpi-card">
               <div className="kpi-label">Active Special Offers</div>
               <div className="kpi-value">{stats.activeSpecialOffers}</div>
               <div className="kpi-meta">Currently active promotions</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/inquiries" className="kpi-card">
               <div className="kpi-label">New Inquiries</div>
               <div className="kpi-value">{stats.newInquiries}</div>
               <div className="kpi-meta">Awaiting concierge response</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/trip-plans" className="kpi-card">
               <div className="kpi-label">New Trip Plans</div>
               <div className="kpi-value">{stats.newTripPlans}</div>
               <div className="kpi-meta">Bespoke itineraries to design</div>
-            </div>
-            <div className="kpi-card">
+            </Link>
+            <Link to="/reviews" className="kpi-card">
               <div className="kpi-label">Pending Reviews</div>
               <div className="kpi-value">{stats.pendingReviews}</div>
               <div className="kpi-meta">Awaiting moderation approval</div>
-            </div>
+            </Link>
           </div>
         </>
       ) : null}

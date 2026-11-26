@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { destinations, tours, packages, cruises } from '@/lib/catalog';
+import type { SearchResultItem } from '@/lib/catalog';
+import { searchCatalogApi } from '@/services/catalogService';
 import styles from './Navigation.module.css';
 
 export interface SearchOverlayProps {
@@ -10,6 +11,7 @@ export interface SearchOverlayProps {
 
 export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResultItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -19,6 +21,7 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose })
     } else {
       document.body.style.overflow = '';
       setQuery('');
+      setResults([]);
     }
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -34,31 +37,33 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose })
     };
   }, [isOpen, onClose]);
 
+  useEffect(() => {
+    const trimmed = query.trim();
+    if (!isOpen || !trimmed) {
+      setResults([]);
+      return;
+    }
+
+    let cancelled = false;
+    const timer = window.setTimeout(() => {
+      searchCatalogApi(trimmed)
+        .then(items => {
+          if (!cancelled) setResults(items.slice(0, 10));
+        })
+        .catch(() => {
+          if (!cancelled) setResults([]);
+        });
+    }, 150);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [query, isOpen]);
+
   if (!isOpen) return null;
 
   const normalizedQuery = query.toLowerCase().trim();
-
-  const matchingDestinations = normalizedQuery
-    ? destinations.filter(d => d.name.toLowerCase().includes(normalizedQuery)).slice(0, 3)
-    : [];
-
-  const matchingTours = normalizedQuery
-    ? tours.filter(t => t.title.toLowerCase().includes(normalizedQuery)).slice(0, 3)
-    : [];
-
-  const matchingPackages = normalizedQuery
-    ? packages.filter(p => p.title.toLowerCase().includes(normalizedQuery)).slice(0, 2)
-    : [];
-
-  const matchingCruises = normalizedQuery
-    ? cruises.filter(c => c.title.toLowerCase().includes(normalizedQuery)).slice(0, 2)
-    : [];
-
-  const totalResults =
-    matchingDestinations.length +
-    matchingTours.length +
-    matchingPackages.length +
-    matchingCruises.length;
 
   return (
     <div
@@ -92,57 +97,21 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose })
 
         {normalizedQuery && (
           <div className={styles.searchResultsBox}>
-            {totalResults === 0 ? (
+            {results.length === 0 ? (
               <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-gray-400)' }}>
                 No sanctuary or expedition found for "{query}".
               </div>
             ) : (
               <div>
-                {matchingDestinations.map(d => (
+                {results.map(item => (
                   <Link
-                    key={`dest-${d.id}`}
-                    to={`/destinations/${d.id}`}
+                    key={`${item.type}-${item.id}`}
+                    to={item.url}
                     className={styles.searchResultItem}
                     onClick={onClose}
                   >
-                    <span>{d.name}</span>
-                    <span className={styles.searchResultCategory}>Destination</span>
-                  </Link>
-                ))}
-
-                {matchingTours.map(t => (
-                  <Link
-                    key={`tour-${t.id}`}
-                    to={`/tours/${t.id}`}
-                    className={styles.searchResultItem}
-                    onClick={onClose}
-                  >
-                    <span>{t.title}</span>
-                    <span className={styles.searchResultCategory}>Private Tour</span>
-                  </Link>
-                ))}
-
-                {matchingPackages.map(p => (
-                  <Link
-                    key={`pkg-${p.id}`}
-                    to={`/packages/${p.id}`}
-                    className={styles.searchResultItem}
-                    onClick={onClose}
-                  >
-                    <span>{p.title}</span>
-                    <span className={styles.searchResultCategory}>Package</span>
-                  </Link>
-                ))}
-
-                {matchingCruises.map(c => (
-                  <Link
-                    key={`cruise-${c.id}`}
-                    to={`/nile-cruises/${c.id}`}
-                    className={styles.searchResultItem}
-                    onClick={onClose}
-                  >
-                    <span>{c.title}</span>
-                    <span className={styles.searchResultCategory}>Nile Cruise</span>
+                    <span>{item.title}</span>
+                    <span className={styles.searchResultCategory}>{item.type}</span>
                   </Link>
                 ))}
               </div>

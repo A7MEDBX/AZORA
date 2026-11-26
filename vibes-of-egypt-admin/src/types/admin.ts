@@ -264,3 +264,65 @@ export type UploadFolder =
   | 'journal'
   | 'offers'
   | 'general';
+
+export type InquiryStatus = 'new' | 'in_progress' | 'responded' | 'closed';
+
+export interface AdminInquiry {
+  id: string;
+  fullName: string;
+  email: string;
+  phone: string | null;
+  country: string | null;
+  subject: string | null;
+  message: string;
+  inquiryType: string;
+  targetSlug: string | null;
+  targetTitle: string | null;
+  preferredTravelDate: string | null;
+  travelersCount: number | null;
+  preferredLanguage: string;
+  status: InquiryStatus;
+  createdAt: string;
+}
+
+export type TripPlanStatus = 'new' | 'reviewing' | 'contacted' | 'completed' | 'cancelled';
+
+export interface AdminTripPlan {
+  id: string;
+  preferredDestinations: string[];
+  travelStartDate: string | null;
+  travelEndDate: string | null;
+  isDatesFlexible: boolean;
+  durationDays: number;
+  adultsCount: number;
+  childrenCount: number;
+  interests: string[];
+  travelStyle: string;
+  budgetPerPerson: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  country: string;
+  additionalNotes: string | null;
+  preferredLanguage: string;
+  status: TripPlanStatus;
+  createdAt: string;
+}
+
+export type ReviewTargetType = 'tour' | 'package' | 'cruise' | 'experience' | 'general';
+
+export interface AdminReview {
+  id: string;
+  reviewerName: string;
+  reviewerCountry: string;
+  rating: number;
+  title: string;
+  content: string;
+  avatar?: string;
+  targetType?: ReviewTargetType;
+  targetId?: string;
+  isApproved: boolean;
+  featured: boolean;
+  date: string;
+  createdAt: string;
+}

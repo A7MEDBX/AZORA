@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { destinations } from '@/lib/catalog';
+import { USE_MOCK_DATA } from '@/api/client';
+import { destinations as mockDestinations } from '@/lib/catalog';
+import { fetchDestinations } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { ApiClientError } from '@/api/client';
 import { submitTripPlan } from '@/services/inquiriesService';
 import styles from './TripPlanner.module.css';
@@ -24,6 +27,11 @@ interface TripPlannerData {
 
 export const TripPlanner: React.FC = () => {
   const [searchParams] = useSearchParams();
+  const { data: destinations } = useAsyncData(
+    fetchDestinations,
+    [],
+    USE_MOCK_DATA ? mockDestinations : []
+  );
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);

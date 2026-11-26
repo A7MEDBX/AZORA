@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { USE_MOCK_DATA } from '@/api/client';
 import { experiences as mockExperiences } from '@/lib/catalog';
 import { fetchExperiences } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -11,7 +12,11 @@ import styles from './Experiences.module.css';
 
 export default function ExperiencesPage() {
   const { t } = useLanguage();
-  const { data: experiences } = useAsyncData(() => fetchExperiences(), [], mockExperiences);
+  const { data: experiences } = useAsyncData(
+    () => fetchExperiences(),
+    [],
+    USE_MOCK_DATA ? mockExperiences : []
+  );
 
   usePageMeta({
     title: 'Signature Egyptian Experiences & Desert Safaris',

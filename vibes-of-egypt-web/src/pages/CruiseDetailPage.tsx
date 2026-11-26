@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getCruiseBySlug, getCruisesByType } from '@/lib/catalog';
 import { fetchCruiseBySlug, fetchCruises } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,7 +8,7 @@ import { CruiseDetailTemplate } from '@/templates';
 
 export default function CruiseDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackCruise = getCruiseBySlug(slug) ?? null;
+  const fallbackCruise = USE_MOCK_DATA ? (getCruiseBySlug(slug) ?? null) : null;
   const { data: cruise, isLoading } = useAsyncData(
     () => (slug ? fetchCruiseBySlug(slug) : Promise.resolve(null)),
     [slug],
@@ -16,7 +17,7 @@ export default function CruiseDetailPage() {
   const { data: relatedList } = useAsyncData(
     () => (cruise ? fetchCruises({ type: cruise.cruiseType }) : Promise.resolve([])),
     [cruise?.cruiseType],
-    cruise ? getCruisesByType(cruise.cruiseType) : []
+    USE_MOCK_DATA && cruise ? getCruisesByType(cruise.cruiseType) : []
   );
 
   if (!cruise && !isLoading) {

@@ -12,10 +12,11 @@ interface GalleryUploadFieldProps {
 }
 
 function extractStoragePathFromUrl(url: string): string | null {
-  const marker = '/vibes-of-egypt-media/';
-  const idx = url.indexOf(marker);
-  if (idx === -1) return null;
-  return url.slice(idx + marker.length).split('?')[0] || null;
+  const cloudinaryMatch = url.match(/\/image\/upload\/(?:v\d+\/)?(vibes-of-egypt\/[^?.]+)/);
+  if (cloudinaryMatch?.[1]) {
+    return cloudinaryMatch[1];
+  }
+  return null;
 }
 
 export const GalleryUploadField: React.FC<GalleryUploadFieldProps> = ({

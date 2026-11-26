@@ -2,10 +2,12 @@ import { Router, type Request, type Response } from 'express';
 import type { ZodSchema } from 'zod';
 import * as adminController from '../../controllers/admin/catalog.admin.controller';
 import * as operationsController from '../../controllers/admin/operations.admin.controller';
+import { adminLoginRateLimiter } from '../../middleware/rateLimiter';
 import { requireAdmin } from '../../middleware/requireAdmin';
 import { uploadSingleImage } from '../../middleware/upload';
 import { validate } from '../../middleware/validate';
 import { asyncHandler } from '../../utils/asyncHandler';
+import { adminLoginSchema } from '../../validators/admin/auth.admin.validator';
 import {
   adminListQuerySchema,
   uuidParamSchema,
@@ -75,7 +77,15 @@ function buildCrudRouter(handlers: CrudHandlers): Router {
 
 const adminRouter = Router();
 
-// Enforce Supabase JWT + app_metadata.role === 'admin' on every /api/admin/* route
+// Public Admin Login endpoint (issues backend-signed HS256 JWT)
+adminRouter.post(
+  '/auth/login',
+  adminLoginRateLimiter,
+  validate({ body: adminLoginSchema }),
+  asyncHandler(operationsController.handleAdminLogin)
+);
+
+// Enforce backend Admin JWT (`role === 'admin'`) on every subsequent /api/admin/* route
 adminRouter.use(requireAdmin);
 
 // Admin profile & dashboard KPIs

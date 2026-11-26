@@ -70,7 +70,7 @@ export const CruiseCard: React.FC<CruiseCardProps> = ({
               <span className={styles.pricePer}> / cabin</span>
             </div>
           </div>
-          <Link to={`/nile-cruises/${cruise.id}`} className={styles.cardActionBtn}>
+          <Link to={`/nile-cruises/${cruise.slug || cruise.id}`} className={styles.cardActionBtn}>
             {actionText}
           </Link>
         </div>

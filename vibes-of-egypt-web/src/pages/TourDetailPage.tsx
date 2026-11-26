@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getTourBySlug, getToursByCategory } from '@/lib/catalog';
 import { fetchTourBySlug, fetchTours } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,7 +8,7 @@ import { TourDetailTemplate } from '@/templates';
 
 export default function TourDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackTour = getTourBySlug(slug) ?? null;
+  const fallbackTour = USE_MOCK_DATA ? (getTourBySlug(slug) ?? null) : null;
   const { data: tour, isLoading } = useAsyncData(
     () => (slug ? fetchTourBySlug(slug) : Promise.resolve(null)),
     [slug],
@@ -16,7 +17,7 @@ export default function TourDetailPage() {
   const { data: categoryTours } = useAsyncData(
     () => (tour ? fetchTours({ category: tour.category }) : Promise.resolve([])),
     [tour?.category],
-    tour ? getToursByCategory(tour.category) : []
+    USE_MOCK_DATA && tour ? getToursByCategory(tour.category) : []
   );
 
   if (!tour && !isLoading) {

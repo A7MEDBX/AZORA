@@ -19,7 +19,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
   if (variant === 'atlas') {
     return (
       <Link
-        to={`/destinations/${destination.id}`}
+        to={`/destinations/${destination.slug || destination.id}`}
         className={`${styles.destinationOverlayCard} ${className}`}
       >
         <img
@@ -44,7 +44,7 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({
 
   return (
     <Link
-      to={`/destinations/${destination.id}`}
+      to={`/destinations/${destination.slug || destination.id}`}
       className={`${styles.cardShell} ${className}`}
     >
       <div className={styles.imageWrap}>

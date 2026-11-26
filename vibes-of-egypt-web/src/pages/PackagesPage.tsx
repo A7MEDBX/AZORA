@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { USE_MOCK_DATA } from '@/api/client';
 import { packages as mockPackages } from '@/lib/catalog';
 import { fetchPackages } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -11,7 +12,11 @@ import styles from './Packages.module.css';
 
 export default function PackagesPage() {
   const { t } = useLanguage();
-  const { data: packages } = useAsyncData(() => fetchPackages(), [], mockPackages);
+  const { data: packages } = useAsyncData(
+    () => fetchPackages(),
+    [],
+    USE_MOCK_DATA ? mockPackages : []
+  );
 
   usePageMeta({
     title: 'Luxury Travel Packages & All-Inclusive Itineraries',

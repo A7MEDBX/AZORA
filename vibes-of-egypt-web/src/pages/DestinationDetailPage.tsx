@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getDestinationBySlug, getToursByDestination } from '@/lib/catalog';
 import { fetchDestinationBySlug } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,7 +8,7 @@ import { DestinationDetailTemplate } from '@/templates';
 
 export default function DestinationDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackDest = getDestinationBySlug(slug);
+  const fallbackDest = USE_MOCK_DATA ? getDestinationBySlug(slug) : undefined;
   const initialData = fallbackDest
     ? { destination: fallbackDest, relatedTours: getToursByDestination(fallbackDest.slug) }
     : null;

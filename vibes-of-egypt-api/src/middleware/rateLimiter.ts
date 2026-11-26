@@ -33,3 +33,19 @@ export const submissionRateLimiter = rateLimit({
     },
   },
 });
+
+/**
+ * Brute-force protection on POST /api/admin/auth/login (10 attempts per 15 minutes per IP).
+ */
+export const adminLoginRateLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    error: {
+      code: 'TOO_MANY_REQUESTS',
+      message: 'Too many login attempts. Please wait 15 minutes before trying again.',
+    },
+  },
+});

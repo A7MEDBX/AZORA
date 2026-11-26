@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/context/LanguageContext';
-import { destinations, tours, packages, cruises } from '@/lib/catalog';
+import { USE_MOCK_DATA } from '@/api/client';
+import {
+  destinations as mockDestinations,
+  tours as mockTours,
+  packages as mockPackages,
+  cruises as mockCruises
+} from '@/lib/catalog';
+import {
+  fetchDestinations,
+  fetchTours,
+  fetchPackages,
+  fetchCruises
+} from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { Container, Button, SectionHeading } from '@/components/ui';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import {
@@ -25,6 +38,27 @@ export default function HomePage() {
   const [searchCity, setSearchCity] = useState('all');
   const [searchCategory, setSearchCategory] = useState('all');
   const [searchDuration, setSearchDuration] = useState('any');
+
+  const { data: destinations } = useAsyncData(
+    fetchDestinations,
+    [],
+    USE_MOCK_DATA ? mockDestinations : []
+  );
+  const { data: tours } = useAsyncData(
+    () => fetchTours(),
+    [],
+    USE_MOCK_DATA ? mockTours : []
+  );
+  const { data: packages } = useAsyncData(
+    () => fetchPackages(),
+    [],
+    USE_MOCK_DATA ? mockPackages : []
+  );
+  const { data: cruises } = useAsyncData(
+    () => fetchCruises(),
+    [],
+    USE_MOCK_DATA ? mockCruises : []
+  );
 
   const featuredDestinations = (destinations || []).slice(0, 6);
   const featuredTours = (tours || []).slice(0, 4);

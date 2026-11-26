@@ -3,7 +3,6 @@ import { AdminLayout } from '@/components/AdminLayout';
 import { RequireAdmin } from '@/components/RequireAdmin';
 import { AuthProvider } from '@/context/AuthContext';
 import { ToastProvider } from '@/context/ToastContext';
-import { ComingSoonPage } from '@/pages/ComingSoonPage';
 import { DashboardPage } from '@/pages/DashboardPage';
 import { LoginPage } from '@/pages/LoginPage';
 import { CruiseFormPage, CruisesListPage } from '@/pages/catalog/CruisesPage';
@@ -13,6 +12,9 @@ import { JournalFormPage, JournalListPage } from '@/pages/catalog/JournalPage';
 import { PackageFormPage, PackagesListPage } from '@/pages/catalog/PackagesPage';
 import { SpecialOfferFormPage, SpecialOffersListPage } from '@/pages/catalog/SpecialOffersPage';
 import { TourFormPage, ToursListPage } from '@/pages/catalog/ToursPage';
+import { InquiriesPage } from '@/pages/operations/InquiriesPage';
+import { ReviewsPage } from '@/pages/operations/ReviewsPage';
+import { TripPlansPage } from '@/pages/operations/TripPlansPage';
 
 export default function App() {
   return (
@@ -60,34 +62,10 @@ export default function App() {
               <Route path="/journal/new" element={<JournalFormPage />} />
               <Route path="/journal/:id/edit" element={<JournalFormPage />} />
 
-              {/* Operations (Phase 4 placeholders) */}
-              <Route
-                path="/inquiries"
-                element={
-                  <ComingSoonPage
-                    title="Customer Inquiries"
-                    description="Review, filter, and respond to incoming concierge messages."
-                  />
-                }
-              />
-              <Route
-                path="/trip-plans"
-                element={
-                  <ComingSoonPage
-                    title="Custom Trip Plans"
-                    description="Track and manage bespoke multi-day trip requests."
-                  />
-                }
-              />
-              <Route
-                path="/reviews"
-                element={
-                  <ComingSoonPage
-                    title="Customer Reviews"
-                    description="Approve, edit, or publish verified traveler testimonials."
-                  />
-                }
-              />
+              {/* Operations */}
+              <Route path="/inquiries" element={<InquiriesPage />} />
+              <Route path="/trip-plans" element={<TripPlansPage />} />
+              <Route path="/reviews" element={<ReviewsPage />} />
             </Route>
 
             <Route path="*" element={<Navigate to="/" replace />} />

@@ -1,12 +1,20 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Container, PageBanner } from '@/components/ui';
-import { teamMembers, reviews } from '@/data/about';
+import { USE_MOCK_DATA } from '@/api/client';
+import { teamMembers, reviews as mockReviews } from '@/data/about';
+import { fetchReviews } from '@/services/catalogService';
+import { useAsyncData } from '@/hooks/useAsyncData';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import styles from './About.module.css';
 
 export default function AboutPage() {
   const { t } = useLanguage();
+  const { data: reviews } = useAsyncData(
+    () => fetchReviews(),
+    [],
+    USE_MOCK_DATA ? mockReviews : []
+  );
 
   usePageMeta({
     title: 'About Vibes of Egypt — Heritage, Expertise & Concierge Team',

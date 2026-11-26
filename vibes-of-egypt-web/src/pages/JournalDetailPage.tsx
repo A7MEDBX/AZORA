@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { USE_MOCK_DATA } from '@/api/client';
 import { getArticleBySlug, getArticles } from '@/lib/catalog';
 import { fetchJournalArticleBySlug, fetchJournalArticles } from '@/services/catalogService';
 import { useAsyncData } from '@/hooks/useAsyncData';
@@ -7,13 +8,17 @@ import { ArticleDetailTemplate } from '@/templates';
 
 export default function JournalDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const fallbackArticle = getArticleBySlug(slug) ?? null;
+  const fallbackArticle = USE_MOCK_DATA ? (getArticleBySlug(slug) ?? null) : null;
   const { data: article, isLoading } = useAsyncData(
     () => (slug ? fetchJournalArticleBySlug(slug) : Promise.resolve(null)),
     [slug],
     fallbackArticle
   );
-  const { data: allArticles } = useAsyncData(() => fetchJournalArticles(), [], getArticles());
+  const { data: allArticles } = useAsyncData(
+    () => fetchJournalArticles(),
+    [],
+    USE_MOCK_DATA ? getArticles() : []
+  );
 
   if (!article && !isLoading) {
     return (
