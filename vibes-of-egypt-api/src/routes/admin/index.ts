@@ -1,13 +1,29 @@
 import { Router, type Request, type Response } from 'express';
 import type { ZodSchema } from 'zod';
 import * as adminController from '../../controllers/admin/catalog.admin.controller';
+import * as operationsController from '../../controllers/admin/operations.admin.controller';
 import { requireAdmin } from '../../middleware/requireAdmin';
+import { uploadSingleImage } from '../../middleware/upload';
 import { validate } from '../../middleware/validate';
 import { asyncHandler } from '../../utils/asyncHandler';
 import {
   adminListQuerySchema,
   uuidParamSchema,
 } from '../../validators/admin/common.validator';
+import {
+  adminInquiriesQuerySchema,
+  updateInquiryStatusSchema,
+} from '../../validators/admin/inquiry.admin.validator';
+import {
+  adminReviewsQuerySchema,
+  createAdminReviewSchema,
+  updateAdminReviewSchema,
+} from '../../validators/admin/review.admin.validator';
+import {
+  adminTripPlansQuerySchema,
+  updateTripPlanStatusSchema,
+} from '../../validators/admin/tripPlan.admin.validator';
+import { deleteUploadSchema } from '../../validators/admin/upload.admin.validator';
 import {
   createCruiseSchema,
   updateCruiseSchema,
@@ -61,6 +77,92 @@ const adminRouter = Router();
 
 // Enforce Supabase JWT + app_metadata.role === 'admin' on every /api/admin/* route
 adminRouter.use(requireAdmin);
+
+// Admin profile & dashboard KPIs
+adminRouter.get('/me', asyncHandler(operationsController.getAdminMe));
+adminRouter.get('/stats', asyncHandler(operationsController.getStats));
+
+// Customer inquiries management
+const inquiriesAdminRouter = Router();
+inquiriesAdminRouter.get(
+  '/',
+  validate({ query: adminInquiriesQuerySchema }),
+  asyncHandler(operationsController.listInquiries)
+);
+inquiriesAdminRouter.get(
+  '/:id',
+  validate({ params: uuidParamSchema }),
+  asyncHandler(operationsController.getInquiry)
+);
+inquiriesAdminRouter.patch(
+  '/:id',
+  validate({ params: uuidParamSchema, body: updateInquiryStatusSchema }),
+  asyncHandler(operationsController.updateInquiry)
+);
+inquiriesAdminRouter.delete(
+  '/:id',
+  validate({ params: uuidParamSchema }),
+  asyncHandler(operationsController.deleteInquiry)
+);
+adminRouter.use('/inquiries', inquiriesAdminRouter);
+
+// Custom trip plans management
+const tripPlansAdminRouter = Router();
+tripPlansAdminRouter.get(
+  '/',
+  validate({ query: adminTripPlansQuerySchema }),
+  asyncHandler(operationsController.listTripPlans)
+);
+tripPlansAdminRouter.get(
+  '/:id',
+  validate({ params: uuidParamSchema }),
+  asyncHandler(operationsController.getTripPlan)
+);
+tripPlansAdminRouter.patch(
+  '/:id',
+  validate({ params: uuidParamSchema, body: updateTripPlanStatusSchema }),
+  asyncHandler(operationsController.updateTripPlan)
+);
+tripPlansAdminRouter.delete(
+  '/:id',
+  validate({ params: uuidParamSchema }),
+  asyncHandler(operationsController.deleteTripPlan)
+);
+adminRouter.use('/trip-plans', tripPlansAdminRouter);
+
+// Reviews moderation
+const reviewsAdminRouter = Router();
+reviewsAdminRouter.get(
+  '/',
+  validate({ query: adminReviewsQuerySchema }),
+  asyncHandler(operationsController.listReviews)
+);
+reviewsAdminRouter.post(
+  '/',
+  validate({ body: createAdminReviewSchema }),
+  asyncHandler(operationsController.createReview)
+);
+reviewsAdminRouter.patch(
+  '/:id',
+  validate({ params: uuidParamSchema, body: updateAdminReviewSchema }),
+  asyncHandler(operationsController.updateReview)
+);
+reviewsAdminRouter.delete(
+  '/:id',
+  validate({ params: uuidParamSchema }),
+  asyncHandler(operationsController.deleteReview)
+);
+adminRouter.use('/reviews', reviewsAdminRouter);
+
+// Supabase Storage media uploads
+const uploadsAdminRouter = Router();
+uploadsAdminRouter.post('/image', uploadSingleImage, asyncHandler(operationsController.uploadImage));
+uploadsAdminRouter.delete(
+  '/image',
+  validate({ body: deleteUploadSchema }),
+  asyncHandler(operationsController.deleteImage)
+);
+adminRouter.use('/uploads', uploadsAdminRouter);
 
 adminRouter.use(
   '/destinations',
