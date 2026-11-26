@@ -100,7 +100,6 @@ export const SpecialOfferFormPage: React.FC = () => {
   const [description, setDescription] = useState('');
   const [targetType, setTargetType] = useState<OfferTargetType>('package');
   const [targetId, setTargetId] = useState('');
-  const [targetSlugToMatch, setTargetSlugToMatch] = useState<string | null>(null);
   const [targetOptions, setTargetOptions] = useState<TargetOption[]>([]);
   const [startsAt, setStartsAt] = useState('');
   const [endsAt, setEndsAt] = useState('');
@@ -108,58 +107,79 @@ export const SpecialOfferFormPage: React.FC = () => {
   const [displayOrder, setDisplayOrder] = useState('0');
 
   useEffect(() => {
-    if (!id) return;
-    adminClient
-      .get<{ data: AdminSpecialOffer }>(`/special-offers/${id}`)
-      .then((res) => {
-        const o = res.data;
-        setTitle(o.title);
-        setSlug(o.offerSlug);
-        setDiscount(o.discount);
-        setCategory(o.category);
-        setBadge(o.badge ?? '');
-        setOriginalPrice(String(o.originalPrice));
-        setDiscountedPrice(String(o.discountedPrice));
-        setValidity(o.validity ?? '');
-        setImage(o.image);
-        setDescription(o.description);
-        setTargetType(o.targetType);
-        setTargetSlugToMatch(o.slug);
-        setStartsAt(o.startsAt ? o.startsAt.slice(0, 16) : '');
-        setEndsAt(o.endsAt ? o.endsAt.slice(0, 16) : '');
-        setIsActive(o.isActive);
-        setDisplayOrder(String(o.displayOrder));
-      })
-      .catch((err: unknown) => showError(err instanceof Error ? err.message : 'Failed to load offer.'))
-      .finally(() => setLoading(false));
-  }, [id, showError]);
-
-  useEffect(() => {
     let active = true;
-    adminClient
-      .get<{ data: TargetOption[] }>(TARGET_ENDPOINT_MAP[targetType])
-      .then((res) => {
-        if (!active) return;
-        setTargetOptions(res.data);
-        if (targetSlugToMatch) {
-          const matched = res.data.find((item) => item.slug === targetSlugToMatch);
-          if (matched) {
-            setTargetId(matched.id);
-            setTargetSlugToMatch(null);
-            return;
+
+    async function init() {
+      try {
+        if (id) {
+          const offerRes = await adminClient.get<{ data: AdminSpecialOffer }>(
+            `/special-offers/${id}`
+          );
+          if (!active) return;
+          const o = offerRes.data;
+          const optionsRes = await adminClient.get<{ data: TargetOption[] }>(
+            TARGET_ENDPOINT_MAP[o.targetType]
+          );
+          if (!active) return;
+
+          setTitle(o.title);
+          setSlug(o.offerSlug);
+          setDiscount(o.discount);
+          setCategory(o.category);
+          setBadge(o.badge ?? '');
+          setOriginalPrice(String(o.originalPrice));
+          setDiscountedPrice(String(o.discountedPrice));
+          setValidity(o.validity ?? '');
+          setImage(o.image);
+          setDescription(o.description);
+          setTargetType(o.targetType);
+          setTargetOptions(optionsRes.data);
+          const matched = optionsRes.data.find((item) => item.slug === o.slug);
+          setTargetId(matched?.id ?? optionsRes.data[0]?.id ?? '');
+          setStartsAt(o.startsAt ? o.startsAt.slice(0, 16) : '');
+          setEndsAt(o.endsAt ? o.endsAt.slice(0, 16) : '');
+          setIsActive(o.isActive);
+          setDisplayOrder(String(o.displayOrder));
+        } else {
+          const optionsRes = await adminClient.get<{ data: TargetOption[] }>(
+            TARGET_ENDPOINT_MAP.package
+          );
+          if (!active) return;
+          setTargetOptions(optionsRes.data);
+          if (optionsRes.data.length > 0) {
+            setTargetId(optionsRes.data[0].id);
           }
         }
-        if (res.data.length > 0 && !res.data.some((item) => item.id === targetId)) {
-          setTargetId(res.data[0].id);
+      } catch (err: unknown) {
+        if (active) {
+          showError(err instanceof Error ? err.message : 'Failed to load offer.');
         }
-      })
-      .catch(() => {
-        if (active) setTargetOptions([]);
-      });
+      } finally {
+        if (active) {
+          setLoading(false);
+        }
+      }
+    }
+
+    void init();
     return () => {
       active = false;
     };
-  }, [targetType, targetSlugToMatch, targetId]);
+  }, [id, showError]);
+
+  const handleTargetTypeChange = async (nextType: OfferTargetType) => {
+    setTargetType(nextType);
+    setTargetId('');
+    try {
+      const res = await adminClient.get<{ data: TargetOption[] }>(TARGET_ENDPOINT_MAP[nextType]);
+      setTargetOptions(res.data);
+      if (res.data.length > 0) {
+        setTargetId(res.data[0].id);
+      }
+    } catch {
+      setTargetOptions([]);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -260,8 +280,7 @@ export const SpecialOfferFormPage: React.FC = () => {
                 className="select"
                 value={targetType}
                 onChange={(e) => {
-                  setTargetType(e.target.value as OfferTargetType);
-                  setTargetId('');
+                  void handleTargetTypeChange(e.target.value as OfferTargetType);
                 }}
               >
                 <option value="package">Package</option>

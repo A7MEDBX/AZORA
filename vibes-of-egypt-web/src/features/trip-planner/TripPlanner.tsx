@@ -657,11 +657,24 @@ export const TripPlanner: React.FC = () => {
           )}
 
           {currentStep < totalSteps ? (
-            <button type="button" onClick={handleNext} className={styles.nextBtn}>
+            <button
+              key="next-step-btn"
+              type="button"
+              onClick={e => {
+                e.preventDefault();
+                handleNext();
+              }}
+              className={styles.nextBtn}
+            >
               Continue to Step {currentStep + 1} →
             </button>
           ) : (
-            <button type="submit" disabled={isSubmitting} className={styles.nextBtn}>
+            <button
+              key="submit-step-btn"
+              type="submit"
+              disabled={isSubmitting}
+              className={styles.nextBtn}
+            >
               {isSubmitting ? 'Transmitting Request...' : 'Submit Bespoke Inquiry ✦'}
             </button>
           )}

@@ -1,11 +1,15 @@
 import rateLimit from 'express-rate-limit';
+import { env } from '../config/env';
+
+const isProd = env.NODE_ENV === 'production';
 
 /**
- * General API rate limiter applied to /api/* (100 requests per 15 minutes per IP).
+ * General API rate limiter applied to /api/*
+ * Production: 300 requests / 15 min / IP. Dev/Test: 5000 requests / 15 min / IP.
  */
 export const apiRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 100,
+  max: isProd ? 300 : 5000,
   standardHeaders: true,
   legacyHeaders: false,
   message: {
@@ -18,11 +22,12 @@ export const apiRateLimiter = rateLimit({
 
 /**
  * Stricter rate limiter applied to customer submission endpoints
- * (POST /api/inquiries, POST /api/trip-plans): 5 requests per 15 minutes per IP.
+ * (POST /api/inquiries, POST /api/trip-plans).
+ * Production: 5 requests / 15 min / IP. Dev/Test: 100 requests / 15 min / IP.
  */
 export const submissionRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 5,
+  max: isProd ? 5 : 100,
   standardHeaders: true,
   legacyHeaders: false,
   message: {
@@ -35,11 +40,12 @@ export const submissionRateLimiter = rateLimit({
 });
 
 /**
- * Brute-force protection on POST /api/admin/auth/login (10 attempts per 15 minutes per IP).
+ * Brute-force protection on POST /api/admin/auth/login.
+ * Production: 10 attempts / 15 min / IP. Dev/Test: 100 attempts / 15 min / IP.
  */
 export const adminLoginRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 10,
+  max: isProd ? 10 : 100,
   standardHeaders: true,
   legacyHeaders: false,
   message: {

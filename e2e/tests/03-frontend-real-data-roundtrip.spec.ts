@@ -167,20 +167,20 @@ test.describe('03 — Public Web Real API Network Audit & Admin-to-Web Live Roun
       await expect(webPage.locator(`img[src="${uploadedImageUrl}"]`).first()).toBeVisible();
 
       await webPage.goto(`${E2E_CONFIG.webBaseUrl}/destinations/${destSlug}`);
-      await expect(webPage.getByRole('heading', { name: destName })).toBeVisible();
+      await expect(webPage.getByRole('heading', { name: destName, exact: true })).toBeVisible();
       await expect(webPage.getByText(tourTitle)).toBeVisible();
 
       await webPage.goto(`${E2E_CONFIG.webBaseUrl}/tours`);
       await expect(webPage.getByText(tourTitle)).toBeVisible();
 
       await webPage.goto(`${E2E_CONFIG.webBaseUrl}/tours/${tourSlug}`);
-      await expect(webPage.getByRole('heading', { name: tourTitle })).toBeVisible();
+      await expect(webPage.getByRole('heading', { name: tourTitle, exact: true })).toBeVisible();
 
       await webPage.goto(`${E2E_CONFIG.webBaseUrl}/packages`);
       await expect(webPage.getByText(pkgTitle)).toBeVisible();
 
       await webPage.goto(`${E2E_CONFIG.webBaseUrl}/packages/${pkgSlug}`);
-      await expect(webPage.getByRole('heading', { name: pkgTitle })).toBeVisible();
+      await expect(webPage.getByRole('heading', { name: pkgTitle, exact: true })).toBeVisible();
       await expect(webPage.getByText(day1Title)).toBeVisible();
       await expect(webPage.getByText(day2Title)).toBeVisible();
 

@@ -1,5 +1,4 @@
 import { expect, test } from '@playwright/test';
-import { fieldByLabel } from './helpers/adminUi';
 import { E2E_CONFIG, E2ERunTracker } from './helpers/e2eContext';
 
 test.describe('04 — Customer Submissions (Inquiries & Trip Plans) & Reviews Moderation Round-Trip', () => {
@@ -156,14 +155,25 @@ test.describe('04 — Customer Submissions (Inquiries & Trip Plans) & Reviews Mo
       await adminPage.getByRole('button', { name: /Add Verified Review/i }).click();
 
       const reviewModal = adminPage.locator('.modal-card');
-      await fieldByLabel(reviewModal.page(), /^Reviewer Name/).locator('input').fill(reviewerName);
-      await fieldByLabel(reviewModal.page(), 'Country / Location')
+      await expect(reviewModal).toBeVisible();
+      await reviewModal
+        .locator('.field')
+        .filter({ hasText: 'Reviewer Name' })
+        .locator('input')
+        .fill(reviewerName);
+      await reviewModal
+        .locator('.field')
+        .filter({ hasText: 'Country / Location' })
         .locator('input')
         .fill('Edinburgh, UK');
-      await fieldByLabel(reviewModal.page(), /^Title/)
+      await reviewModal
+        .locator('.field')
+        .filter({ hasText: 'Title / Tour or Cruise Name' })
         .locator('input')
         .fill(reviewTitle);
-      await fieldByLabel(reviewModal.page(), /^Review Content/)
+      await reviewModal
+        .locator('.field')
+        .filter({ hasText: 'Review Content' })
         .locator('textarea')
         .fill(`Unforgettable private Egyptologist curatorial tour (${tracker.runId}).`);
 

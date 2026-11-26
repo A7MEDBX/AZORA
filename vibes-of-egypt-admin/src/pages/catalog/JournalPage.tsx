@@ -91,9 +91,11 @@ export const JournalFormPage: React.FC = () => {
 
   useEffect(() => {
     if (!id) return;
+    let active = true;
     adminClient
       .get<{ data: AdminJournalArticle }>(`/journal/${id}`)
       .then((res) => {
+        if (!active) return;
         const a = res.data;
         setTitle(a.title);
         setSlug(a.slug);
@@ -108,8 +110,15 @@ export const JournalFormPage: React.FC = () => {
         setFeatured(a.featured);
         setStatus(a.status);
       })
-      .catch((err: unknown) => showError(err instanceof Error ? err.message : 'Failed to load article.'))
-      .finally(() => setLoading(false));
+      .catch((err: unknown) => {
+        if (active) showError(err instanceof Error ? err.message : 'Failed to load article.');
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
+    };
   }, [id, showError]);
 
   const handleSubmit = async (e: React.FormEvent) => {

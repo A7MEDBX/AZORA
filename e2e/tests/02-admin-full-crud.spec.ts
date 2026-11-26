@@ -81,6 +81,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await tourRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Badge').locator('input').fill('E2E Exclusive');
     await page.getByRole('button', { name: 'Save Changes' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/tours`);
 
     // 4. PACKAGES (with linked destination + 2 itinerary days added & reordered)
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/packages/new`);
@@ -124,6 +125,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await pkgRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Badge').locator('input').fill('E2E Signature');
     await page.getByRole('button', { name: 'Save Package' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/packages`);
 
     // 5. CRUISES
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/cruises/new`);
@@ -142,6 +144,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await cruiseRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Badge').locator('input').fill('Teak Charter');
     await page.getByRole('button', { name: 'Save Changes' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/cruises`);
 
     // 6. EXPERIENCES (linked to E2E Destination)
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/experiences/new`);
@@ -164,6 +167,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await expRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Badge').locator('input').fill('Stargazing');
     await page.getByRole('button', { name: 'Save Changes' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/experiences`);
 
     // 7. SPECIAL OFFERS (polymorphically linked to E2E Package)
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/special-offers/new`);
@@ -186,6 +190,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await offerRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Discount Label').locator('input').fill('20% Off');
     await page.getByRole('button', { name: 'Save Offer' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/special-offers`);
 
     // 8. JOURNAL ARTICLES
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/journal/new`);
@@ -208,6 +213,7 @@ test.describe('02 — Admin Dashboard Full CRUD, Image Uploads & 409 FK Protecti
     await journalRow.getByRole('link', { name: 'Edit' }).click();
     await fieldByLabel(page, 'Author Role').locator('input').fill('Chief Field Egyptologist');
     await page.getByRole('button', { name: 'Save Article' }).click();
+    await expect(page).toHaveURL(`${E2E_CONFIG.adminBaseUrl}/journal`);
 
     // 9. Verify 409 Conflict when deleting a Destination still referenced by Tour & Package
     await page.goto(`${E2E_CONFIG.adminBaseUrl}/destinations`);
