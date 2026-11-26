@@ -13,6 +13,10 @@ export interface ValidatedPolymorphicTarget {
   title: string;
 }
 
+export interface ValidatePolymorphicOptions {
+  allowUnpublished?: boolean;
+}
+
 const uuidValidator = z.string().uuid();
 
 const TARGET_TABLE_MAP: Record<
@@ -28,11 +32,13 @@ const TARGET_TABLE_MAP: Record<
 
 /**
  * Verifies that targetType is a supported catalog entity type and that targetId
- * is a valid UUID referring to an existing, published record in that table.
+ * is a valid UUID referring to an existing record in that table.
+ * By default requires the target record to be published (`allowUnpublished: false`).
  */
 export async function validatePolymorphicTarget(
   targetType: string,
-  targetId: string
+  targetId: string,
+  options: ValidatePolymorphicOptions = {}
 ): Promise<ValidatedPolymorphicTarget> {
   if (!POLYMORPHIC_TARGET_TYPES.includes(targetType as PolymorphicTargetType)) {
     throw new AppError(
@@ -54,12 +60,16 @@ export async function validatePolymorphicTarget(
   const { table, titleColumn } = TARGET_TABLE_MAP[typedTarget];
   const supabase = getSupabaseClient();
 
-  const { data, error } = await supabase
+  let query = supabase
     .from(table)
     .select(`id, slug, ${titleColumn}`)
-    .eq('id', targetId)
-    .eq('is_published', true)
-    .maybeSingle();
+    .eq('id', targetId);
+
+  if (!options.allowUnpublished) {
+    query = query.eq('is_published', true);
+  }
+
+  const { data, error } = await query.maybeSingle();
 
   if (error) {
     throw new AppError(
@@ -70,8 +80,9 @@ export async function validatePolymorphicTarget(
   }
 
   if (!data) {
+    const suffix = options.allowUnpublished ? 'does not exist.' : 'does not exist or is not published.';
     throw new AppError(
-      `Referenced ${typedTarget} with id "${targetId}" does not exist or is not published.`,
+      `Referenced ${typedTarget} with id "${targetId}" ${suffix}`,
       400,
       'INVALID_TARGET_REFERENCE'
     );

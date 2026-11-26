@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import adminRoutes from './admin';
 import cruisesRoutes from './cruises.routes';
 import destinationsRoutes from './destinations.routes';
 import experiencesRoutes from './experiences.routes';
@@ -26,5 +27,6 @@ router.use('/reviews', reviewsRoutes);
 router.use('/search', searchRoutes);
 router.use('/inquiries', inquiriesRoutes);
 router.use('/trip-plans', tripPlansRoutes);
+router.use('/admin', adminRoutes);
 
 export default router;

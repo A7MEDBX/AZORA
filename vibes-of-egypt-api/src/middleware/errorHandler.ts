@@ -2,6 +2,19 @@ import type { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
 import { env } from '../config/env';
 import { AppError, type ApiErrorResponse } from '../types/api';
+import { mapDbError, type PostgrestLikeError } from '../utils/dbError';
+
+const PG_ERROR_CODES = new Set(['23505', '23503', '22P02', '23514']);
+
+function isPostgresConstraintError(err: unknown): err is PostgrestLikeError {
+  return (
+    typeof err === 'object' &&
+    err !== null &&
+    'code' in err &&
+    typeof (err as { code?: unknown }).code === 'string' &&
+    PG_ERROR_CODES.has((err as { code: string }).code)
+  );
+}
 
 export function errorHandler(
   err: unknown,
@@ -26,6 +39,18 @@ export function errorHandler(
         code: 'VALIDATION_ERROR',
         message: 'Request validation failed',
         details: err.flatten(),
+      },
+    });
+    return;
+  }
+
+  if (isPostgresConstraintError(err)) {
+    const mapped = mapDbError(err, 'Database operation failed');
+    res.status(mapped.statusCode).json({
+      error: {
+        code: mapped.code,
+        message: mapped.message,
+        ...(mapped.details !== undefined ? { details: mapped.details } : {}),
       },
     });
     return;
